@@ -1,0 +1,102 @@
+body{
+    background: url("../assets/img/fundo_principal2.png")  no-repeat;
+    background-size: cover;
+}
+/*Formatação do cabeçalho*/
+.menu_fundo{
+    background: #37A094;
+}
+.logo_img{
+    height: 4em;
+}
+.navbar-light .navbar-nav{
+    font-size: 1em;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #FF8000;
+}
+.navbar-light .navbar-toggler{
+    color: rgba(0,0,0,.5);
+    border-color: rgba(255,255,255,.5);
+}
+.divisor{
+    width: 1px;
+    background: white;
+    margin: 12px 15px;
+}
+.bar_laranja{
+    height: 0.5em;
+    background: #E48900;
+}
+
+/*Formatação do Home*/
+.div-home{
+    padding: 7em 3em;
+}
+
+
+#home p{
+    color:#fff; 
+}
+#home h1, h2{
+    color:#E48900;
+    text-shadow: 0 0 3px #000;
+}
+.cor-form{
+    background: rgba(119, 176, 170,.4);
+    border-radius: 25px;
+}
+
+.btn-custom{
+    background: #E48900;
+    transition: background 0.4s, color 0.4s;
+    margin: 10px;
+}
+.btn-custom:hover{
+    background: #FFBF00;
+}
+
+/* Rodpé */
+footer{
+    background: #37A094;
+    padding: 15px 0px;
+    position: relative;
+}
+footer .navbar-nav .nav-item .nav-link:hover{
+    color: #9bf0e1;
+}
+footer ul{
+    list-style: none;
+}
+footer ul li{
+    float: left;
+    margin: 0 5px;
+}
+footer ul li{
+    border: 1px solid #fff;
+    border-radius: 100px;
+}
+footer ul li a i{
+    color: #fff;
+}
+footer ul li:hover{
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+footer ul li a i:hover{
+    color: #000;
+}
+footer h4{
+    color:#E48900;
+    font-size: 1.2em;
+    display: inline;
+    text-shadow: 0 0 3px #000;
+}
+footer p{
+    color: #fff;
+    font-size: 0.8em;
+    display: inline;
+}
