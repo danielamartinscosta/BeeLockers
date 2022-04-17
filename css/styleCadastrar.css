@@ -1,11 +1,3 @@
-/*Formatação do Main*/
-#main{
-    padding: 72px 0;
-}
-#main p{
-    color:#fff; 
-}
-#main h1, h2{
-    color:#E48900;
-    text-shadow: 0 0 3px #000;
+.div-checkbox {
+    margin: 1.5em 1em;
 }

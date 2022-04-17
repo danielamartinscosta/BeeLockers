@@ -1,11 +1,13 @@
+<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Emily, Daniela, Geovani e Julyane">
-    <meta name="keywords" content="Praia, armário, ">
+    <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
+    <meta name="author" content="Geovani, Daniela, Julyane, Emily e Pedro">
+    <meta name="keyword" content="Praia, armário, guarda volumes">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ícone página -->
@@ -17,18 +19,18 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleClima.css">
-    <title>Bee Lockers</title>
+    <title>Bee Lockers - Agendar</title>
 </head>
 
 <body>
 
     <header>
-        <!--Início cabeçalho-->
-        <nav class="navbar navbar-expand-sm navbar-light menu_fundo">
+        <!-- Início Cabeçalho -->
+        <nav class="navbar navbar-expand-sm navbar-light">
             <div class="container-fluid">
 
-                <a href="" class="navbar-brand" alt="Bee Lockes">
-                    <img class="logo_img" src="../assets/img/logo.jpeg">
+                <a href="home.php" class="navbar-brand">
+                    <img src="../assets/img/logo.jpeg" width="100" class="img-fluid">
                 </a>
 
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu">
@@ -54,59 +56,66 @@
                             <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
                         </li>
                         <li class="nav-item">
-                            <a href="login.php" class="nav-link">Entrar</a>
+                            <a href="home.php" class="nav-link">Entrar</a>
                         </li>
                     </ul>
                 </div>
 
             </div>
         </nav>
-        <div class="bar_laranja"></div>
-    </header>
-    <!--Fim cabeçalho-->
+        <div class="bar-laranja"></div>
+    </header><!-- Fim Cabeçalho -->
 
+    <main>
+        <!-- Início do Conteúdo Principal-->
+        <section id="home">
+            <div class="container-fluid">
 
-
-    <section id="home">
-        <!-- Início do home-->
-        <div class="container-fluid">
-            <div class="row align-items-center ">
-
-                <div class="col-lg-6 d-flex div-home">
-                    <div class="align-self-center align-items-center">
-                    
-                        <h2>Confira qual a cidade ideal para curtir um passeio incrível hoje.</h2>
-                        <h1>E faça já sua reserva!</h1>
+                <div class="row">
+                    <div class="col-md div-home text-center">
+                        <h1>
+                            <nobr>Bee <span>Lockers</span></nobr>
+                        </h1>
+                        <p>
+                            Confira qual a cidade ideal para curtir um passeio incrível ainda hoje.
+                        </p>
+                        <p>
+                            Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login e faça já a sua reserva!
+                        </p>
                     </div>
                 </div>
 
                 <!-- início da pesquisa de clima -->
-                <div class="col-lg-6 mt-2 div-clima">
-                    <div class="card cor-clima shadow-lg">
-                        <div class="card-body">
-                            <div class="row fw-bolder">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 mt-2 div-clima">
+                        <div class="card cor-clima shadow-lg">
+                            <div class="card-body">
+                                <div class="row fw-bolder">
 
-                                <div class="card-header text-center bg-transparent border-success">CLIMA</div>
-                                <div class="card-body text-center">
-                                    <div class="city">Cidade</div>
-                                    <div class="date">Domingo, 30 Novembro 2022</div>
-                                    <div class="container-img">
-                                        <img src="../assets/img/unknown.png" alt="imagem-clima">
+                                    <div class="card-header text-center bg-transparent border-success">
+                                        <h2>Consulta de Clima</h2>
                                     </div>
-                                    <div class="container-temp">
-                                        <div>22</div>
-                                        <span>°C</span>
+                                    <div class="card-body text-center">
+                                        <div class="city">Cidade</div>
+                                        <div class="date">Domingo, 30 Novembro 2022</div>
+                                        <div class="container-img">
+                                            <img src="../assets/img/unknown.png" alt="imagem-clima">
+                                        </div>
+                                        <div class="container-temp">
+                                            <div>22</div>
+                                            <span>°C</span>
+                                        </div>
+                                        <div class="weather">Nublado</div>
+                                        <div class="low-high"> Mínima de: 22°C /Máxima de: 23°C</div>
                                     </div>
-                                    <div class="weather">Nublado</div>
-                                    <div class="low-high"> Mínima de: 22°C /Máxima de: 23°C</div>
-                                </div>
-                                <div class="card-footer text-center bg-transparent border-success">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control shadow-lg " placeholder="Digite o nome da Cidade" aria-label="digite o nome da Cidade" aria-describedby="button-addon2">
-                                        <button class="btn btn-success text-white" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                                    <div class="card-footer text-center bg-transparent border-success">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control shadow-lg " placeholder="Digite o nome da Cidade" aria-label="digite o nome da Cidade" aria-describedby="button-addon2">
+                                            <button class="btn btn-success text-white" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                                        </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,55 +123,55 @@
                 <<!-- Fim da pesquisa de clima -->
 
             </div>
-        </div>
-
-    </section><!-- Fim do Home-->
-
-    <footer>
-        <!-- Início do rodapé-->
-        <div class="container-fluid">
-            <div class="row align-self-center">
-
-                <div class="col-md-6">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank" class="btn">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="btn">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/" target="_blank" class="btn">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h4>Bee Lockers</h4>
-                    <p>Diversão com segurança</p>
-                </div>
-
             </div>
-        </div>
-    </footer><!-- Fim do rodapé-->
+
+        </section><!-- Fim do Home-->
+
+        <footer>
+            <!-- Início do rodapé-->
+            <div class="container-fluid">
+                <div class="row align-self-center">
+
+                    <div class="col-md-6">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" class="btn">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="btn">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/" target="_blank" class="btn">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Bee Lockers</h4>
+                        <p>Diversão com segurança</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer><!-- Fim do rodapé-->
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="../js/clima.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="../js/clima.js"></script>
 
 </body>
 

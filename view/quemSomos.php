@@ -5,8 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Emily, Daniela, Geovani e Julyane">
-    <meta name="keywords" content="Praia, armário, ">
+    <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
+    <meta name="author" content="Geovani, Daniela, Julyane, Emily e Pedro">
+    <meta name="keyword" content="Praia, armário, guarda volumes">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ícone página -->
@@ -17,20 +18,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- CSS próprio -->
-    <link rel="stylesheet" href="../css/styleAgenda.css">
-    <title>Bee Lockers</title>
+    <title>Bee Lockers - Home</title>
 </head>
 
 <body>
 
     <header>
-        <!--Início cabeçalho-->
-        <nav class="navbar navbar-expand-sm navbar-light menu_fundo">
-            <div class="container">
+        <!-- Início Cabeçalho -->
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container-fluid">
 
-                <a href="" class="navbar-brand" alt="Bee Lockes">
-                    <img class="logo_img" src="../assets/img/logo.jpeg">
+                <a href="home.php" class="navbar-brand">
+                    <img src="../assets/img/logo.jpeg" width="100" class="img-fluid">
                 </a>
 
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu">
@@ -56,68 +55,115 @@
                             <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
                         </li>
                         <li class="nav-item">
-                            <a href="login.php" class="nav-link">Entrar</a>
+                            <a href="home.php" class="nav-link">Entrar</a>
                         </li>
                     </ul>
                 </div>
 
             </div>
         </nav>
-        <div class="bar_laranja"></div>
-    </header>
-    <!--Fim cabeçalho-->
+        <div class="bar-laranja"></div>
+    </header><!-- Fim Cabeçalho -->
 
+    <main>
+        <!-- Início do Conteúdo Principal-->
+        <section id="home">
+            <div class="container-fluid">
 
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h1>
+                            <nobr>Bee <span>Lockers</span></nobr>
+                        </h1>
+                    </div>
+                </div>
 
-    <main id="main">
-        <!-- Início do main-->
-        <div class="container">
-            <div class="row  justify-content-around align-items-center">
+                <div class="row">
 
-                <form>
+                    <div class="col-md div-home text-center">
+                        <p>
+                            Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado.
+                        </p>
+                        <p>
+                            Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus
+                            pertences enquanto você se diverte.
+                        </p>
+                        <h2>Temos a solução ideal para você!!!</h2>
+                        <h1>Entre já e confira!</h1>
+                    </div>
+                </div>
 
-                    <div class="row mb-2 fw-bolder">
-                        <div class="col-md-6">
-                            <div class="card cor-form">
-                                <div class="card-body">
+                <div class="row justify-content-center">
+                    <form class="col-md-6 div-home">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="fw-bolder">
 
-                                    <p>
-                                        Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado.
-                                    </p>
-                                    <p>
-                                        Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus
-                                        pertences enquanto você se diverte.
-                                    </p><br>
-                                    <p>Confira ao Lado nossos valores e faça já sua reserva</p>
+                                    <div class="m-1">
+                                        <label for="txtUsuario" class="form-label">Usuário:</label>
+                                        <input type="email" name="txtUsuario" id="txtUsuario" class="form-control">
+                                    </div>
+                                    <div class="m-1">
+                                        <label for="txtSenha" class="form-label">Senha:</label>
+                                        <input type="email" name="txtSenha" id="txtSenha" class="form-control">
+                                    </div>
 
+                                </div>
+                                <div class="row mb-2">
+
+                                    <div class="col">
+                                        <button type="submit" class="btn text-white btn-custom">Logar</button>
+                                    </div>
+                                    <div class="col">
+                                        <a href="cadastroUsuario.php" type="submit" class="btn text-white btn-custom">Cadastrar</a>
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
+                    </form>
 
-                        <div class="col-md-6">
+                </div>
+            </div>
+        </section>
+    </main><!-- Fim do Conteúdo Principal-->
 
-                            <div class="card-body text-center">
-                                <img src="../assets/img/valores.PNG" alt="">
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </form>
-
-
+    <section class="caixa">
+        <!--/Início seção recursos -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="../assets/img/facil.png" class="img-fluid">
+                    <h4>Fácil de usar</h4>
+                    <p>
+                        O BeeLockers vai além do básico e permite que você faça seus passeios e atividades, essenciais para seu lazer, sem nenhuma preocupação. Simples como tem que ser!
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../assets/img/economize.png" class="img-fluid">
+                    <h4>Economize seu tempo</h4>
+                    <p>
+                        Tempo é dinheiro! Em segundos, você tem tudo sob controle e aproveite seu tempo com o que realmente importa pra você!
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../assets/img/suporte.png" class="img-fluid">
+                    <h4>Suporte amigo</h4>
+                    <p>
+                        Dúvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui pra resolver seus problemas e deixar sua vida bem mais fácil!
+                    </p>
+                </div>
             </div>
         </div>
-    </main><!-- Fim do main-->
+    </section>
+    <!--/FIM seção recursos -->
 
     <footer>
-        <!-- Início do rodapé-->
-        <div class="container">
-            <div class="row">
+        <!--Início do rodapé-->
+        <section class="container-fluid">
+            <div class="row align-items-center">
 
-                <div class="col-md-6">
+                <div class="col-md-6 align-content-center">
                     <ul>
                         <li>
                             <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
@@ -141,15 +187,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 text-center">
                     <h4>Bee Lockers</h4>
                     <p>Diversão com segurança</p>
                 </div>
 
             </div>
-        </div>
-    </footer><!-- Fim do rodapé-->
-
+        </section>
+    </footer>
+    <!--Fim do rodapé-->
 
 
 

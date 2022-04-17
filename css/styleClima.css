@@ -1,29 +1,32 @@
-.div-clima{
+.div-clima {
     padding: 0.2em 0.5em;
+    
 }
-.cor-clima{
+
+.cor-clima {
     background: rgba(119, 176, 170, 0.89);
     border-radius: 25px;
 }
-.city{
+
+.city {
     font-size: 24px;
 }
 
-.date{
+.date {
     font-size: 16px;
 }
 
-.container-temp{
+.container-temp {
     display: flex;
     justify-content: center;
     font-size: 28px;
 
 }
 
-.weather{
+.weather {
     font-size: 16px;
 }
 
-.low-high{
+.low-high {
     font-size: 16px;
 }

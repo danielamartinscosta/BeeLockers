@@ -1,0 +1,12 @@
+#main {
+    padding: 4em 2em;
+}
+
+.card .card-body {
+    padding: 3em 2em;
+}
+
+.card .card-body p {
+    font-size: 1.2em;
+    color: #fff;
+}
