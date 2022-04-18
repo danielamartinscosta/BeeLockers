@@ -90,7 +90,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <p>
-                                    Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado
+                                    De maneira simples, 
                                 </p>
                                 <p>
                                     Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus
@@ -105,7 +105,36 @@
                     <div class="col-md div-home">
                         <div class="card">
                             <div class="card-body">
-
+                                <div id="praia" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#praia1" data-slide-to="0" class="active"></li>
+                                        <li data-target="#praia2" data-slide-to="1"></li>
+                                        <li data-target="#praia3" data-slide-to="2"></li>
+                                        <li data-target="#praia4" data-slide-to="3"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="../assets/imagem_praia/guaruja.png" alt="Guaruja">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="../assets/imagem_praia/itarare.jpg" alt="itarare">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="../assets/imagem_praia/praia_grande.jpg" alt="PraiaGrande">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="../assets/imagem_praia/ubatuba.jpg" alt="Ubatuba">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#praia" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Anterior</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#praia" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Próximo</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

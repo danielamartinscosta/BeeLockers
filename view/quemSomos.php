@@ -85,7 +85,7 @@
                             Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado.
                         </p>
                         <p>
-                            Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus
+                            Pensando nisso gostariamos de te oferecer a locação de nossos armários para você guardar seus
                             pertences enquanto você se diverte.
                         </p>
                         <h2>Temos a solução ideal para você!!!</h2>

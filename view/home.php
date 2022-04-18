@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
-    <meta name="author" content="Geovani, Daniela, Julyane e Emily">
+    <meta name="author" content="Geovani, Daniela, Julyane, Emily">
     <meta name="keyword" content="Praia, armário, guarda volumes">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">

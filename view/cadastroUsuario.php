@@ -90,7 +90,7 @@
                             <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
                             </h1>
                             <p>
-                                Falta pouco para você ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
+                                Falta pouco para você ter acesso ao melhor sistema de guarda volume. Cadastre-se e aproveite.
                             </p>
                             <p>
                                 Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
