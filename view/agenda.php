@@ -90,18 +90,19 @@
                         <div class="card">
                             <div class="card-body">
                                 <p>
-                                    De maneira simples, 
+                                    Com apenas alguns cliques, acesse nossa agenda e reserve um lugar seguro para deixar seus itens pessoais. Viaje e descubra que dá para curtir uma praia sem preocupações.
+                                    Nunca foi tão fácil agendar! 
                                 </p>
+                                
                                 <p>
-                                    Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus
-                                    pertences enquanto você se diverte.
+                                    E ai? Qual é a sua praia? Clique em agendar e Confira qual o melhor destino para você!
                                 </p>
 
                                 <a href="reserva.php" class="btn text-white btn-custom">Agendar</a>
                             </div>
                         </div>
                     </div>
-
+                    <!-- Início do Conteúdo das imagens - Carrossel-->
                     <div class="col-md div-home">
                         <div class="card">
                             <div class="card-body">
@@ -138,6 +139,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Fim do Conteúdo das imagens - Carrossel-->
                 </div>
 
             </div>

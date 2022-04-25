@@ -82,11 +82,11 @@
 
                     <div class="col-md div-home text-center">
                         <p>
-                            Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado.
+                            Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado. Nascemos da ideia de tornar o lazer, um momento inesquecível e sem preocupações.
                         </p>
                         <p>
                             Pensando nisso gostariamos de te oferecer a locação de nossos armários para você guardar seus
-                            pertences enquanto você se diverte.
+                            pertences enquanto se diverte.
                         </p>
                         <h2>Temos a solução ideal para você!!!</h2>
                         <h1>Entre já e confira!</h1>
@@ -118,6 +118,13 @@
                                         <a href="cadastroUsuario.php" type="submit" class="btn text-white btn-custom">Cadastrar</a>
                                     </div>
 
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
+                                    <label for="txtPermissao" class="form-check-label text-white">
+                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
+                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                    </label>
                                 </div>
                             </div>
                         </div>

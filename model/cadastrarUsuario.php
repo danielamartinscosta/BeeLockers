@@ -2,6 +2,7 @@
 
 // inserir os dados no formulário 
 $nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
 $email = $_POST['email'];
 $sexo = $_POST['sexo'];
 $telefone = $_POST['telefone'];
@@ -12,8 +13,9 @@ $dtnasc = $_POST['dtnasc'];
 include "connect.php";
 
 // variavel da query
-$sql = "INSERT INTO cadastro_usuario (
-    nome, 
+$sql = "INSERT INTO usuario (
+    nome,
+    cpf, 
     email, 
     sexo, 
     telefone, 
@@ -22,6 +24,7 @@ $sql = "INSERT INTO cadastro_usuario (
     
     ) VALUES (
         '$nome',
+        '$cpf',
         '$email',
         '$sexo',
         '$telefone',
@@ -39,4 +42,4 @@ if ($result) {
     echo "Cadastro não realizado, tente novamente";
 }
 
-header("location:../view/exibirUsuario.php");
+header("location:../view/cadastroUsuario.php");

@@ -2,10 +2,8 @@
 
 // inserir os dados no formulário 
 $nome_praia = $_POST['nome_praia'];
-$nome_responsavel = $_POST['nome_responsavel'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$senha = $_POST['senha'];
+$imagem_praia = $_POST['imagem_praia'];
+$endereco_praia = $_POST['endereco_praia'];
 
 
 include "connect.php";
@@ -13,17 +11,13 @@ include "connect.php";
 // variavel da query
 $sql = "INSERT INTO cadastro_usuario (
     nome_praia,
-    nome_responsavel, 
-    email, 
-    telefone, 
-    senha 
+    imagem_praia, 
+    endereco_praia
     
     ) VALUES (
         '$nome_praia',
-        '$nome_responsavel',
-        '$email',
-        '$telefone',
-        '$senha'
+        '$imagem_praia',
+        '$endereco_praia'
     )";
 
 // realizar o insert de dados
@@ -36,4 +30,4 @@ if ($result) {
     echo "Cadastro não realizado, tente novamente";
 }
 
-header("location:../view/exibirPraia.php");
+header("location:../view/cadastroPraia.php");
