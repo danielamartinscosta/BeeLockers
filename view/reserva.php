@@ -89,27 +89,65 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md div-home text-center">
+                <div class="col-md div-home">
                     <div class="row fw-bolder">
-                        <div class="col-md div-home">
+                        <div class="col div-home">
                             <div class="card mb-3">
-                                <div class="card-header bg-transparent border-warning">Tabela de valores</div>
-                                <div class="card-body text-success">
-                                    <div class="col-md-3">
-                                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="card-header bg-transparent border-warning text-center">
+                                    <h2>Tabela de valores</h2>
+                                </div>
+                                <div class="row card-body">
+                                    <div class="col-md-7">
+                                        <ul>
+                                            <ol>1 HORA</ol>
+                                            <ol>2 HORAS</ol>
+                                            <ol>4 HORAS</ol>
+                                            <ol>Demais horas</ol>
+
+                                        </ul>
                                     </div>
-                                    <div class="col-md-2">
-                                        <p>textoexempo</p>
+                                    <div class="col-md-5">
+                                        <ul>
+                                            <ol>R$ 10,00</ol>
+                                            <ol>R$ 20,00</ol>
+                                            <ol>R$ 27,00</ol>
+                                            <ol>R$ 2,00</ol>
+
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="col-md-7">
+                                        <ul>
+                                            <ol>UTILIZAÇÃO DO CHUVEIRO</ol>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <ul>
+                                            <ol>2 MNT  R$ 3,00</ol>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="col-md-7">
+                                        <ul>
+                                            <ol>ÁGUA</ol>
+                                            <ol>CADEADO - NUMERAÇÃO</ol>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <ul>
+                                            <ol>R$ 3,00</ol>
+                                            <ol>GRÁTIS</ol>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="card-footer bg-transparent border-warning">Footer</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Fim do calendário  -->
+        <!-- Fim do calendário  -->
         </div>
         <div class="modal fade" id="visualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
