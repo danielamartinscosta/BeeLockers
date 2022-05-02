@@ -70,7 +70,6 @@
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid">
-
                 <div class="row">
                     <div class="col-md div-home text-center">
                         <h1>
@@ -121,10 +120,7 @@
                     </div>
                 </div>
                 <<!-- Fim da pesquisa de clima -->
-
             </div>
-            </div>
-
         </section><!-- Fim do Home-->
 
         <footer>
@@ -156,14 +152,48 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 text-center">
                         <h4>Bee Lockers</h4>
                         <p>Diversão com segurança</p>
                     </div>
-
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-2">
+                            <h4>BeeLockers</h4>
+                            <ul id="indice">
+                                <ol>
+                                    <a href="quemSomos.php">Sobre Nós</a>
+                                </ol>
+                                <ol>
+                                    <a href="home.php">Home</a>
+                                </ol>
+                                <ol>
+                                    <a href="agenda.php">Agenda</a>
+                                </ol>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Para você</h4>
+                            <ul>
+                                <ol>
+                                    <a href="cadastroUsuario.php">Cadastre-se</a>
+                                </ol>
+                                <ol>
+                                    <a href="home.php">Login</a>
+                                </ol>
+                                <ol>
+                                    <a href="reserva.php">Reserva</a>
+                                </ol>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer><!-- Fim do rodapé-->
+        </footer>
+        <div class="text-center pt-2">
+            <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
+        </div>
+        <!-- Fim do rodapé-->
 
 
 

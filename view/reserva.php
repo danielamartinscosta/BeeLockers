@@ -33,6 +33,19 @@
 
 <body>
 
+    <?php
+    // Verificar se existe uma sessão aberta no server
+    if (session_start() !== PHP_SESSION_ACTIVE) {
+        session_start();
+
+        // Testar se o usuário está logado
+        if (isset($_SESSION['email'])) {
+            echo $_SESSION['email'];
+        }
+    }
+
+    ?>
+
     <header>
         <!-- Início Cabeçalho -->
         <nav class="navbar navbar-expand-sm navbar-light">
@@ -110,7 +123,7 @@
                                         <ul>
                                             <ol>R$ 10,00</ol>
                                             <ol>R$ 20,00</ol>
-                                            <ol>R$ 27,00</ol>
+                                            <ol>R$ 25,00</ol>
                                             <ol>R$ 2,00</ol>
 
                                         </ul>
@@ -123,7 +136,7 @@
                                     </div>
                                     <div class="col-md-5">
                                         <ul>
-                                            <ol>2 MNT  R$ 3,00</ol>
+                                            <ol>2 MNT R$ 3,00</ol>
                                         </ul>
                                     </div>
                                     <hr>
@@ -149,29 +162,141 @@
 
         <!-- Fim do calendário  -->
         </div>
-        <div class="modal fade" id="visualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+        <div class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Detalhes do evento</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalLabel">Detalhes do Evento</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
-                        <dl class="row">
-                            <dt class="col-sm-3">ID do evento</dt>
-                            <dd class="col-sm-9" id="id_evento"></dd>
+                        <div class="visevent">
+                            <dl class="row">
+                                <dt class="col-sm-3">ID do evento</dt>
+                                <dd class="col-sm-9" id="id"></dd>
 
-                            <dt class="col-sm-3">Titulo do evento</dt>
-                            <dd class="col-sm-9" id="titulo"></dd>
+                                <dt class="col-sm-3">Nome</dt>
+                                <dd class="col-sm-9" id="title"></dd>
 
-                            <dt class="col-sm-3">Hora inicial</dt>
-                            <dd class="col-sm-9" id="comeco"></dd>
+                                <dt class="col-sm-3">Início da reserva</dt>
+                                <dd class="col-sm-9" id="start"></dd>
 
-                            <dt class="col-sm-3">Hora final</dt>
-                            <dd class="col-sm-9" id="fim"></dd>
-                        </dl>
+                                <dt class="col-sm-3">Fim da reserva</dt>
+                                <dd class="col-sm-9" id="end"></dd>
+                            </dl>
+                            <button class="btn btn-warning btn-canc-vis">Editar</button>
+                        </div>
+                        <div class="formedit">
+                            <span id="msg-edit"></span>
+                            <form id="editevent" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="id" id="id">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Título</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="title" class="form-control" id="title" placeholder="Título do evento">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Cor</label>
+                                    <div class="col-sm-10">
+                                        <select name="color" class="form-control" id="color">
+                                            <option value="">Selecione</option>
+                                            <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
+                                            <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
+                                            <option style="color:#FF4500;" value="#FF4500">Laranja</option>
+                                            <option style="color:#8B4513;" value="#8B4513">Marrom</option>
+                                            <option style="color:#1C1C1C;" value="#1C1C1C">Preto</option>
+                                            <option style="color:#436EEE;" value="#436EEE">Royal Blue</option>
+                                            <option style="color:#A020F0;" value="#A020F0">Roxo</option>
+                                            <option style="color:#40E0D0;" value="#40E0D0">Turquesa</option>
+                                            <option style="color:#228B22;" value="#228B22">Verde</option>
+                                            <option style="color:#8B0000;" value="#8B0000">Vermelho</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Início da reserva</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="start" class="form-control" id="start" onkeypress="DataHora(event, this)">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Fim da reserva</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="end" class="form-control" id="end" onkeypress="DataHora(event, this)">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-primary btn-canc-edit">Cancelar</button>
+                                        <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Evento</h5>
+                        <button type="button" class="close warning" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span id="msg-cad"></span>
+                        <form id="addevent" method="POST" enctype="multipart/form-data">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nome</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="title" class="form-control" id="title" placeholder="Responsável pela reserva">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Cor</label>
+                                <div class="col-sm-10">
+                                    <select name="color" class="form-control" id="color">
+                                        <option value="">Selecione</option>
+                                        <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
+                                        <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
+                                        <option style="color:#FF4500;" value="#FF4500">Laranja</option>
+                                        <option style="color:#8B4513;" value="#8B4513">Marrom</option>
+                                        <option style="color:#1C1C1C;" value="#1C1C1C">Preto</option>
+                                        <option style="color:#436EEE;" value="#436EEE">Royal Blue</option>
+                                        <option style="color:#A020F0;" value="#A020F0">Roxo</option>
+                                        <option style="color:#40E0D0;" value="#40E0D0">Turquesa</option>
+                                        <option style="color:#228B22;" value="#228B22">Verde</option>
+                                        <option style="color:#8B0000;" value="#8B0000">Vermelho</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Início da reserva</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="start" class="form-control" id="start" onkeypress="DataHora(event, this)">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Fim da reserva</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="end" class="form-control" id="end" onkeypress="DataHora(event, this)">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,10 +335,42 @@
                     <h4>Bee Lockers</h4>
                     <p>Diversão com segurança</p>
                 </div>
-
-            </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4">
+                        <h4>BeeLockers</h4>
+                        <ul id="indice">
+                            <ol>
+                                <a href="quemSomos.php">Sobre Nós</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Home</a>
+                            </ol>
+                            <ol>
+                                <a href="agenda.php">Agenda</a>
+                            </ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Para você</h4>
+                        <ul>
+                            <ol>
+                                <a href="cadastroUsuario.php">Cadastre-se</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Login</a>
+                            </ol>
+                            <ol>
+                                <a href="reserva.php">Reserva</a>
+                            </ol>
+                        </ul>
+                    </div>
+                </div>
         </section>
     </footer>
+    <div class="text-center pt-2">
+        <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
+    </div>
     <!--Fim do rodapé-->
 
 

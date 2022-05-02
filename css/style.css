@@ -92,7 +92,7 @@ label {
 }
 
 /* ================= Recursos =================*/
-.caixa{
+.caixa {
     padding: 60px 0;
     background-color: #fff;
 }
@@ -126,12 +126,20 @@ footer ul li a i {
     color: #fff;
 }
 
+footer ul ol a {
+    color: #fff;
+}
+
 footer ul li:hover {
     border: 1px solid #000;
     border-radius: 100px;
 }
 
 footer ul li a i:hover {
+    color: #000;
+}
+
+footer ul ol a:hover {
     color: #000;
 }
 
@@ -145,6 +153,8 @@ footer p {
     color: #fff;
     font-size: 0.8em;
 }
+
+
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {

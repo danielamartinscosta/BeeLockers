@@ -22,21 +22,6 @@
 </head>
 
 <body>
-
-    <?php
-    // Verificar se existe uma sessão aberta no server
-    if (session_start() !== PHP_SESSION_ACTIVE) {
-        session_start();
-
-        // Testar se o usuário está logado
-        if (isset($_SESSION['email'])) {
-            echo $_SESSION['email'];
-        }
-    }
-
-    ?>
-
-
     <header>
         <!-- Início Cabeçalho -->
         <nav class="navbar navbar-expand-sm navbar-light">
@@ -106,44 +91,44 @@
 
                                 <div class="row">
                                     <div>
-                                        <label for="txtUsuario" class="form-label">Usuário:</label>
-                                        <input type="name" name="txtUsuario" id="txtUsuario" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <label for="nome" class="form-label">Usuário:</label>
+                                        <input type="name" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="txtEmail" class="form-label">E-mail:</label>
+                                        <label for="email" class="form-label">E-mail:</label>
                                         <input type="email" name="txtEmail" id="txtEmail" placeholder="Seu e-mail" required class="form-control">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="txtFone" class="form-label">Fone:</label>
-                                        <input type="tel" name="txtFone" id="txtFone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
+                                        <label for="telefone" class="form-label">Fone:</label>
+                                        <input type="tel" name="telefone" id="telefone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="txtCpf" class="form-label">CPF:</label>
-                                        <input type="number" name="txtCpf" id="txtCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                                        <label for="cpf" class="form-label">CPF:</label>
+                                        <input type="number" name="cpf" id="cpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="txtSenha" id="txtSenha" placeholder="Digite sua senha" required class="form-control">
+                                        <label for="senha" class="form-label">Senha:</label>
+                                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="txtNascimento" class="form-label">Data de nascimento:</label>
-                                        <input type="date" name="txtNascimento" id="txtNascimento" required class="form-control">
+                                        <label for="detnasc" class="form-label">Data de nascimento:</label>
+                                        <input type="date" name="dtnasc" id="dtnasc" required class="form-control">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="txtSexo" class="form-label">Sexo:</label><br>
-                                        <select id="txtSexo" name="txtSexo" class="form-control" checked="checked">
+                                        <label for="sexo" class="form-label">Sexo:</label><br>
+                                        <select id="sexo" name="sexo" class="form-control" checked="checked">
                                             <option value="f" selected>Feminino</option>
                                             <option value="m">Masculino</option>
                                         </select>
@@ -211,10 +196,43 @@
                     <h4>Bee Lockers</h4>
                     <p>Diversão com segurança</p>
                 </div>
-
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                        <h4>BeeLockers</h4>
+                        <ul id="indice">
+                            <ol>
+                                <a href="quemSomos.php">Sobre Nós</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Home</a>
+                            </ol>
+                            <ol>
+                                <a href="agenda.php">Agenda</a>
+                            </ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Para você</h4>
+                        <ul>
+                            <ol>
+                                <a href="cadastroUsuario.php">Cadastre-se</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Login</a>
+                            </ol>
+                            <ol>
+                                <a href="reserva.php">Reserva</a>
+                            </ol>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </footer>
+    <div class="text-center pt-2">
+        <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
+    </div>
     <!--Fim do rodapé-->
 
 

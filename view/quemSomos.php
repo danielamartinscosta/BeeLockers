@@ -77,93 +77,126 @@
                         </h1>
                     </div>
                 </div>
-
-                <div class="row">
-
-                    <div class="col-md div-home text-center">
-                        <p>
-                            Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado. Nascemos da ideia de tornar o lazer, um momento inesquecível e sem preocupações.
-                        </p>
-                        <p>
-                            Pensando nisso gostariamos de te oferecer a locação de nossos armários para você guardar seus
-                            pertences enquanto se diverte.
-                        </p>
-                        <h2>Temos a solução ideal para você!!!</h2>
-                        <h1>Entre já e confira!</h1>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <form class="col-md-6 div-home">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="fw-bolder">
-
-                                    <div class="m-1">
-                                        <label for="txtUsuario" class="form-label">Usuário:</label>
-                                        <input type="email" name="txtUsuario" id="txtUsuario" class="form-control">
-                                    </div>
-                                    <div class="m-1">
-                                        <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="email" name="txtSenha" id="txtSenha" class="form-control">
-                                    </div>
-
-                                </div>
-                                <div class="row mb-2">
-
-                                    <div class="col">
-                                        <button type="submit" class="btn text-white btn-custom">Logar</button>
-                                    </div>
-                                    <div class="col">
-                                        <a href="cadastroUsuario.php" type="submit" class="btn text-white btn-custom">Cadastrar</a>
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
-                                    <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
-                                    </label>
-                                </div>
-                            </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>
+                                Somos uma empresa brasileira que trabalha com o objetivo de promover lazer e segurança lado a lado. Nascemos da ideia de tornar o lazer, um momento inesquecível e sem preocupações.
+                            </p>
+                            <p>Desde 2022 atuando no desenvolvimento de soluções tecnológicas para sistema de agendamento, voltado para o setor de entretenimento - cultura de lazer. </p>
+                            <p>
+                                A BeeLockers é pioneira e líder em sistema de agendamento para locação de armários nas praias do litoral brasileiro. Possui um completo conjunto de soluções que atendem as necessidades de agendamento, com praticidade e otimização de tempo.
+                            </p>
                         </div>
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
-
+    <!--/Início seção Missão, Visão e Valores -->
     <section class="caixa">
-        <!--/Início seção recursos -->
+
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4">
-                    <img src="../assets/img/facil.png" class="img-fluid">
-                    <h4>Fácil de usar</h4>
+                    <img src="../assets/img/missao.png" class="img-fluid">
+                    <h4>Missão</h4>
                     <p>
-                        O BeeLockers vai além do básico e permite que você faça seus passeios e atividades, essenciais para seu lazer, sem nenhuma preocupação. Simples como tem que ser!
+                        Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="../assets/img/economize.png" class="img-fluid">
-                    <h4>Economize seu tempo</h4>
+                    <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
+                    <h4>Visão</h4>
                     <p>
-                        Tempo é dinheiro! Em segundos, você tem tudo sob controle e aproveite seu tempo com o que realmente importa pra você!
+                        Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na perda de objetos em áreas litorâneas.
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="../assets/img/suporte.png" class="img-fluid">
-                    <h4>Suporte amigo</h4>
+                    <img src="../assets/img/valores.png" class="img-fluid">
+                    <h4>Valores</h4>
                     <p>
-                        Dúvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui pra resolver seus problemas e deixar sua vida bem mais fácil!
+                        Nosso principal valor é a ética nas relações. Visamos ter responsabilidade nas ações e compromissos com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <!--/FIM seção recursos -->
+    <!--/FIM seção Missão, Visão e Valores -->
+    <main>
+        <!-- Início da seção Contato-->
+        <section id="home">
+            <div class="row justify-content-right">
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-md text-center">
+                                <h2>
+                                    <nobr>Contato</nobr>
+                                </h2>
+                            </div>
+                            <div class="row justify-content-center">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="500" height="370" allowfullscreen="" loading="lazy"></iframe>
+                                <p><strong>Endereço:</strong> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo
+                                    <br><strong>CEP:</strong><span> 04941-175</span><br><strong>Tel:</strong><span> (11)5833-0861</span>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-md text-center">
+                                <h2>
+                                    <nobr>Dúvidas?</nobr>
+                                </h2>
+                            </div>
+                            <div class="flex-container">
+                                <div class="col">
+                                    <!-- FOrmulario -->
+                                    <form>
+                                        <div class="m-1">
+                                            <label for="nome" class="form-label"><strong>Nome:</strong></label>
+                                            <input type="email" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
+                                        </div>
+                                        <div class="m-1">
+                                            <label for="email" class="form-label"><strong>E-mail:</strong></label>
+                                            <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="form-control">
+                                        </div>
+                                        <div class="m-1">
+                                            <label for="Tel" class="form-label col-md-12">
+                                                <strong>Tel:</strong>
+                                                <input type="tel" id="tel" placeholder="(11)-00000-0000" class="form-control">
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label for="Assunto" class="form-label col-md-12">
+                                                <strong>Assunto:</strong>
+                                                <input type="text" id="assunto" placeholder="Insira aqui o assunto da mensagem" class="form-control">
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label for="msg" class="form-label col-md-12">
+                                                <strong>Mensagem:</strong>
+                                                <textarea name="msg" id="msg" rows="5" class="form-control"></textarea>
+                                            </label>
+                                        </div>
+                                        <div class="col ">
+                                            <button type="submit" class="btn text-white btn-custom">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- Fim da seção contato-->
 
     <footer>
         <!--Início do rodapé-->
@@ -198,10 +231,43 @@
                     <h4>Bee Lockers</h4>
                     <p>Diversão com segurança</p>
                 </div>
-
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                        <h4>BeeLockers</h4>
+                        <ul id="indice">
+                            <ol>
+                                <a href="quemSomos.php">Sobre Nós</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Home</a>
+                            </ol>
+                            <ol>
+                                <a href="agenda.php">Agenda</a>
+                            </ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Para você</h4>
+                        <ul>
+                            <ol>
+                                <a href="cadastroUsuario.php">Cadastre-se</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Login</a>
+                            </ol>
+                            <ol>
+                                <a href="reserva.php">Reserva</a>
+                            </ol>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </footer>
+    <div class="text-center pt-2">
+        <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
+    </div>
     <!--Fim do rodapé-->
 
 

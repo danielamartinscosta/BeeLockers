@@ -123,7 +123,7 @@
                                 <div>
                                     <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
                                     <label for="txtPermissao" class="form-check-label text-white">
-                                    De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
+                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
                                         e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
                                     </label>
                                 </div>
@@ -200,10 +200,43 @@
                     <h4>Bee Lockers</h4>
                     <p>Diversão com segurança</p>
                 </div>
-
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                        <h4>BeeLockers</h4>
+                        <ul id="indice">
+                            <ol>
+                                <a href="quemSomos.php">Sobre Nós</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Home</a>
+                            </ol>
+                            <ol>
+                                <a href="agenda.php">Agenda</a>
+                            </ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Para você</h4>
+                        <ul>
+                            <ol>
+                                <a href="cadastroUsuario.php">Cadastre-se</a>
+                            </ol>
+                            <ol>
+                                <a href="home.php">Login</a>
+                            </ol>
+                            <ol>
+                                <a href="reserva.php">Reserva</a>
+                            </ol>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </footer>
+    <div class="text-center pt-2">
+        <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
+    </div>
     <!--Fim do rodapé-->
 
 
