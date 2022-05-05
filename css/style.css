@@ -91,6 +91,8 @@ label {
     background: #FFBF00;
 }
 
+
+
 /* ================= Recursos =================*/
 .caixa {
     padding: 60px 0;
@@ -108,11 +110,11 @@ footer .navbar-nav .nav-item .nav-link:hover {
     color: #9bf0e1;
 }
 
-footer ul {
+footer ul, footer ol{
     list-style: none;
 }
 
-footer ul li {
+footer ul li{
     float: left;
     margin: 0 0.3em;
 }
@@ -122,11 +124,7 @@ footer ul li {
     border-radius: 100px;
 }
 
-footer ul li a i {
-    color: #fff;
-}
-
-footer ul ol a {
+footer ul li a i, footer ol li a{
     color: #fff;
 }
 
@@ -139,7 +137,7 @@ footer ul li a i:hover {
     color: #000;
 }
 
-footer ul ol a:hover {
+footer ol a:hover {
     color: #000;
 }
 
@@ -151,7 +149,11 @@ footer h4 {
 
 footer p {
     color: #fff;
-    font-size: 0.8em;
+    font-size: 1em;
+}
+
+footer .bordar-rodape{
+    border-top: 0.2px solid #424242;
 }
 
 

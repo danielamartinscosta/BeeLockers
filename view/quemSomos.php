@@ -29,7 +29,7 @@
             <div class="container-fluid">
 
                 <a href="home.php" class="navbar-brand">
-                    <img src="../assets/img/logo.jpeg" width="100" class="img-fluid">
+                    <img src="../assets/img/logo.jpeg" width="120" class="img-fluid">
                 </a>
 
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu">
@@ -78,6 +78,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-8 div-home">
                     <div class="card">
@@ -93,28 +94,56 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row fw-bolder justify-content-center">
+                <div class="col-md-4 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                        <h2 class="text-center">O motivo de existimos?</h2>
+                        <p>
+                            A Bee Lockers nasceu com objetivo de facilida e tirar a tirar a preocupação durante seus momentos de lazer.
+                            Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e 
+                            deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                        <h2 class="text-center">Como surgiu a ideia do Bee Lockers?</h2>
+                        <p>
+                            A Bee Lockers nasceu com objetivo de facilida e tirar a tirar a preocupação durante seus momentos de lazer.
+                            Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e 
+                            deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
     <!--/Início seção Missão, Visão e Valores -->
     <section class="caixa">
 
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4">
+            <div class="row align-items-center justify-content-around">
+                <div class="col-md-3">
                     <img src="../assets/img/missao.png" class="img-fluid">
                     <h4>Missão</h4>
                     <p>
                         Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
                     <h4>Visão</h4>
                     <p>
                         Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na perda de objetos em áreas litorâneas.
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="../assets/img/valores.png" class="img-fluid">
                     <h4>Valores</h4>
                     <p>
@@ -128,26 +157,36 @@
     <main>
         <!-- Início da seção Contato-->
         <section id="home">
-            <div class="row justify-content-right">
+            <div class="row justify-content-center">
                 <div class="col-md-6 div-home">
                     <div class="card">
                         <div class="card-body">
-                            <div class="col-md text-center">
-                                <h2>
-                                    <nobr>Contato</nobr>
-                                </h2>
-                            </div>
-                            <div class="row justify-content-center">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="500" height="370" allowfullscreen="" loading="lazy"></iframe>
-                                <p><strong>Endereço:</strong> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo
-                                    <br><strong>CEP:</strong><span> 04941-175</span><br><strong>Tel:</strong><span> (11)5833-0861</span>
+                            <div class="col-md">
+                                <h2 class="text-center">Contato</h2>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="100%" height="370" allowfullscreen="" loading="lazy"></iframe>
+                                <p>
+                                    <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo
                                 </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            <span class="fw-bold">CEP:</span> 04941-175
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <span class="fw-bold">Tel:</span>(11)5833-0861
+                                        </p>
+                                    </div>
+                                </div>
+                                
 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 div-home">
+                <div class="col-md-4 div-home">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-md text-center">
@@ -198,77 +237,75 @@
         </section>
     </main><!-- Fim da seção contato-->
 
-    <footer>
-        <!--Início do rodapé-->
+    <footer><!--Início do rodapé-->
         <section class="container-fluid">
-            <div class="row align-items-center">
+            <div class="row text-center">
 
-                <div class="col-md-6 align-content-center">
+                <div class="col-md ">
                     <ul>
-                        <li>
+                        <li class="bordar-icone-rodape">
                             <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="bordar-icone-rodape">
                             <a href="https://www.instagram.com/" target="_blank" class="btn">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="bordar-icone-rodape">
                             <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="btn">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="bordar-icone-rodape">
                             <a href="https://www.youtube.com/" target="_blank" class="btn">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 text-center">
+
+                <div class="col-md">
+                    <h4>BeeLockers</h4>
+                    <ol>
+                        <li>
+                            <a href="quemSomos.php">Sobre Nós</a>
+                        </li>
+                        <li>
+                            <a href="home.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="agenda.php">Agenda</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md">
+                    <h4>Para você</h4>
+                    <ol>
+                        <li>
+                            <a href="cadastroUsuario.php">Cadastre-se</a>
+                        </li>
+                        <li>
+                            <a href="home.php">Login</a>
+                        </li>
+                        <li>
+                            <a href="reserva.php">Reserva</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="col-md text-center">
                     <h4>Bee Lockers</h4>
                     <p>Diversão com segurança</p>
                 </div>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-2">
-                        <h4>BeeLockers</h4>
-                        <ul id="indice">
-                            <ol>
-                                <a href="quemSomos.php">Sobre Nós</a>
-                            </ol>
-                            <ol>
-                                <a href="home.php">Home</a>
-                            </ol>
-                            <ol>
-                                <a href="agenda.php">Agenda</a>
-                            </ol>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <h4>Para você</h4>
-                        <ul>
-                            <ol>
-                                <a href="cadastroUsuario.php">Cadastre-se</a>
-                            </ol>
-                            <ol>
-                                <a href="home.php">Login</a>
-                            </ol>
-                            <ol>
-                                <a href="reserva.php">Reserva</a>
-                            </ol>
-                        </ul>
-                    </div>
-                </div>
+
+            </div>
+            <div class="bordar-rodape text-center pt-2">
+                <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer>
-    <div class="text-center pt-2">
-        <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
-    </div>
-    <!--Fim do rodapé-->
+    </footer><!--Fim do rodapé-->
 
 
 
