@@ -65,5 +65,6 @@ CREATE TABLE IF NOT EXISTS eventos (
   cor varchar(10) DEFAULT NULL,
   comeco datetime DEFAULT NULL,
   fim datetime DEFAULT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id_evento)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+

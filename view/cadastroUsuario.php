@@ -85,50 +85,50 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <form class="col-md-8">
+                    <form method="post" action="../model/cadastrarUsuario.php" enctype="multipart/form-data" class="col-md-8">
                         <div class="card">
                             <div class="card-body mb-2 fw-bolder">
 
                                 <div class="row">
                                     <div>
-                                        <label for="nome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <label for="inputNome" class="form-label">Usuário:</label>
+                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="email" class="form-label">E-mail:</label>
-                                        <input type="email" name="txtEmail" id="txtEmail" placeholder="Seu e-mail" required class="form-control">
+                                        <label for="inputEmail" class="form-label">E-mail:</label>
+                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="telefone" class="form-label">Fone:</label>
-                                        <input type="tel" name="telefone" id="telefone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="number" name="cpf" id="cpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="senha" class="form-label">Senha:</label>
-                                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required class="form-control">
+                                        <label for="inputPhone" class="form-label">Fone:</label>
+                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="detnasc" class="form-label">Data de nascimento:</label>
-                                        <input type="date" name="dtnasc" id="dtnasc" required class="form-control">
+                                        <label for="inputCpf" class="form-label">CPF:</label>
+                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="sexo" class="form-label">Sexo:</label><br>
-                                        <select id="sexo" name="sexo" class="form-control" checked="checked">
+                                        <label for="inputSenha" class="form-label">Senha:</label>
+                                        <input type="password" name="senha" id="inputSenha" placeholder="Digite sua senha" required class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputDate" class="form-label">Data de nascimento:</label>
+                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputSexo" class="form-label">Sexo:</label><br>
+                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
                                             <option value="f" selected>Feminino</option>
                                             <option value="m">Masculino</option>
                                         </select>
