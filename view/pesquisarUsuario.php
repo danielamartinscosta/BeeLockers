@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
-    <meta name="author" content="Geovani, Daniela, Julyane, Emily e Pedro">
+    <meta name="author" content="Geovani, Daniela, Julyane, Emily">
     <meta name="keyword" content="Praia, armário, guarda volumes">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">
@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styleCadastrar.css">
-    <title>Bee Lockers - Cadastrar</title>
+    <title>Bee Lockers - Home</title>
 </head>
 
 <body>
+
     <header>
         <!-- Início Cabeçalho -->
         <nav class="navbar navbar-expand-sm navbar-light">
@@ -68,100 +68,65 @@
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid">
-
+                
                 <div class="row">
-                    <div class="col-md div-home text-center">
-                        <div>
-                            <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
-                            </h1>
-                            <p>
-                                Falta pouco para você ter acesso ao melhor sistema de guarda volume. Cadastre-se e aproveite.
-                            </p>
-                            <p>
-                                Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
-                            </p>
-                        </div>
+                    <div class="col-md text-center">
+                        <h1><nobr></span>Bee <span>Lockers</span></nobr>
+                        </h1>
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
-                    <form method="post" action="../model/cadastrarUsuario.php" enctype="multipart/form-data" class="col-md-8">
-                        <div class="card">
-                            <div class="card-body mb-2 fw-bolder">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Administração de Usuários</h2>
+                    </div>
 
-                                <div class="row">
-                                    <div>
-                                        <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required>
-                                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <input name="inputPesq" type="search" class="form-control" id="inputPesq"  placeholder="Insira algum dado para pesquisar o usuário"
+                                    value="<?php echo isset($_POST['pesq']) ? $_POST['pesq'] : "" ?>">
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputCpf" class="form-label">CPF:</label>
-                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="inputSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="senha" id="inputSenha" placeholder="Digite sua senha" required class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputDate" class="form-label">Data de nascimento:</label>
-                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="inputSexo" class="form-label">Sexo:</label><br>
-                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
-                                            <option value="f" selected>Feminino</option>
-                                            <option value="m">Masculino</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
-                                        <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="row text-center">
-
-                                    <div class="col">
-                                        <button type="submit" class="btn text-white btn-custom">Cadastrar</button>
-                                    </div>
-
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn text-white btn-custom">Pesquisar</button>
                                 </div>
 
                             </div>
-                        </div>
-                    </form>
+
+                            <div class="table-responsive">
+                                <table class="table align-middle table-striped table-hover" width="100%">
+                                    <!--<table class="table table-striped table-hover">-->
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">NOME</th>
+                                            <th scope="col">NASCIMENTO</th>
+                                            <th scope="col">E-MAIL</th>
+                                            <th scope="col">SEXO</th>
+                                            <th scope="col">TELEFONE</th>
+                                            <th scope="col">TIPO</th>
+                                            <th scope="col">AÇÃO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        
+                                    </tbody>
+                                
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                    
                 </div>
-
-
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
+
+    
 
     <footer><!--Início do rodapé-->
         <section class="container-fluid">
@@ -232,6 +197,7 @@
             </div>
         </section>
     </footer><!--Fim do rodapé-->
+    
 
 
 
