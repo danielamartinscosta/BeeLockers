@@ -28,7 +28,7 @@
     <script src='../js/daygrid/main.min.js'></script>
     <script src='../js/core/locales/pt-br.js'></script>
     <script src="../js/personalizacaoAgenda.js"></script>
-    <title>Bee Lockers - Agendar</title>
+    <title>Bee Lockers - Reservar</title>
 </head>
 
 <body>

@@ -56,9 +56,25 @@ $result = $conn->query($sql);
 
 // testar se o cadastro foi feito com sucesso
 if ($result) {
-    echo "cadastro realizado com sucesso!";
+    echo "<div class='row g-3 pt-3'>
+    <div class='col-md'></div>
+        <div class='col-md'>
+            <div class='alert alert-success'role='alert'>
+            Cadastro realizado com sucesso.
+            </div>
+        </div>
+    <div class='col-md'></div>
+    </div>";
 } else {
-    echo "Cadastro não realizado, tente novamente";
+    echo "<div class='row g-3 pt-3'>
+    <div class='col-md'></div>
+        <div class='col-md'>
+            <div class='alert alert-danger'role='alert'>
+            Cadastro não realizado. Verifique os dados e tente novamente.
+            </div>
+        </div>
+    <div class='col-md'></div>
+    </div>";
 }
 
 echo "$result";

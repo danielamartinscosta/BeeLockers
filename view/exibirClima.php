@@ -19,7 +19,7 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleClima.css">
-    <title>Bee Lockers - Agendar</title>
+    <title>Bee Lockers - Clima</title>
 </head>
 
 <body>

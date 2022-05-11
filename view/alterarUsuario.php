@@ -1,4 +1,3 @@
-<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,12 +17,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styleAgendar.css">
-    <title>Bee Lockers - Agenda</title>
+    <link rel="stylesheet" href="../css/styleCadastrar.css">
+    <title>Bee Lockers - Alterar Cadastro</title>
 </head>
 
 <body>
-
     <header>
         <!-- Início Cabeçalho -->
         <nav class="navbar navbar-expand-sm navbar-light">
@@ -67,118 +65,122 @@
     </header><!-- Fim Cabeçalho -->
 
     <main>
+        <?php
+
+        // receber o id do usuario a ser alterado e montar o formulario
+        $id_usuario = $_GET['id_usuario'];
+
+        //procurar os dados no banco
+        //conectar ao banco
+
+        include "../model/connect.php";
+
+        //select no banco para recuperar os dados do usuário
+        $sql = "SELECT * FROM usuario WHERE id_usuario='$id_usuario'";
+
+        //executar a query
+
+        $result = $conn->query($sql);
+
+        // montar o formulario
+
+        if ($linha = $result->fetch_array()) { // mysqli_num or mysqli_assoc
+            $id_usuario = $linha['id_usuario'];
+            $nome = $linha['nome'];
+            $dtnasc = $linha['dtnasc'];
+            $email = $linha['email'];
+            $sexo = $linha['sexo'];
+            $telefone = $linha['telefone'];
+        }
+        ?>
+
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid">
 
                 <div class="row">
                     <div class="col-md div-home text-center">
-                        <h1>
-                            <nobr>Bee <span>Lockers</span></nobr>
-                        </h1>
-                        <p>
-                            Falta pouco para você ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
-                        </p>
-                        <p>
-                            Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
-                        </p>
+                        <div>
+                            <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
+                            </h1>
+                            <p>
+                                Falta pouco para você ter acesso ao melhor sistema de guarda volume.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col div-home">
+                    <form method="post" action="../model/alterarUsuario.php" enctype="multipart/form-data" class="col-md-8">
                         <div class="card">
-                            <div class="card-body">
-                                <p>
-                                    Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado
-                                </p>
-                                <p>
-                                    Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus 
-                                    pertences enquanto você se diverti.
-                                </p>
+                            <div class="card-body mb-2 fw-bolder">
 
-                                <p>
-                                    Com apenas alguns cliques, acesse nossa agenda e reserve um lugar seguro para deixar seus itens pessoais. Viaje e descubra que dá para curtir uma praia sem preocupações.
-                                    Nunca foi tão fácil agendar! 
-                                </p>
-                                
-                                <p>
-                                    E ai? Qual é a sua praia? Clique em agendar e Confira qual o melhor destino para você!
-                                </p>
+                                <div class="row">
+                                    <div>
+                                        <label for="inputNome" class="form-label">Usuário:</label>
+                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required value="<?= isset($nome)? $nome: ''?>">
+                                    </div>
+                                </div>
 
-                                <a href="reserva.php" class="btn text-white btn-custom">Agendar</a>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputEmail" class="form-label">E-mail:</label>
+                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control" value="<?= isset($email)? $email: ''?>">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputPhone" class="form-label">Fone:</label>
+                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx" value="<?= isset($telefone)? $telefone: ''?>">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputCpf" class="form-label">CPF:</label>
+                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" value="<?= isset($cpf)? $cpf: ''?>">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputSenha" class="form-label">Senha:</label>
+                                        <input type="password" name="senha" id="inputSenha" placeholder="Digite sua senha" required class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputDate" class="form-label">Data de nascimento:</label>
+                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control" value="<?= isset($dtnasc)? $dtnasc: ''?>">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputSexo" class="form-label">Sexo:</label><br>
+                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
+                                            <option value="F" <?= $sexo == 'F' ? 'selected': '' ?>selected>Feminino</option>
+                                            <option value="M"  <?= $sexo == 'M' ? 'selected': '' ?>>Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row text-center">
+
+                                    <div class="col">
+                                        <button type="submit" class="btn text-white btn-custom">Alterar</button>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="row fw-bolder justify-content-center">
-                    <!-- Início do Conteúdo das imagens - Carrossel-->
-                    <div class="col">
 
-                            <div id="praia" class="carousel slide" data-bs-ride="carousel"><!-- Início Carousel -->
-
-                                <!--Indicadores-->
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="0" class="active"></button>
-                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="1"></button>
-                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="2"></button>
-                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="3"></button>
-                                </div>
-                                <!--Indicadores-->
-
-                                <div class="carousel-inner"><!-- Início Inner -->
-
-                                    <div class="carousel-item active">
-                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/guaruja.png" alt="Guaruja">
-
-                                        <div class="carousel-caption">
-                                            <h3>Praia de Guaruja</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/itarare.jpg" alt="itarare">
-
-                                        <div class="carousel-caption">
-                                            <h3>Praia de Itarare</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/praia_grande.jpg" alt="PraiaGrande">
-
-                                        <div width="100%" class="carousel-caption">
-                                            <h3>Praia Grande</h3>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/ubatuba.jpg" alt="Ubatuba">
-                                        <div class="carousel-caption">
-                                            <h3>Praia de Ubatuba</h3>
-                                        </div>
-                                    </div>
-
-                                </div><!-- Fim Inner -->
-
-                                <!-- Início Controle -->
-                                <a href="#praia" class="carousel-control-prev" data-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </a>
-                                <a href="#praia" class="carousel-control-next" data-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </a>
-                                <!-- Fim Controle -->
-
-                            </div><!-- Fim Carousel -->
-                    </div>
-                    <!-- Fim do Conteúdo das imagens - Carrossel-->
-                </div>
 
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -246,12 +248,12 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>

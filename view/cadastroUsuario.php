@@ -129,8 +129,8 @@
                                     <div class="col-md">
                                         <label for="inputSexo" class="form-label">Sexo:</label><br>
                                         <select id="inputSexo" name="sexo" class="form-control" checked="checked">
-                                            <option value="f" selected>Feminino</option>
-                                            <option value="m">Masculino</option>
+                                            <option value="F" selected>Feminino</option>
+                                            <option value="M">Masculino</option>
                                         </select>
                                     </div>
                                 </div>
