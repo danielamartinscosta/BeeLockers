@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Bee Lockers - Cadastro de Praia</title>
+    <title>Bee Lockers - Parcerias</title>
 </head>
 
 <body>

@@ -51,6 +51,9 @@
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
+                        </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
                             <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>

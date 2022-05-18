@@ -49,6 +49,9 @@
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
+                        </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
                             <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
@@ -76,7 +79,7 @@
         include "../model/connect.php";
 
         //select no banco para recuperar os dados do usuário
-        $sql = "SELECT * FROM usuario WHERE id_usuario='$id_usuario'";
+        $sql = "SELECT * FROM usuario WHERE id_usuario = '$id_usuario'";
 
         //executar a query
 
@@ -84,13 +87,15 @@
 
         // montar o formulario
 
-        if ($linha = $result->fetch_array()) { // mysqli_num or mysqli_assoc
+        if ($linha = $result->fetch_array()) {
             $id_usuario = $linha['id_usuario'];
             $nome = $linha['nome'];
-            $dtnasc = $linha['dtnasc'];
+            $cpf = $linha['cpf'];
             $email = $linha['email'];
             $sexo = $linha['sexo'];
             $telefone = $linha['telefone'];
+            $senha = $linha['senha'];
+            $dtnasc = $linha['dtnasc'];
         }
         ?>
 

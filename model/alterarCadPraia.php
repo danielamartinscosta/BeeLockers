@@ -3,13 +3,10 @@
 //conexão como banco de dados
 include "connect.php";
 
-$id_praia = $_POST['id_usuario'];
+$id_praia = $_POST['id_praia'];
 $nome_praia = $_POST['nome_praia'];
-$nome_responsavel = $_POST['nome_responsavel'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-$telefone = $_POST['telefone'];
 $imagem_praia = $_POST['imagem_praia'];
+$endereco_praia = $_POST['endereco_praia'];
 
 
 $dir = '../assets/imagem_praia';
@@ -41,10 +38,8 @@ if ($_FILES['imagem_praia']['name']) {
 
 $result = "UPDATE usuario SET 
 nome_praia = '$nome_praia',
-nome_responsavel = '$nome_responsavel',
-senha = '$senha',
-telefone = '$telefone',
-imagem_praia = $imagem_praia
+imagem_praia = $imagem_praia,
+endereco_praia = $endereco_praia
 WHERE id_praia='$id_praia'";
 
 

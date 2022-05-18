@@ -5,22 +5,25 @@ include "connect.php";
 
 $id_usuario = $_POST['id_usuario'];
 $nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
-$telefone = $_POST['telefone'];
-$dtnasc = $_POST['dtnasc'];
 $sexo = $_POST['sexo'];
+$telefone = $_POST['telefone'];
+$senha = $_POST['senha'];
+$dtnasc = $_POST['dtnasc'];
 
-$id = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : '';
+$id_usuario = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : '';
 
 
 $result = "UPDATE usuario SET 
 nome = '$nome',
-senha = '$senha',
+cpf = '$cpf',
+email = '$email',
+sexo = '$sexo',
 telefone = '$telefone',
-dtnasc = '$dtnasc',
-sexo = '$sexo'
-WHERE id_usuario='$id_usuario'";
+senha = '$senha',
+dtnasc = '$dtnasc'
+WHERE id_usuario = '$id_usuario'";
 
 
 $resultado = mysqli_query($conn, $result);
