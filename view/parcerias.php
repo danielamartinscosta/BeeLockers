@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleAgendar.css">
     <title>Bee Lockers - Parcerias</title>
 </head>
 
@@ -67,3 +68,277 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
+    <main>
+        <!-- Início do Conteúdo Principal-->
+        <section id="home">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h1>
+                            <nobr>Parcerias <span>Lockers</span></nobr>
+                        </h1>
+                        <p>
+                            Falta pouco para você ser um de nossos parceiros e ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
+                        </p>
+                        <p>Tem um quiosque ou um local disponível para locação de armários? Seja um parceiro Bee Lockers e veja os benefícios que podemos te oferecer!</p>
+                        <p>
+                            Se você já é cadastrado, <a class="text-warning" href="cadastroParceria.php">Clique aqui</a> para fazer login.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row fw-bolder justify-content-right
+            ">
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center">Praia Grande</h2>
+                            <!-- Início do Conteúdo das imagens - Carrossel-->
+                            <div class="col">
+                                <div id="praia" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- Início Carousel -->
+                                    <!--Indicadores-->
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="0" class="active"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="2"></button>
+                                    </div>
+                                    <!--Indicadores-->
+                                    <div class="carousel-inner">
+                                        <!-- Início Inner -->
+                                        <div class="carousel-item active">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/praiaGrande1.jpg" alt="Praia Grande 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/praiaGrande2.png" alt="Praia Grande 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/praiaGrande3.jpg" alt="PraiaGrande 3">
+                                        </div>
+                                    </div><!-- Fim Inner -->
+                                    <!-- Início Controle -->
+                                    <a href="#praia" class="carousel-control-prev" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </a>
+                                    <a href="#praia" class="carousel-control-next" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </a>
+                                    <!-- Fim Controle -->
+                                </div><!-- Fim Carousel -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Conteúdo das imagens - Carrossel-->
+                </div>
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-md">
+                                <h2 class="text-center">Localização</h2>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467194.73515147675!2d-46.8786185185235!3d-23.82006162508188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1e637baff3b7%3A0xfc5ad123b1462984!2sQuiosque%207%20ondas!5e0!3m2!1spt-BR!2sbr!4v1653233988716!5m2!1spt-BR!2sbr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row fw-bolder justify-content-right
+            ">
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-md">
+                                <h2 class="text-center">Localização</h2>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.720054259358!2d-45.0656809!3d-23.4705604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cd53ef617e0f25%3A0xc714fb13e52d4c1e!2sQuiosque%20Kaiamb%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1653250923622!5m2!1spt-BR!2sbr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center">Ubatuba</h2>
+                            <!-- Início do Conteúdo das imagens - Carrossel-->
+                            <div class="col">
+                                <div id="praia" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- Início Carousel -->
+                                    <!--Indicadores-->
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="0" class="active"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="3"></button>
+                                    </div>
+                                    <!--Indicadores-->
+                                    <div class="carousel-inner">
+                                        <!-- Início Inner -->
+                                        <div class="carousel-item active">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/ubatuba1.jpg" alt="Ubatuba 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/ubatuba2.jpg" alt="Ubatuba 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/ubatuba3.jpg" alt="Ubatuba 3">
+                                        </div>
+                                    </div><!-- Fim Inner -->
+                                    <!-- Início Controle -->
+                                    <a href="#praia" class="carousel-control-prev" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </a>
+                                    <a href="#praia" class="carousel-control-next" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </a>
+                                    <!-- Fim Controle -->
+                                </div><!-- Fim Carousel -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Conteúdo das imagens - Carrossel-->
+                </div>
+            </div>
+
+            <div class="row fw-bolder justify-content-right
+            ">
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center">Guarujá</h2>
+                            <!-- Início do Conteúdo das imagens - Carrossel-->
+                            <div class="col">
+                                <div id="praia" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- Início Carousel -->
+                                    <!--Indicadores-->
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="0" class="active"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="2"></button>
+                                    </div>
+                                    <!--Indicadores-->
+                                    <div class="carousel-inner">
+                                        <!-- Início Inner -->
+                                        <div class="carousel-item active">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/guaruja1.jpg" alt="Guaruja 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/guaruja2.jpg" alt="Guaruja 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/guaruja3.jpg" alt="Guaruja 3">
+                                        </div>
+                                    </div><!-- Fim Inner -->
+                                    <!-- Início Controle -->
+                                    <a href="#praia" class="carousel-control-prev" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </a>
+                                    <a href="#praia" class="carousel-control-next" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </a>
+                                    <!-- Fim Controle -->
+                                </div><!-- Fim Carousel -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Conteúdo das imagens - Carrossel-->
+                </div>
+                <div class="col-md-6 div-home">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-md">
+                                <h2 class="text-center">Localização</h2>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58318.18439615473!2d-46.27901775113276!3d-23.99978387342581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1ffe83e5e773b%3A0xe03cebe971c44da3!2sQUIOSQUE%20VIRADO%20PRA%20LUA!5e0!3m2!1spt-BR!2sbr!4v1653252241022!5m2!1spt-BR!2sbr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- Fim do Conteúdo Principal-->
+
+    <footer>
+        <!--Início do rodapé-->
+        <section class="container-fluid">
+            <div class="row text-center">
+
+                <div class="col-md ">
+                    <ul>
+                        <li class="bordar-icone-rodape">
+                            <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="bordar-icone-rodape">
+                            <a href="https://www.instagram.com/" target="_blank" class="btn">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="bordar-icone-rodape">
+                            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="btn">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="bordar-icone-rodape">
+                            <a href="https://www.youtube.com/" target="_blank" class="btn">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md">
+                    <h4>BeeLockers</h4>
+                    <ol>
+                        <li>
+                            <a href="quemSomos.php">Sobre Nós</a>
+                        </li>
+                        <li>
+                            <a href="home.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="agenda.php">Agenda</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md">
+                    <h4>Para você</h4>
+                    <ol>
+                        <li>
+                            <a href="cadastroUsuario.php">Cadastre-se</a>
+                        </li>
+                        <li>
+                            <a href="home.php">Login</a>
+                        </li>
+                        <li>
+                            <a href="reserva.php">Reserva</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="col-md text-center">
+                    <h4>Bee Lockers</h4>
+                    <p>Diversão com segurança</p>
+                </div>
+
+            </div>
+            <div class="bordar-rodape text-center pt-2">
+                <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
+            </div>
+        </section>
+    </footer>
+    <!--Fim do rodapé-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,3 @@
-<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,17 +32,22 @@
 
 <body>
 
-    <?php
-    // Verificar se existe uma sessão aberta no server
-    if (session_start() !== PHP_SESSION_ACTIVE) {
+    <?php /*
+    //testar de o usuário está logado
+    //verificar se existe uma sessão aberta no servidor
+    if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
-
-        // Testar se o usuário está logado
-        if (isset($_SESSION['email'])) {
-            echo $_SESSION['email'];
-        }
     }
 
+    //testar se o usuário está logado ou não
+    if (isset($_SESSION['email'])) {
+        echo $_SESSION['email'];
+    } else {
+        // apagar a variável de sessão
+        unset($_SESSION['email']);
+        header("Location: ../index.php");
+    }
+*/
     ?>
 
     <header>
@@ -90,6 +94,7 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
+
     <section id="home">
         <div class="container-fluid">
             <!-- Início do calendário  -->
@@ -249,8 +254,8 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Evento</h5>
-                        <button type="button" class="close warning" data-dismiss="modal" aria-label="Close">
+                        <h5 class="modal-title" id="exampleModalLabel">Reservar horário</h5>
+                        <button type="button" class="close warning btn-success" data-dismiss="modal" aria-label="Close"  >
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -305,7 +310,8 @@
         </div>
     </section>
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -373,7 +379,8 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 

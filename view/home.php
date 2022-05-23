@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="m-1">
                                         <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="email" name="txtSenha" id="txtSenha" class="form-control">
+                                        <input type="password" name="txtSenha" id="txtSenha" class="form-control">
                                     </div>
 
                                 </div>
@@ -127,8 +127,8 @@
                                     <div class="form-group form-inline form-switch div-checkbox">
                                         <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
                                         <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
+                                            e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
                                         </label>
                                     </div>
                                 </div>
@@ -141,6 +141,46 @@
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
+
+    <?php
+    //conectar ao banco
+    include "../model/connect.php";
+
+    // Pesquisar usuario e senha no banco e receber dados do formulario
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
+
+    //query de busca no banco
+    if (isset($_POST['email']) && isset($_POST['senha'])) {
+
+        $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";
+
+        // recebe a quantidade de registros (0= login errado e 1= ok
+        $result = $conn->query($sql);
+
+        // testar se tem registro
+        if ($result->num_rows === 1) {
+            //iniciar uma sessão no servidor
+            session_start();
+
+            //criar uma variável de sessão no servidor
+            $_SESSION['email'] = $email;
+
+            header("location:reserva.php");
+        } else {
+            echo "<div class='row g-3 pt-3'>
+                                <div class='col-md'></div>
+                                    <div class='col-md'>
+                                        <div class='alert alert-danger'role='alert'>
+                                        Login ou senha incorreto! Verifique os dados e tente novamente.
+                                        </div>
+                                    </div>
+                                <div class='col-md'></div>
+                                </div>";
+        }
+    }
+
+    ?>
 
     <section class="caixa">
         <!--/Início seção recursos -->
@@ -172,7 +212,8 @@
     </section>
     <!--/FIM seção recursos -->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -240,8 +281,9 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
-    
+    </footer>
+    <!--Fim do rodapé-->
+
 
 
 
