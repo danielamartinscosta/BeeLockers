@@ -83,7 +83,7 @@
                         </p>
                         <p>Tem um quiosque ou um local disponível para locação de armários? Seja um parceiro Bee Lockers e veja os benefícios que podemos te oferecer!</p>
                         <p>
-                            Se você já é cadastrado, <a class="text-warning" href="cadastroParceria.php">Clique aqui</a> para fazer login.
+                            Não tem cadastro? <a class="text-warning" href="cadastroParceria.php">Clique aqui</a> para se cadastrar.
                         </p>
                     </div>
                 </div>
@@ -257,6 +257,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md text-center text-dark">
+                <p><strong> Faça parte desse time você também.</strong></p>
+                <P><strong>Venha para a Bee Lockers</strong></P>
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->

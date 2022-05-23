@@ -98,11 +98,11 @@
 
                                     <div class="m-1">
                                         <label for="txtUsuario" class="form-label">Usuário:</label>
-                                        <input type="email" name="txtUsuario" id="txtUsuario" class="form-control">
+                                        <input type="email" name="txtUsuario" id="txtUsuario" class="form-control" placeholder="Digite seu e-mail">
                                     </div>
                                     <div class="m-1">
                                         <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="txtSenha" id="txtSenha" class="form-control">
+                                        <input type="password" name="txtSenha" id="txtSenha" class="form-control" placeholder="Digite sua Senha">
                                     </div>
 
                                 </div>
@@ -169,14 +169,14 @@
             header("location:reserva.php");
         } else {
             echo "<div class='row g-3 pt-3'>
-                                <div class='col-md'></div>
-                                    <div class='col-md'>
-                                        <div class='alert alert-danger'role='alert'>
-                                        Login ou senha incorreto! Verifique os dados e tente novamente.
-                                        </div>
-                                    </div>
-                                <div class='col-md'></div>
-                                </div>";
+                    <div class='col-md'></div>
+                        <div class='col-md'>
+                            <div class='alert alert-danger'role='alert'>
+                            Login ou senha incorreto! Verifique os dados e tente novamente.
+                            </div>
+                        </div>
+                    <div class='col-md'></div>
+                </div>";
         }
     }
 

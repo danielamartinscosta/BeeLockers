@@ -89,7 +89,7 @@
                             <p>
                                 Somos uma empresa brasileira que trabalha com o objetivo de promover lazer e segurança lado a lado. Nascemos da ideia de tornar o lazer, um momento inesquecível e sem preocupações.
                             </p>
-                            <p>Desde 2022 atuando no desenvolvimento de soluções tecnológicas para sistema de agendamento, voltado para o setor de entretenimento - cultura de lazer. </p>
+                            <p> Desde 2022 atuando no desenvolvimento de soluções tecnológicas para sistema de agendamento, voltado para o setor de entretenimento - cultura de lazer. </p>
                             <p>
                                 A BeeLockers é pioneira e líder em sistema de agendamento para locação de armários nas praias do litoral brasileiro. Possui um completo conjunto de soluções que atendem as necessidades de agendamento, com praticidade e otimização de tempo.
                             </p>
@@ -104,7 +104,7 @@
                         <div class="card-body">
                         <h2 class="text-center">O motivo de existimos?</h2>
                         <p>
-                            A Bee Lockers nasceu com objetivo de facilida e tirar a tirar a preocupação durante seus momentos de lazer.
+                            A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
                             Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e 
                             deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
                         </p>
@@ -117,7 +117,7 @@
                         <div class="card-body">
                         <h2 class="text-center">Como surgiu a ideia do Bee Lockers?</h2>
                         <p>
-                            A Bee Lockers nasceu com objetivo de facilida e tirar a tirar a preocupação durante seus momentos de lazer.
+                            A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
                             Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e 
                             deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
                         </p>
@@ -127,7 +127,7 @@
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
-      
+
     <!--/Início seção Missão, Visão e Valores -->
     <section class="caixa">
 
@@ -144,14 +144,14 @@
                     <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
                     <h4>Visão</h4>
                     <p>
-                        Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na perda de objetos em áreas litorâneas.
+                        Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
                     </p>
                 </div>
                 <div class="col-md-3">
                     <img src="../assets/img/valores.png" class="img-fluid">
                     <h4>Valores</h4>
                     <p>
-                        Nosso principal valor é a ética nas relações. Visamos ter responsabilidade nas ações e compromissos com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
+                        Nosso principal valor é a ética nas relações. Visamos responsabilidade nas ações e compromisso com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
                     </p>
                 </div>
             </div>

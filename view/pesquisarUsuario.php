@@ -41,6 +41,24 @@ mysql> describe usuario;
 +------------+--------------+------+-----+-------------------+----------------+
 -->
 
+    <?php /*
+    //testar de o usuário está logado
+    //verificar se existe uma sessão aberta no servidor
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+
+    //testar se o usuário está logado ou não
+    if (isset($_SESSION['email'])) {
+        echo $_SESSION['email'];
+    } else {
+        // apagar a variável de sessão
+        unset($_SESSION['email']);
+        header("Location: ../index.php");
+    }
+*/
+    ?>
+
     <header>
         <!-- Início Cabeçalho -->
         <nav class="navbar navbar-expand-sm navbar-light">
@@ -103,18 +121,20 @@ mysql> describe usuario;
                     <div class="card-header text-center">
                         <h2>Administração de Usuários</h2>
                     </div>
-
+                    
                     <div class="card-body">
                         <form method="POST" action="#">
                             <div class="row">
 
                                 <div class="col-md-6">
-                                    <input name="inputPesq" type="search" class="form-control" id="inputPesq" placeholder="Insira o nome a ser pesquisado" value="<?php echo isset($_POST['pesq']) ? $_POST['pesq'] : "" ?>">
+                                    <input name="pesq" type="search" class="form-control" id="inputPesq" placeholder="Insira o nome a ser pesquisado" value="<?php echo isset($_POST['pesq']) ? $_POST['pesq'] : "" ?>">
                                 </div>
 
                                 <div class="col-md-2">
                                     <button type="submit" class="btn text-white btn-custom">Pesquisar</button>
+                                    
                                 </div>
+                                <div class="col-md "><a href="../model/logoff.php" class="btn text-white float-end  btn-custom">Sair</a></div>
 
                             </div>
 
