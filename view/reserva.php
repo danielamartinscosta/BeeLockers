@@ -32,7 +32,7 @@
 
 <body>
 
-    <?php /*
+    <?php 
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -47,7 +47,7 @@
         unset($_SESSION['email']);
         header("Location: ../index.php");
     }
-*/
+
     ?>
 
     <header>

@@ -171,6 +171,14 @@
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
                                 <!-- Fim Controle -->
+                                <script>$('.carousel').slick({
+                                        dots: true,
+                                        infinite: true,
+                                        speed: 999,
+                                        slidesToShow: 4,
+                                        slidesToScroll: 4,
+                                        });
+                                </script>
 
                             </div><!-- Fim Carousel -->
                     </div>

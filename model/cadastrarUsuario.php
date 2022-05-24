@@ -31,6 +31,8 @@ $dtnasc = $_POST['dtnasc'];
 
 include "connect.php";
 
+echo $nome, $cpf, $email, $sexo, $telefone, $senha, $dtnasc; 
+
 // variavel da query
 $sql = "INSERT INTO usuario (
     nome,
@@ -54,29 +56,13 @@ $sql = "INSERT INTO usuario (
 // realizar o insert de dados
 $result = $conn->query($sql);
 
-// testar se o cadastro foi feito com sucesso
+//testar se o cadastro foi feito com sucesso
 if ($result) {
-    echo "<div class='row g-3 pt-3'>
-    <div class='col-md'></div>
-        <div class='col-md'>
-            <div class='alert alert-success'role='alert'>
-            Cadastro realizado com sucesso.
-            </div>
-        </div>
-    <div class='col-md'></div>
-    </div>";
+    header('Location:../view/agenda.php');
+
 } else {
-    echo "<div class='row g-3 pt-3'>
-    <div class='col-md'></div>
-        <div class='col-md'>
-            <div class='alert alert-danger'role='alert'>
-            Cadastro não realizado. Verifique os dados e tente novamente.
-            </div>
-        </div>
-    <div class='col-md'></div>
-    </div>";
+    echo "Não foi possivel realizar o cadastro";
 }
 
-echo "$result";
-
-header("location:../view/cadastroUsuario.php");
+//encerra a conexão com o banco de dados
+$conn->close();

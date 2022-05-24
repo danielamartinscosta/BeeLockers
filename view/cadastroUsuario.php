@@ -18,6 +18,8 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleCadastrar.css">
+
+
 <script>function mascara_cpf(){
     var cpf = document.getElementById('cpf')
     if(cpf.value.length == 3 || cpf.value.length == 7){
@@ -62,8 +64,8 @@ window.onload = function(){
 	
 	
     //CELULAR -------
-    idcss('tel_celular').setAttribute('maxlength', 15);
-	idcss('tel_celular').onkeypress = function(){
+    idcss('telefone').setAttribute('maxlength', 15);
+	idcss('telefone').onkeypress = function(){
 		mask( this, masktel );
 	}
 	//-------------
@@ -160,7 +162,7 @@ window.onload = function(){
 
                                     <div class="col-md">
                                         <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="tel_celular" id="tel_celular" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="telefone" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
@@ -193,7 +195,7 @@ window.onload = function(){
 
                                 <div class="row">
                                     <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
+                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
                                         De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
                                         e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
