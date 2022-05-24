@@ -18,6 +18,59 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleCadastrar.css">
+<script>function mascara_cpf(){
+    var cpf = document.getElementById('cpf')
+    if(cpf.value.length == 3 || cpf.value.length == 7){
+        cpf.value += "."
+    }
+    else if(cpf.value.length == 11){
+        cpf.value += "-"
+    }
+}
+</script>
+<script type="text/javascript">
+
+
+
+function mask(o,f){
+v_obj=o
+v_fun=f
+setTimeout("execmask()",1)
+}
+
+function execmask(){
+v_obj.value=v_fun(v_obj.value)
+}
+
+function masktel(v){
+v=v.replace(/\D/g,"");
+v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+return v;
+}
+
+
+
+
+
+
+function idcss( el ){
+	return document.getElementById( el );
+}
+
+window.onload = function(){
+	
+	
+    //CELULAR -------
+    idcss('tel_celular').setAttribute('maxlength', 15);
+	idcss('tel_celular').onkeypress = function(){
+		mask( this, masktel );
+	}
+	//-------------
+	
+}
+</script>
+
     <title>Bee Lockers - Cadastrar</title>
 </head>
 
@@ -107,14 +160,14 @@
 
                                     <div class="col-md">
                                         <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
+                                        <input type="text" name="tel_celular" id="tel_celular" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputCpf" class="form-label">CPF:</label>
-                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                                        <label for="cpf" class="form-label">CPF:</label>
+                                        <input type="text" name="cpf" id="cpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required  title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
 
                                     <div class="col-md">

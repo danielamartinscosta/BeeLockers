@@ -109,17 +109,17 @@
                                 <div class="row mb-2">
 
                                     <div class="col text-center">
-                                        <button type="submit" class="btn text-white btn-custom">Login</button>
+                                        <button type="submit" class="btn text-white btn-custom ">Login</button>
                                     </div>
 
                                 </div>
                                 <div class="row text-center mb-2">
 
                                     <div class="col">
-                                        <a href="esqueciSenha.php" class="btn text-white">Esqueci minha senha</a>
+                                        <a href="esqueciSenha.php" class="btn text-warning">Esqueci minha senha</a>
                                     </div>
                                     <div class="col">
-                                        <a href="cadastroUsuario.php" class="btn text-white">Criar uma conta</a>
+                                        <a href="cadastroUsuario.php" class="btn text-warning">Criar uma conta</a>
                                     </div>
 
                                 </div>
