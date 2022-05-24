@@ -123,7 +123,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required value="<?= isset($nome)? $nome: ''?>">
+                                        <input type="text" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required value="<?= isset($nome)? $nome: ''?>">
                                     </div>
                                 </div>
 

@@ -165,14 +165,13 @@
                             <h2 class="text-center">Ubatuba</h2>
                             <!-- Início do Conteúdo das imagens - Carrossel-->
                             <div class="col">
-                                <div id="praia" class="carousel slide" data-bs-ride="carousel">
+                                <div id="praia1" class="carousel slide" data-bs-ride="carousel">
                                     <!-- Início Carousel -->
                                     <!--Indicadores-->
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#praia" data-bs-slide-to="0" class="active"></button>
                                         <button type="button" data-bs-target="#praia" data-bs-slide-to="1"></button>
                                         <button type="button" data-bs-target="#praia" data-bs-slide-to="2"></button>
-                                        <button type="button" data-bs-target="#praia" data-bs-slide-to="3"></button>
                                     </div>
                                     <!--Indicadores-->
                                     <div class="carousel-inner">
@@ -211,7 +210,7 @@
                             <h2 class="text-center">Guarujá</h2>
                             <!-- Início do Conteúdo das imagens - Carrossel-->
                             <div class="col">
-                                <div id="praia" class="carousel slide" data-bs-ride="carousel">
+                                <div id="praia2" class="carousel slide" data-bs-ride="carousel">
                                     <!-- Início Carousel -->
                                     <!--Indicadores-->
                                     <div class="carousel-indicators">

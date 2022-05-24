@@ -162,14 +162,14 @@ window.onload = function(){
 
                                     <div class="col-md">
                                         <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="telefone" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="inputPhone" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="text" name="cpf" id="cpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required  title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required  title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
 
                                     <div class="col-md">
