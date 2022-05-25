@@ -37,14 +37,17 @@
 
     //testar se o usuário está logado ou não
     if (isset($_SESSION['email'])) {
-        echo $_SESSION['email'];
+        //echo $_SESSION['email'];
     } else {
         // apagar a variável de sessão
         unset($_SESSION['email']);
         echo "Deu ruim!!", $_SESSION;
-        //header("Location: ../index.php");
+        header("Location: ../index.php");
     }
 
+
+
+$usuario = implode(" ",$_SESSION);
     ?>
 
     <title>Bee Lockers - Reservar</title>
@@ -86,10 +89,10 @@
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
+                            <a href="perfilUsuario.php" class="nav-link"><?=$usuario?></a>
                         </li>
                         <li class="nav-item">
-                            <a href="home.php" class="nav-link">Entrar</a>
+                            <a href="../model/logoff.php" class="nav-link">Sair</a>
                         </li>
                     </ul>
                 </div>
