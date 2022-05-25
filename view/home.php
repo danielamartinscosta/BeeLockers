@@ -91,18 +91,18 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <form class="col-md-4 div-home">
+                    <form class="col-md-4 div-home" method="post" action="../model/logar.php" enctype="multipart/form-data">
                         <div class="card">
                             <div class="card-body">
                                 <div class="fw-bolder">
 
                                     <div class="m-1">
                                         <label for="txtUsuario" class="form-label">Usuário:</label>
-                                        <input type="email" name="txtUsuario" id="txtUsuario" class="form-control" placeholder="Digite seu e-mail">
+                                        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail">
                                     </div>
                                     <div class="m-1">
                                         <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="txtSenha" id="txtSenha" class="form-control" placeholder="Digite sua Senha">
+                                        <input type="password" name="senha" id="inputSenha" class="form-control" placeholder="Digite sua Senha">
                                     </div>
 
                                 </div>
@@ -111,6 +111,9 @@
                                     <div class="col text-center">
                                         <button type="submit" class="btn text-white btn-custom ">Login</button>
                                     </div>
+
+                                  
+
 
                                 </div>
                                 <div class="row text-center mb-2">
@@ -136,51 +139,10 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
-
-    <?php
-    //conectar ao banco
-    include "../model/connect.php";
-
-    // Pesquisar usuario e senha no banco e receber dados do formulario
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
-
-    //query de busca no banco
-    if (isset($_POST['email']) && isset($_POST['senha'])) {
-
-        $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";
-
-        // recebe a quantidade de registros (0= login errado e 1= ok
-        $result = $conn->query($sql);
-
-        // testar se tem registro
-        if ($result->num_rows === 1) {
-            //iniciar uma sessão no servidor
-            session_start();
-
-            //criar uma variável de sessão no servidor
-            $_SESSION['email'] = $email;
-
-            header("location:reserva.php");
-        } else {
-            echo "<div class='row g-3 pt-3'>
-                    <div class='col-md'></div>
-                        <div class='col-md'>
-                            <div class='alert alert-danger'role='alert'>
-                            Login ou senha incorreto! Verifique os dados e tente novamente.
-                            </div>
-                        </div>
-                    <div class='col-md'></div>
-                </div>";
-        }
-    }
-
-    ?>
 
     <section class="caixa">
         <!--/Início seção recursos -->

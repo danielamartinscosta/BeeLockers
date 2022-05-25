@@ -27,10 +27,6 @@
     <script src='../js/daygrid/main.min.js'></script>
     <script src='../js/core/locales/pt-br.js'></script>
     <script src="../js/personalizacaoAgenda.js"></script>
-    <title>Bee Lockers - Reservar</title>
-</head>
-
-<body>
 
     <?php 
     //testar de o usuário está logado
@@ -45,10 +41,18 @@
     } else {
         // apagar a variável de sessão
         unset($_SESSION['email']);
-        header("Location: ../index.php");
+        echo "Deu ruim!!", $_SESSION;
+        //header("Location: ../index.php");
     }
 
     ?>
+
+    <title>Bee Lockers - Reservar</title>
+</head>
+
+<body>
+
+    
 
     <header>
         <!-- Início Cabeçalho -->
