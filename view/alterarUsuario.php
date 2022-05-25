@@ -122,8 +122,12 @@
 
                                 <div class="row">
                                     <div>
+                                        <label class="form-label">ID</label>
+                                        <input type="text" name="id" id="inputId" class="form-control" value="<?= $id_usuario ?>" readonly="readonly" >
+                                    </div>
+                                    <div class="col-md">
                                         <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="text" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required value="<?= isset($nome)? $nome: ''?>">
+                                        <input type="text" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo"  required value="<?= isset($nome)? $nome: ''?>">
                                     </div>
                                 </div>
 
