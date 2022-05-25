@@ -19,16 +19,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleCadastrar.css">
 
-<!--
-<script>function mascara_cpf(){
-    var cpf = document.getElementById('inputCpf')
-    if(cpf.value.length == 3 || cpf.value.length == 7){
-        cpf.value += "."
-    }
-    else if(cpf.value.length == 11){
-        cpf.value += "-"
-    }
-}
+
 </script>
 <script type="text/javascript">
 
@@ -73,7 +64,7 @@ window.onload = function(){
 }
 </script>
 
-    <title>Bee Lockers - Cadastrar</title>-->
+    <title>Bee Lockers - Cadastrar</title>
 </head>
 
 <body>
