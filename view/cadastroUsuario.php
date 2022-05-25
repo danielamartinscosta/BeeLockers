@@ -24,7 +24,6 @@
 <script type="text/javascript">
 
 
-
 function mask(o,f){
 v_obj=o
 v_fun=f
@@ -42,11 +41,6 @@ v=v.replace(/(\d)(\d{4})$/,"$1-$2");
 return v;
 }
 
-
-
-
-
-
 function idcss( el ){
 	return document.getElementById( el );
 }
@@ -59,8 +53,7 @@ window.onload = function(){
 	idcss('inputPhone').onkeypress = function(){
 		mask( this, masktel );
 	}
-	//-------------
-	
+	//-----------
 }
 </script>
 
