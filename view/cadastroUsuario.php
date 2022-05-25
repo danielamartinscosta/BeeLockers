@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleCadastrar.css">
 
-
+<!--
 <script>function mascara_cpf(){
-    var cpf = document.getElementById('cpf')
+    var cpf = document.getElementById('inputCpf')
     if(cpf.value.length == 3 || cpf.value.length == 7){
         cpf.value += "."
     }
@@ -64,8 +64,8 @@ window.onload = function(){
 	
 	
     //CELULAR -------
-    idcss('telefone').setAttribute('maxlength', 15);
-	idcss('telefone').onkeypress = function(){
+    idcss('inputPhone').setAttribute('maxlength', 15);
+	idcss('inputPhone').onkeypress = function(){
 		mask( this, masktel );
 	}
 	//-------------
@@ -73,7 +73,7 @@ window.onload = function(){
 }
 </script>
 
-    <title>Bee Lockers - Cadastrar</title>
+    <title>Bee Lockers - Cadastrar</title>-->
 </head>
 
 <body>
