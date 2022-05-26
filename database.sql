@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 id_usuario int(11) AUTO_INCREMENT,
 nome varchar(255) DEFAULT NULL,
-cpf varchar(11) DEFAULT NULL,
+cpf varchar(14) DEFAULT NULL,
 email varchar(255) UNIQUE DEFAULT NULL,
 sexo varchar(10) DEFAULT NULL,
 telefone varchar(25) DEFAULT NULL,

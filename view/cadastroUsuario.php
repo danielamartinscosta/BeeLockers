@@ -20,42 +20,50 @@
     <link rel="stylesheet" href="../css/styleCadastrar.css">
 
 
-</script>
-<script type="text/javascript">
+    <script>
+        function mascara_cpf() {
+            var cpf = document.getElementById('inputCpf')
+            if (cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += "."
+            } else if (cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function mask(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmask()", 1)
+        }
+
+        function execmask() {
+            v_obj.value = v_fun(v_obj.value)
+        }
+
+        function masktel(v) {
+            v = v.replace(/\D/g, "");
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+            return v;
+        }
+
+        function idcss(el) {
+            return document.getElementById(el);
+        }
+
+        window.onload = function() {
 
 
-function mask(o,f){
-v_obj=o
-v_fun=f
-setTimeout("execmask()",1)
-}
-
-function execmask(){
-v_obj.value=v_fun(v_obj.value)
-}
-
-function masktel(v){
-v=v.replace(/\D/g,"");
-v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
-v=v.replace(/(\d)(\d{4})$/,"$1-$2");
-return v;
-}
-
-function idcss( el ){
-	return document.getElementById( el );
-}
-
-window.onload = function(){
-	
-	
-    //CELULAR -------
-    idcss('inputPhone').setAttribute('maxlength', 15);
-	idcss('inputPhone').onkeypress = function(){
-		mask( this, masktel );
-	}
-	//-----------
-}
-</script>
+            //CELULAR -------
+            idcss('inputPhone').setAttribute('maxlength', 15);
+            idcss('inputPhone').onkeypress = function() {
+                mask(this, masktel);
+            }
+            //-----------
+        }
+    </script>
 
     <title>Bee Lockers - Cadastrar</title>
 </head>
@@ -153,7 +161,7 @@ window.onload = function(){
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required  title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
 
                                     <div class="col-md">
@@ -181,8 +189,8 @@ window.onload = function(){
                                     <div class="form-group form-inline form-switch div-checkbox">
                                         <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
+                                            e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
                                         </label>
                                     </div>
                                 </div>
@@ -205,7 +213,8 @@ window.onload = function(){
         </section>
     </main><!-- Fim do Conteúdo Principal-->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -273,7 +282,8 @@ window.onload = function(){
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 
