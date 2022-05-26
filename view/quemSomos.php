@@ -21,48 +21,45 @@
     <title>Bee Lockers - Quem Somos</title>
 
     </script>
-<script type="text/javascript">
+    <script type="text/javascript">
+        function mask(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmask()", 1)
+        }
 
+        function execmask() {
+            v_obj.value = v_fun(v_obj.value)
+        }
 
-
-function mask(o,f){
-v_obj=o
-v_fun=f
-setTimeout("execmask()",1)
-}
-
-function execmask(){
-v_obj.value=v_fun(v_obj.value)
-}
-
-function masktel(v){
-v=v.replace(/\D/g,"");
-v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
-v=v.replace(/(\d)(\d{4})$/,"$1-$2");
-return v;
-}
+        function masktel(v) {
+            v = v.replace(/\D/g, "");
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+            return v;
+        }
 
 
 
 
 
 
-function idcss( el ){
-	return document.getElementById( el );
-}
+        function idcss(el) {
+            return document.getElementById(el);
+        }
 
-window.onload = function(){
-	
-	
-    //CELULAR -------
-    idcss('tel_celular').setAttribute('maxlength', 15);
-	idcss('tel_celular').onkeypress = function(){
-		mask( this, masktel );
-	}
-	//-------------
-	
-}
-</script>    
+        window.onload = function() {
+
+
+            //CELULAR -------
+            idcss('tel_celular').setAttribute('maxlength', 15);
+            idcss('tel_celular').onkeypress = function() {
+                mask(this, masktel);
+            }
+            //-------------
+
+        }
+    </script>
 </head>
 
 <body>
@@ -146,12 +143,12 @@ window.onload = function(){
                 <div class="col-md-4 div-home">
                     <div class="card">
                         <div class="card-body">
-                        <h2 class="text-center">O motivo de existimos?</h2>
-                        <p>
-                            A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
-                            Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e 
-                            deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
-                        </p>
+                            <h2 class="text-center">O motivo de existimos?</h2>
+                            <p>
+                                A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
+                                Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e
+                                deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -159,12 +156,12 @@ window.onload = function(){
                 <div class="col-md-5 div-home">
                     <div class="card">
                         <div class="card-body">
-                        <h2 class="text-center">Como surgiu a ideia do Bee Lockers?</h2>
-                        <p>
-                            A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
-                            Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e 
-                            deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
-                        </p>
+                            <h2 class="text-center">Como surgiu a ideia do Bee Lockers?</h2>
+                            <p>
+                                A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
+                                Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e
+                                deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -206,86 +203,32 @@ window.onload = function(){
         <!-- Início da seção Contato-->
         <section id="home">
             <div class="row justify-content-center">
-                <div class="col-md-6 div-home">
+                <div class="col div-home">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-md">
-                                <h2 class="text-center">Contato</h2>
+                                <h2 class="text-center">Localização</h2>
 
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="100%" height="370" allowfullscreen="" loading="lazy"></iframe>
                                 <p>
-                                    <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo
+                                    <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo - 04941-175
                                 </p>
-                                <div class="row">
-                                    <div class="col">
-                                        <p>
-                                            <span class="fw-bold">CEP:</span> 04941-175
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <p>
-                                            <span class="fw-bold">Tel:</span>(11)5833-0861
-                                        </p>
-                                    </div>
-                                </div>
-                                
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="col-md text-center">
-                                <h2>
-                                    <nobr>Dúvidas?</nobr>
-                                </h2>
-                            </div>
-                            <div class="flex-container">
                                 <div class="col">
-                                    <!-- FOrmulario -->
-                                    <form>
-                                        <div class="m-1">
-                                            <label for="nome" class="form-label"><strong>Nome:</strong></label>
-                                            <input type="email" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
-                                        </div>
-                                        <div class="m-1">
-                                            <label for="email" class="form-label"><strong>E-mail:</strong></label>
-                                            <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="form-control">
-                                        </div>
-                                        <div class="m-1">
-                                            <label for="Tel" class="form-label col-md-12">
-                                                <strong>Tel:</strong>
-                                                <input type="tel" id="tel_celular" placeholder="(11)-00000-0000" class="form-control">
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label for="Assunto" class="form-label col-md-12">
-                                                <strong>Assunto:</strong>
-                                                <input type="text" id="assunto" placeholder="Insira aqui o assunto da mensagem" class="form-control">
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label for="msg" class="form-label col-md-12">
-                                                <strong>Mensagem:</strong>
-                                                <textarea name="msg" id="msg" rows="5" class="form-control"></textarea>
-                                            </label>
-                                        </div>
-                                        <div class="col ">
-                                            <button type="submit" class="btn text-white btn-custom">Enviar</button>
-                                        </div>
-                                    </form>
+                                    <p>
+                                        <span class="fw-bold">Tel:</span>(11)5833-0861
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
         </section>
     </main><!-- Fim da seção contato-->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -353,7 +296,8 @@ window.onload = function(){
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 

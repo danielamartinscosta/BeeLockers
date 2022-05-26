@@ -83,7 +83,7 @@
                         </p>
                         <p>Tem um quiosque ou um local disponível para locação de armários? Seja um parceiro Bee Lockers e veja os benefícios que podemos te oferecer!</p>
                         <p>
-                            Não tem cadastro? <a class="text-warning" href="cadastroParceria.php">Clique aqui</a> para se cadastrar.
+                            Não tem cadastro? <a class="text-warning" href="">Clique aqui</a> para se cadastrar.
                         </p>
                     </div>
                 </div>
@@ -260,6 +260,60 @@
             <div class="col-md text-center text-dark">
                 <p><strong> Faça parte desse time você também.</strong></p>
                 <P><strong>Venha para a Bee Lockers</strong></P>
+            </div>
+            <div class="col div-home">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-md text-center">
+                            <h2>
+                                <nobr>Contato</nobr>
+                            </h2>
+                        </div>
+                        <div class="flex-container">
+                            <div class="col">
+                                <!-- FOrmulario -->
+                                <form>
+                                    <div class="m-1">
+                                        <label for="nome" class="form-label"><strong>Nome:</strong></label>
+                                        <input type="email" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
+                                    </div>
+                                    <div class="m-1">
+                                        <label for="email" class="form-label"><strong>E-mail:</strong></label>
+                                        <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="form-control">
+                                    </div>
+                                    <div class="m-1">
+                                        <label for="Tel" class="form-label col-md-12">
+                                            <strong>Tel:</strong>
+                                            <input type="tel" id="tel_celular" placeholder="(11)-00000-0000" class="form-control">
+                                        </label>
+                                    </div>
+                                    <div class="m-1">
+                                        <div class="form-group row">
+                                            <label for="Assunto" class="form-label"><strong>Assunto:</strong></label>
+                                            <div>
+                                                <select name="assunto" class="form-control" id="assunto">
+                                                    <option value=""></option>
+                                                    <option value="">Cadastro de Parceria</option>
+                                                    <option value="">Trabalhe conosco</option>
+                                                    <option value="">Dúvidas</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="msg" class="form-label col-md-12">
+                                            <strong>Mensagem:</strong>
+                                            <textarea name="msg" id="msg" rows="5" class="form-control"></textarea>
+                                        </label>
+                                    </div>
+                                    <div class="col ">
+                                        <button type="submit" class="btn text-white btn-custom">Enviar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
