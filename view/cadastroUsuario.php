@@ -189,8 +189,8 @@
                                     <div class="form-group form-inline form-switch div-checkbox">
                                         <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
-                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                            e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" >condições da Bee Loockers</a>
+                                            e<a class="text-warning" href="" > política de privacidade</a>.
                                         </label>
                                     </div>
                                 </div>

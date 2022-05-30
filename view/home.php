@@ -112,7 +112,7 @@
                                         <button type="submit" class="btn text-white btn-custom ">Login</button>
                                     </div>
 
-                                  
+
 
 
                                 </div>
@@ -128,14 +128,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
+                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
-                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                            e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" data-toggle="modal" data-target="#condicoesUso">Condições da Bee Loockers</a>
+                                            e <a class="text-warning" href="" data-toggle="modal" data-target="#politica" target="_blank"> política de privacidade</a>.
                                         </label>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </form>
@@ -143,6 +142,50 @@
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
+
+    <!-- Modal termos de uso -->
+    <div class="modal fade" id="condicoesUso" tabindex="-1" aria-labelledby="condicoesDeUso" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="condicoesDeUso">Termo de Uso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatum facere tempore iste id optio, veniam nostrum ad quibusdam eius officia, qui dolor aperiam exercitationem? Esse sed alias possimus at?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim da janela Modal Termos de Uso -->
+
+    <!-- Modal termos de uso -->
+    <div class="modal fade" id="politica" tabindex="-1" aria-labelledby="politicaPrivacidade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="politicaPrivacidade">Política de Privacidade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatum facere tempore iste id optio, veniam nostrum ad quibusdam eius officia, qui dolor aperiam exercitationem? Esse sed alias possimus at?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim da janela Modal Termos de Uso -->
 
     <section class="caixa">
         <!--/Início seção recursos -->
