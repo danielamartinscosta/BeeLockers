@@ -76,7 +76,7 @@
                 <div class="row">
                     <div class="col-md text-center">
                         <h1>
-                            <nobr>Parcerias <span>Lockers</span></nobr>
+                            Parcerias<span>Lockers</span>
                         </h1>
                         <p>
                             Falta pouco para você ser um de nossos parceiros e ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
@@ -261,9 +261,9 @@
                 <p><strong> Faça parte desse time você também.</strong></p>
                 <P><strong>Venha para a Bee Lockers</strong></P>
             </div>
-            <div class="col div-home">
-                <div class="card">
-                    <div class="card-body">
+            <div class="row div-home justify-content-center">
+                <div class="card col-6">
+                    <div class="card-body ">
                         <div class="col-md text-center">
                             <h2>
                                 <nobr>Contato</nobr>
@@ -275,7 +275,7 @@
                                 <form>
                                     <div class="m-1">
                                         <label for="nome" class="form-label"><strong>Nome:</strong></label>
-                                        <input type="email" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
+                                        <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
                                     </div>
                                     <div class="m-1">
                                         <label for="email" class="form-label"><strong>E-mail:</strong></label>
@@ -288,17 +288,8 @@
                                         </label>
                                     </div>
                                     <div class="m-1">
-                                        <div class="form-group row">
-                                            <label for="Assunto" class="form-label"><strong>Assunto:</strong></label>
-                                            <div>
-                                                <select name="assunto" class="form-control" id="assunto">
-                                                    <option value=""></option>
-                                                    <option value="">Cadastro de Parceria</option>
-                                                    <option value="">Trabalhe conosco</option>
-                                                    <option value="">Dúvidas</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        <label for="assunto" class="form-label"><strong>Assunto:</strong></label>
+                                        <input type="text" name="assunto" id="assunto" placeholder="" class="form-control">
                                     </div>
                                     <div>
                                         <label for="msg" class="form-label col-md-12">

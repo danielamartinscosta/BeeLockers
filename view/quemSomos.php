@@ -203,7 +203,7 @@
         <!-- Início da seção Contato-->
         <section id="home">
             <div class="row justify-content-center">
-                <div class="col div-home">
+                <div class="col-6 div-home">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-md">

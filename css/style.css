@@ -39,7 +39,8 @@ nav {
     color: #fff;
     padding: 2em;
     background: url("../assets/img/fundo_principal2.png") no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 #home h1,

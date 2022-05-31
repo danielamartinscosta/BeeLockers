@@ -149,7 +149,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title text-center" id="condicoesDeUso">Termo de Uso</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
@@ -157,7 +157,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
                 </div>
             </div>
@@ -171,7 +171,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="politicaPrivacidade">Política de Privacidade</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
@@ -179,7 +179,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
                 </div>
             </div>

@@ -122,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-                <<!-- Fim da pesquisa de clima -->
+                <!-- Fim da pesquisa de clima -->
             </div>
         </section><!-- Fim do Home-->
 
