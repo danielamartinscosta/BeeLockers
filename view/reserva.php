@@ -1,3 +1,4 @@
+<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -117,15 +118,15 @@
                     </div>
                 </div>
             <!-- Fim do calendário  -->
-                <div class="col-md div-home">
+                <div class="col div-home">
                     <div class="row fw-bolder">
                         <div class="col div-home">
-                            <div class="card mb-3">
+                            <div class="card">
                                 <div class="card-header bg-transparent border-warning text-center">
                                     <h2>Tabela de valores</h2>
                                 </div>
                                 <div class="row card-body">
-                                    <div class="col-md-7">
+                                    <div class="col">
                                         <ul>
                                             <ol>1 HORA</ol>
                                             <ol>2 HORAS</ol>
@@ -134,7 +135,7 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col">
                                         <ul>
                                             <ol>R$ 10,00</ol>
                                             <ol>R$ 20,00</ol>
@@ -144,24 +145,24 @@
                                         </ul>
                                     </div>
                                     <hr>
-                                    <div class="col-md-7">
+                                    <div class="col-md">
                                         <ul>
                                             <ol>UTILIZAÇÃO DO CHUVEIRO</ol>
                                         </ul>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md">
                                         <ul>
                                             <ol>2 MNT R$ 3,00</ol>
                                         </ul>
                                     </div>
                                     <hr>
-                                    <div class="col-md-7">
+                                    <div class="col">
                                         <ul>
                                             <ol>ÁGUA</ol>
-                                            <ol>CADEADO - NUMERAÇÃO</ol>
+                                            <ol>CADEADO</ol>
                                         </ul>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col">
                                         <ul>
                                             <ol>R$ 3,00</ol>
                                             <ol>GRÁTIS</ol>
@@ -189,7 +190,7 @@
                         <div class="visevent">
                             <dl class="row">
                                 <dt class="col-sm-3">ID do evento</dt>
-                                <dd class="col-sm-9" id="id"></dd>
+                                <dd class="col-sm-9" id="id_evento"></dd>
 
                                 <dt class="col-sm-3">Nome</dt>
                                 <dd class="col-sm-9" id="title"></dd>
@@ -205,7 +206,7 @@
                         <div class="formedit">
                             <span id="msg-edit"></span>
                             <form id="editevent" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" name="id" id="id">
+                                <input type="hidden" name="id_evento" id="id_evento">
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Título</label>
                                     <div class="col-sm-10">
@@ -215,7 +216,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Cor</label>
                                     <div class="col-sm-10">
-                                        <select name="color" class="form-control" id="color">
+                                        <select name="cor" class="form-control" id="cor">
                                             <option value="">Selecione</option>
                                             <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
                                             <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
@@ -271,13 +272,13 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="title" class="form-control" id="title" placeholder="Responsável pela reserva">
+                                    <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Responsável pela reserva">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Cor</label>
                                 <div class="col-sm-10">
-                                    <select name="color" class="form-control" id="color">
+                                    <select name="cor" class="form-control" id="cor">
                                         <option value="">Selecione</option>
                                         <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
                                         <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>

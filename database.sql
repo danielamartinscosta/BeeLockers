@@ -68,8 +68,8 @@ CREATE TABLE eventos (
   id_evento int(11) NOT NULL AUTO_INCREMENT,
   titulo varchar(220) DEFAULT NULL,
   cor varchar(10) DEFAULT NULL,
-  comeco datetime DEFAULT NULL,
-  fim datetime DEFAULT NULL,
+  start datetime DEFAULT NULL,
+  end datetime DEFAULT NULL,
   PRIMARY KEY (id_evento)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
