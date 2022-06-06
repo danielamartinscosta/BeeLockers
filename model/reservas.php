@@ -11,7 +11,7 @@ $data_start = str_replace('/','-', $dados['start']);
 $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 
 $data_end = str_replace('/','-', $dados['end']);
-$data_end_conv = date("Y-m-d H:i:s", strtotime($data_fim));
+$data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
 
 $query_reservas = "INSERT INTO reservas (nome_responsavel, praia, start, end) VALUES (:nome_responsavel, :praia, :start, :end)";
 

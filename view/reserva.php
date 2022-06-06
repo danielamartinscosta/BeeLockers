@@ -210,7 +210,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva">
+                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva" value="<?= isset($nome)? $nome: ''?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">

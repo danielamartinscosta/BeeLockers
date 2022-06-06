@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //Mascara para o campo data e hora
-function DataHora(evento, objeto) {
-    var keypress = (window.event) ? event.keyCode : evento.which;
+function DataHora(event, objeto) {
+    var keypress = (window.event) ? event.keyCode : event.which;
     campo = eval(objeto);
     if (campo.value == '00/00/0000 00:00') {
         campo.value = "";
@@ -69,7 +69,7 @@ function DataHora(evento, objeto) {
         else if (campo.value.length == conjunto5)
             campo.value = campo.value + separacao3;
     } else {
-        events.returnValue = false; //verificar se é para deixar como event ou como reservas
+        event.returnValue = false; //verificar se é para deixar como event ou como reservas
     }
 }
 
