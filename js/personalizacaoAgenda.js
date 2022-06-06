@@ -75,37 +75,37 @@ function DataHora(evento, objeto) {
 
 $(document).ready(function () {
     $("#addevent").on("submit", function (event) {
-        event.preventDefault();
-       $.ajax({
+        event.preventDefault(); //não fecha a janela modal sem autorização
+        $.ajax({
             method: "POST",
-            url: "cad_event.php",
+            url: "reservas.php",
             data: new FormData(this),
             contentType: false,
             processData: false,
             success: function (retorna) {
                 if (retorna['sit']) {
-                    //$("#msg-cad").html(retorna['msg']);
+                    //$("#msg-reservas").html(retorna['msg']);
                     location.reload();
                 } else {
-                    $("#msg-cad").html(retorna['msg']);
+                    $("#msg-reservas").html(retorna['msg']);
                 }
             }
         })
     });
-    
-    $('.btn-canc-vis').on("click", function(){
+
+    $('.btn-canc-vis').on("click", function () {
         $('.visevent').slideToggle();
         $('.formedit').slideToggle();
     });
-    
-    $('.btn-canc-edit').on("click", function(){
+
+    $('.btn-canc-edit').on("click", function () {
         $('.formedit').slideToggle();
         $('.visevent').slideToggle();
     });
-    
+
     $("#editevent").on("submit", function (event) {
         event.preventDefault();
-       $.ajax({
+        $.ajax({
             method: "POST",
             url: "edit_event.php",
             data: new FormData(this),

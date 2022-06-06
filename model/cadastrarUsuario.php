@@ -31,6 +31,8 @@ $dtnasc = $_POST['dtnasc'];
 
 include "connect.php";
 
+echo $nome, $cpf, $email, $sexo, $telefone, $senha, $dtnasc; 
+
 // variavel da query
 $sql = "INSERT INTO usuario (
     nome,
@@ -54,13 +56,13 @@ $sql = "INSERT INTO usuario (
 // realizar o insert de dados
 $result = $conn->query($sql);
 
-// testar se o cadastro foi feito com sucesso
+//testar se o cadastro foi feito com sucesso
 if ($result) {
-    echo "cadastro realizado com sucesso!";
+    header('Location:../view/reserva.php');
+
 } else {
-    echo "Cadastro não realizado, tente novamente";
+    echo "Não foi possivel realizar o cadastro";
 }
 
-echo "$result";
-
-header("location:../view/cadastroUsuario.php");
+//encerra a conexão com o banco de dados
+$conn->close();

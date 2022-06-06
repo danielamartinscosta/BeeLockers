@@ -1,4 +1,3 @@
-<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,9 +17,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Bee Lockers - Quem Somos</title>
+    <link rel="stylesheet" href="../css/styleCadastrar.css">
 
+
+    <script>
+        function mascara_cpf() {
+            var cpf = document.getElementById('inputCpf')
+            if (cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += "."
+            } else if (cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+        }
     </script>
+
     <script type="text/javascript">
         function mask(o, f) {
             v_obj = o
@@ -39,11 +49,6 @@
             return v;
         }
 
-
-
-
-
-
         function idcss(el) {
             return document.getElementById(el);
         }
@@ -52,18 +57,19 @@
 
 
             //CELULAR -------
-            idcss('tel_celular').setAttribute('maxlength', 15);
-            idcss('tel_celular').onkeypress = function() {
+            idcss('inputPhone').setAttribute('maxlength', 15);
+            idcss('inputPhone').onkeypress = function() {
                 mask(this, masktel);
             }
-            //-------------
-
+            //-----------
         }
     </script>
+
+    
+    <title>Bee Lockers - Alterar Cadastro</title>
 </head>
 
 <body>
-
     <header>
         <!-- Início Cabeçalho -->
         <nav class="navbar navbar-expand-sm navbar-light">
@@ -110,122 +116,125 @@
     </header><!-- Fim Cabeçalho -->
 
     <main>
+        <?php
+
+        // receber o id do usuario a ser alterado e montar o formulario
+        $id_usuario = $_GET['id_usuario'];
+
+        //procurar os dados no banco
+        //conectar ao banco
+
+        include "../model/connect.php";
+
+        //select no banco para recuperar os dados do usuário
+        $sql = "SELECT * FROM usuario WHERE id_usuario = '$id_usuario'";
+
+        //executar a query
+
+        $result = $conn->query($sql);
+
+        // montar o formulario
+
+        if ($linha = $result->fetch_array()) {
+            $id_usuario = $linha['id_usuario'];
+            $nome = $linha['nome'];
+            $cpf = $linha['cpf'];
+            $email = $linha['email'];
+            $sexo = $linha['sexo'];
+            $telefone = $linha['telefone'];
+            $senha = $linha['senha'];
+            $dtnasc = $linha['dtnasc'];
+        }
+        ?>
+
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-md text-center">
-                        <h1>
-                            <nobr>Bee <span>Lockers</span></nobr>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-8 div-home">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="col-md div-home text-center">
+                        <div>
+                            <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
+                            </h1>
                             <p>
-                                Somos uma empresa brasileira que trabalha com o objetivo de promover lazer e segurança lado a lado. Nascemos da ideia de tornar o lazer, um momento inesquecível e sem preocupações.
-                            </p>
-                            <p> Desde 2022 atuando no desenvolvimento de soluções tecnológicas para sistema de agendamento, voltado para o setor de entretenimento - cultura de lazer. </p>
-                            <p>
-                                A BeeLockers é pioneira e líder em sistema de agendamento para locação de armários nas praias do litoral brasileiro. Possui um completo conjunto de soluções que atendem as necessidades de agendamento, com praticidade e otimização de tempo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row fw-bolder justify-content-center">
-                <div class="col-md-4 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center">O motivo de existimos?</h2>
-                            <p>
-                                A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
-                                Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e
-                                deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
+                                Falta pouco para você ter acesso ao melhor sistema de guarda volume.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-5 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center">Como surgiu a ideia do Bee Lockers?</h2>
-                            <p>
-                                A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
-                                Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e
-                                deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
-                            </p>
+                <div class="row justify-content-center">
+                    <form method="post" action="../model/alterarUsuario.php" enctype="multipart/form-data" class="col-md-8">
+                        <div class="card">
+                            <div class="card-body mb-2 fw-bolder">
+
+                                <div class="row">
+                                    <div>
+                                        <label class="form-label">ID</label>
+                                        <input type="text" name="id" id="inputId" class="form-control" value="<?= $id_usuario ?>" readonly="readonly" >
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="inputNome" class="form-label">Usuário:</label>
+                                        <input type="text" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo"  required value="<?= isset($nome)? $nome: ''?>">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputEmail" class="form-label">E-mail:</label>
+                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control" value="<?= isset($email)? $email: ''?>">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputPhone" class="form-label">Fone:</label>
+                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx" value="<?= isset($telefone)? $telefone: ''?>">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputCpf" class="form-label">CPF:</label>
+                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" value="<?= isset($cpf)? $cpf: ''?>">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputSenha" class="form-label">Senha:</label>
+                                        <input type="password" name="senha" id="inputSenha" placeholder="Digite sua senha" required class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputDate" class="form-label">Data de nascimento:</label>
+                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control" value="<?= isset($dtnasc)? $dtnasc: ''?>">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputSexo" class="form-label">Sexo:</label><br>
+                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
+                                            <option value="F" <?= $sexo == 'F' ? 'selected': '' ?>selected>Feminino</option>
+                                            <option value="M"  <?= $sexo == 'M' ? 'selected': '' ?>>Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row text-center">
+
+                                    <div class="col">
+                                        <button type="submit" class="btn text-white btn-custom">Alterar</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
+
+
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
-
-    <!--/Início seção Missão, Visão e Valores -->
-    <section class="caixa">
-
-        <div class="container">
-            <div class="row align-items-center justify-content-around">
-                <div class="col-md-3">
-                    <img src="../assets/img/missao.png" class="img-fluid">
-                    <h4>Missão</h4>
-                    <p>
-                        Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
-                    <h4>Visão</h4>
-                    <p>
-                        Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="../assets/img/valores.png" class="img-fluid">
-                    <h4>Valores</h4>
-                    <p>
-                        Nosso principal valor é a ética nas relações. Visamos responsabilidade nas ações e compromisso com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/FIM seção Missão, Visão e Valores -->
-    <main>
-        <!-- Início da seção Contato-->
-        <section id="home">
-            <div class="row justify-content-center">
-                <div class="col-6 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="col-md">
-                                <h2 class="text-center">Localização</h2>
-
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="100%" height="370" allowfullscreen="" loading="lazy"></iframe>
-                                <p>
-                                    <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo - 04941-175
-                                </p>
-                                <div class="col">
-                                    <p>
-                                        <span class="fw-bold">Tel:</span>(11)5833-0861
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-    </main><!-- Fim da seção contato-->
 
     <footer>
         <!--Início do rodapé-->

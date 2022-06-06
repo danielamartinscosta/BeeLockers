@@ -1,4 +1,3 @@
-<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,23 +27,34 @@
     <script src='../js/daygrid/main.min.js'></script>
     <script src='../js/core/locales/pt-br.js'></script>
     <script src="../js/personalizacaoAgenda.js"></script>
-    <title>Bee Lockers - Agendar</title>
+
+   <?php
+    //testar de o usuário está logado
+    //verificar se existe uma sessão aberta no servidor
+   /* if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+
+    //testar se o usuário está logado ou não
+    if (isset($_SESSION['email'])) {
+    } else {
+        // apagar a variável de sessão
+        unset($_SESSION['email']);
+        echo "Error!!", $_SESSION;
+        header("Location: ../index.php");
+    }
+
+
+
+    $usuario = implode(" ", $_SESSION);*/
+    ?>
+ 
+    <title>Bee Lockers - Reservar</title>
 </head>
 
 <body>
 
-    <?php
-    // Verificar se existe uma sessão aberta no server
-    if (session_start() !== PHP_SESSION_ACTIVE) {
-        session_start();
 
-        // Testar se o usuário está logado
-        if (isset($_SESSION['email'])) {
-            echo $_SESSION['email'];
-        }
-    }
-
-    ?>
 
     <header>
         <!-- Início Cabeçalho -->
@@ -73,12 +83,15 @@
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
                         </li>
-                        <li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
                         </li>
+                        <!--<li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="home.php" class="nav-link">Entrar</a>
+                            <a href="perfilUsuario.php" class="nav-link"><?= $usuario ?></a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="../model/logoff.php" class="nav-link">Sair</a>
                         </li>
                     </ul>
                 </div>
@@ -87,6 +100,7 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
+
     <section id="home">
         <div class="container-fluid">
             <!-- Início do calendário  -->
@@ -102,6 +116,7 @@
                         </div>
                     </div>
                 </div>
+            <!-- Fim do calendário  -->
                 <div class="col-md div-home">
                     <div class="row fw-bolder">
                         <div class="col div-home">
@@ -159,8 +174,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Fim do calendário  -->
+       
         </div>
         <div class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -246,13 +260,13 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Evento</h5>
-                        <button type="button" class="close warning" data-dismiss="modal" aria-label="Close">
+                        <h5 class="modal-title" id="exampleModalLabel">Reservar horário</h5>
+                        <button type="button" class="close warning btn-success" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <span id="msg-cad"></span>
+                        <span id="msg-reservas"></span>
                         <form id="addevent" method="POST" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
@@ -302,7 +316,8 @@
         </div>
     </section>
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -370,7 +385,8 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 

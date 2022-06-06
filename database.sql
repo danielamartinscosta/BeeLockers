@@ -2,10 +2,11 @@ CREATE DATABASE `bee_lockers`;
 
 USE bee_lockers;
 
+DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 id_usuario int(11) AUTO_INCREMENT,
 nome varchar(255) DEFAULT NULL,
-cpf varchar(11) DEFAULT NULL,
+cpf varchar(14) DEFAULT NULL,
 email varchar(255) UNIQUE DEFAULT NULL,
 sexo varchar(10) DEFAULT NULL,
 telefone varchar(25) DEFAULT NULL,
@@ -18,6 +19,7 @@ PRIMARY KEY (id_usuario),
 FOREIGN KEY (id_praia) REFERENCES praia (id_praia)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
+DROP TABLE IF EXISTS parceria;
 CREATE TABLE parceria(
 id_empresa int(11) AUTO_INCREMENT,
 id_praia int(11) NOT NULL,
@@ -32,6 +34,7 @@ PRIMARY KEY (id_empresa),
 FOREIGN KEY (id_praia) references praia (id_praia)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
+DROP TABLE IF EXISTS praia;
 CREATE TABLE praia(
 id_praia int(11) AUTO_INCREMENT,
 nome_praia varchar(255) DEFAULT NULL,
@@ -39,6 +42,7 @@ imagem_praia varchar(255) DEFAULT NULL,
 PRIMARY KEY (id_praia)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS endereco_praia;
 CREATE TABLE endereco_praia(
 id_endereço int(11) AUTO_INCREMENT,
 numero varchar(20) not null,
@@ -50,6 +54,7 @@ PRIMARY KEY (id_endereço),
 FOREIGN KEY (id_praia) references praia (id_praia)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
+DROP TABLE IF EXISTS tipo;
 CREATE TABLE tipo (
 id_tipo int(11) AUTO_INCREMENT,
 admin int not null,
@@ -59,7 +64,7 @@ PRIMARY KEY (id_tipo)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 DROP TABLE IF EXISTS eventos;
-CREATE TABLE IF NOT EXISTS eventos (
+CREATE TABLE eventos (
   id_evento int(11) NOT NULL AUTO_INCREMENT,
   titulo varchar(220) DEFAULT NULL,
   cor varchar(10) DEFAULT NULL,

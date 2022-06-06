@@ -18,6 +18,53 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleCadastrar.css">
+
+
+    <script>
+        function mascara_cpf() {
+            var cpf = document.getElementById('inputCpf')
+            if (cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += "."
+            } else if (cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function mask(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmask()", 1)
+        }
+
+        function execmask() {
+            v_obj.value = v_fun(v_obj.value)
+        }
+
+        function masktel(v) {
+            v = v.replace(/\D/g, "");
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+            return v;
+        }
+
+        function idcss(el) {
+            return document.getElementById(el);
+        }
+
+        window.onload = function() {
+
+
+            //CELULAR -------
+            idcss('inputPhone').setAttribute('maxlength', 15);
+            idcss('inputPhone').onkeypress = function() {
+                mask(this, masktel);
+            }
+            //-----------
+        }
+    </script>
+
     <title>Bee Lockers - Cadastrar</title>
 </head>
 
@@ -48,6 +95,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
@@ -104,14 +154,14 @@
 
                                     <div class="col-md">
                                         <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="inputPhone" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputCpf" class="form-label">CPF:</label>
-                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                                        <label for="cpf" class="form-label">CPF:</label>
+                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
 
                                     <div class="col-md">
@@ -129,18 +179,18 @@
                                     <div class="col-md">
                                         <label for="inputSexo" class="form-label">Sexo:</label><br>
                                         <select id="inputSexo" name="sexo" class="form-control" checked="checked">
-                                            <option value="f" selected>Feminino</option>
-                                            <option value="m">Masculino</option>
+                                            <option value="F" selected>Feminino</option>
+                                            <option value="M">Masculino</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
+                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" >condições da Bee Loockers</a>
+                                            e<a class="text-warning" href="" > política de privacidade</a>.
                                         </label>
                                     </div>
                                 </div>
@@ -163,7 +213,8 @@
         </section>
     </main><!-- Fim do Conteúdo Principal-->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -231,7 +282,8 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 

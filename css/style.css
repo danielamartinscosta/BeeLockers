@@ -3,6 +3,14 @@ a {
 }
 
 /* ================= Cabeçalho =================*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.clear{
+    clear: both;
+}
 nav {
     background: rgb(55, 160, 148);
 }
@@ -35,11 +43,17 @@ nav {
 
 
 /* ================= Principal =================*/
-#home {
-    color: #fff;
-    padding: 2em;
+main{
     background: url("../assets/img/fundo_principal2.png") no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 2em;
+    
+}
+#home {
+    padding-top: 10%;
+    color: #fff;
+    
 }
 
 #home h1,
@@ -96,7 +110,7 @@ label {
 /* ================= Recursos =================*/
 .caixa {
     padding: 60px 0;
-    background-color: #fff;
+    padding-bottom: 5%;
 }
 
 /* ================= Rodapé =================*/

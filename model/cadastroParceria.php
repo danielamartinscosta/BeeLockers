@@ -36,4 +36,4 @@ if ($result) {
     echo "Cadastro não realizado, tente novamente";
 }
 
-header("location:../view/cadastroParceria.php");
+header("location:../view/cadastroPraia.php");

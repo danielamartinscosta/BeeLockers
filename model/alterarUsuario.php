@@ -3,27 +3,28 @@
 //conexão como banco de dados
 include "connect.php";
 
-$id = $_POST['id_usuario'];
+$id_usuario = $_POST['id'];
 $nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
-$telefone = $_POST['telefone'];
-$dtnasc = $_POST['dtnasc'];
 $sexo = $_POST['sexo'];
-$tipo = $_POST['tipo'];
+$telefone = $_POST['telefone'];
+$senha = $_POST['senha'];
+$dtnasc = $_POST['dtnasc'];
 
+$id_usuario = isset($_POST['id']) ? $_POST['id'] : '';
 
-$id = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : '';
 
 
 $result = "UPDATE usuario SET 
 nome = '$nome',
-senha = '$senha',
-telefone = '$telefone',
-dtnasc = '$dtnasc',
+cpf = '$cpf',
+email = '$email',
 sexo = '$sexo',
-tipo = '$tipo'
-WHERE id='$id'";
+telefone = '$telefone',
+senha = '$senha',
+dtnasc = '$dtnasc'
+WHERE id_usuario = '$id_usuario'";
 
 
 $resultado = mysqli_query($conn, $result);
@@ -35,5 +36,4 @@ if ($resultado) {  //para confirmar a alteração ou informar o erro
 }
 
 
-
-header('Location:../view/exibirUsuario.php');
+header('Location:../view/pesquisarUsuario.php');

@@ -49,6 +49,9 @@
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
+                        </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
                             <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
@@ -63,7 +66,7 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
-
+    <div class="clear"></div>
     <main>
         <!-- Início do Conteúdo Principal-->
         <section id="home">
@@ -88,56 +91,101 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <form class="col-md-4 div-home">
+                    <form class="col-md-4 div-home" method="post" action="../model/logar.php" enctype="multipart/form-data">
                         <div class="card">
                             <div class="card-body">
                                 <div class="fw-bolder">
 
                                     <div class="m-1">
                                         <label for="txtUsuario" class="form-label">Usuário:</label>
-                                        <input type="email" name="txtUsuario" id="txtUsuario" class="form-control">
+                                        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail">
                                     </div>
                                     <div class="m-1">
                                         <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="email" name="txtSenha" id="txtSenha" class="form-control">
+                                        <input type="password" name="senha" id="inputSenha" class="form-control" placeholder="Digite sua Senha">
                                     </div>
 
                                 </div>
                                 <div class="row mb-2">
 
                                     <div class="col text-center">
-                                        <button type="submit" class="btn text-white btn-custom">Login</button>
+                                        <button type="submit" class="btn text-white btn-custom ">Login</button>
                                     </div>
+
+
+
 
                                 </div>
                                 <div class="row text-center mb-2">
 
                                     <div class="col">
-                                        <a href="esqueciSenha.php" class="btn text-white">Esqueci minha senha</a>
+                                        <a href="esqueciSenha.php" class="btn text-warning">Esqueci minha senha</a>
                                     </div>
                                     <div class="col">
-                                        <a href="cadastroUsuario.php" class="btn text-white">Criar uma conta</a>
+                                        <a href="cadastroUsuario.php" class="btn text-warning">Criar uma conta</a>
                                     </div>
 
                                 </div>
                                 <div class="row">
                                     <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
+                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" data-toggle="modal" data-target="#condicoesUso">Condições da Bee Loockers</a>
+                                            e <a class="text-warning" href="" data-toggle="modal" data-target="#politica" target="_blank"> política de privacidade</a>.
                                         </label>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
+
+    <!-- Modal termos de uso -->
+    <div class="modal fade" id="condicoesUso" tabindex="-1" aria-labelledby="condicoesDeUso" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="condicoesDeUso">Termo de Uso</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatum facere tempore iste id optio, veniam nostrum ad quibusdam eius officia, qui dolor aperiam exercitationem? Esse sed alias possimus at?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim da janela Modal Termos de Uso -->
+
+    <!-- Modal termos de uso -->
+    <div class="modal fade" id="politica" tabindex="-1" aria-labelledby="politicaPrivacidade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="politicaPrivacidade">Política de Privacidade</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatum facere tempore iste id optio, veniam nostrum ad quibusdam eius officia, qui dolor aperiam exercitationem? Esse sed alias possimus at?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim da janela Modal Termos de Uso -->
 
     <section class="caixa">
         <!--/Início seção recursos -->
@@ -169,7 +217,8 @@
     </section>
     <!--/FIM seção recursos -->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -237,8 +286,9 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
-    
+    </footer>
+    <!--Fim do rodapé-->
+
 
 
 

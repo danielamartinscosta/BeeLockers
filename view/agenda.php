@@ -19,7 +19,7 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleAgendar.css">
-    <title>Bee Lockers - Agendar</title>
+    <title>Bee Lockers - Agenda</title>
 </head>
 
 <body>
@@ -50,6 +50,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
@@ -168,6 +171,14 @@
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
                                 <!-- Fim Controle -->
+                                <script>$('.carousel').slick({
+                                        dots: true,
+                                        infinite: true,
+                                        speed: 999,
+                                        slidesToShow: 4,
+                                        slidesToScroll: 4,
+                                        });
+                                </script>
 
                             </div><!-- Fim Carousel -->
                     </div>

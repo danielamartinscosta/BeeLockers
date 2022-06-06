@@ -19,7 +19,7 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleClima.css">
-    <title>Bee Lockers - Agendar</title>
+    <title>Bee Lockers - Clima</title>
 </head>
 
 <body>
@@ -50,6 +50,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="exibirClima.php" class="nav-link">Clima</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="parcerias.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
@@ -119,11 +122,13 @@
                         </div>
                     </div>
                 </div>
-                <<!-- Fim da pesquisa de clima -->
+                <!-- Fim da pesquisa de clima -->
             </div>
         </section><!-- Fim do Home-->
+    </main>
 
-        <footer><!--Início do rodapé-->
+    <footer>
+    <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -191,7 +196,7 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
 
 
 
