@@ -66,7 +66,7 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
-
+    <div class="clear"></div>
     <main>
         <!-- Início do Conteúdo Principal-->
         <section id="home">
