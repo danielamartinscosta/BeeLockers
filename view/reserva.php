@@ -181,7 +181,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Detalhes do Evento</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Detalhes da reserva</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -189,11 +189,11 @@
                     <div class="modal-body">
                         <div class="visevent">
                             <dl class="row">
-                                <dt class="col-sm-3">ID do evento</dt>
-                                <dd class="col-sm-9" id="id_evento"></dd>
+                                <dt class="col-sm-3">ID da reserva</dt>
+                                <dd class="col-sm-9" id="id_reserva"></dd>
 
                                 <dt class="col-sm-3">Nome</dt>
-                                <dd class="col-sm-9" id="title"></dd>
+                                <dd class="col-sm-9" id="nome_responsavel"></dd>
 
                                 <dt class="col-sm-3">Início da reserva</dt>
                                 <dd class="col-sm-9" id="start"></dd>
@@ -206,17 +206,17 @@
                         <div class="formedit">
                             <span id="msg-edit"></span>
                             <form id="editevent" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" name="id_evento" id="id_evento">
+                                <input type="hidden" name="id_reserva" id="id_reserva">
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Título</label>
+                                    <label class="col-sm-2 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="title" class="form-control" id="title" placeholder="Título do evento">
+                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Cor</label>
+                                    <label class="col-sm-2 col-form-label">Praia</label>
                                     <div class="col-sm-10">
-                                        <select name="cor" class="form-control" id="cor">
+                                        <select name="praia" class="form-control" id="praia">
                                             <option value="">Selecione</option>
                                             <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
                                             <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
@@ -272,13 +272,13 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Responsável pela reserva">
+                                    <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Cor</label>
+                                <label class="col-sm-2 col-form-label">Praia</label>
                                 <div class="col-sm-10">
-                                    <select name="cor" class="form-control" id="cor">
+                                    <select name="cor" class="form-control" id="praia">
                                         <option value="">Selecione</option>
                                         <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
                                         <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>

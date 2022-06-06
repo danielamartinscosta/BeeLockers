@@ -13,16 +13,16 @@ $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 $data_end = str_replace('/','-', $dados['end']);
 $data_end_conv = date("Y-m-d H:i:s", strtotime($data_fim));
 
-$query_event = "INSERT INTO eventos (titulo, cor, start, end) VALUES (:titulo, :cor, :start, :end)";
+$query_reservas = "INSERT INTO reservas (nome_responsavel, praia, start, end) VALUES (:nome_responsavel, :praia, :start, :end)";
 
-$insert_event = $conn->prepare($query_event);
-$insert_event->bindParam(':titulo', $dados['titulo']);
-$insert_event->bindParam(':cor', $dados['cor']);
-$insert_event->bindParam(':start', $data_start_conv);
-$insert_event->bindParam(':end', $data_end_conv);
+$insert_reservas = $conn->prepare($query_reservas);
+$insert_reservas->bindParam(':nome_responsavel', $dados['nome_responsavel']);
+$insert_reservas->bindParam(':praia', $dados['praia']);
+$insert_reservas->bindParam(':start', $data_start_conv);
+$insert_reservas->bindParam(':end', $data_end_conv);
 
 
-if ($insert_event->execute()) {
+if ($insert_reservas->execute()) {
     $retorna = ['sit' => true, 'msg' => '<div class="alert alert-success" role="alert">Reserva realizada com sucesso!</div>'];
     $_SESSION['msg'] = '<div class="alert alert-success" role="alert">
     Reserva realizada com sucesso!</div>';

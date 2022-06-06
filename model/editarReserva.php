@@ -13,7 +13,7 @@ $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 $data_end = str_replace('/','-', $dados['end']);
 $data_end_conv = date("Y-m-d H:i:s", strtotime($data_fim));
 
-$query_event = "UPDATE eventos SET titulo=:titulo, cor=:cor, start=:start, end=:end WHERE id_evento=:id_evento";
+$query_reservas = "UPDATE reservas SET nome_responsavel=:nome_responsavel, praia=:praia, start=:start, end=:end WHERE id_reserva=:id_reserva";
 
 $update_event = $conn->prepare($query_event);
 $update_event->bindParam(':titulo', $dados['titulo']);

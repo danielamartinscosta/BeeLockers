@@ -63,13 +63,13 @@ perceria int not NULL,
 PRIMARY KEY (id_tipo)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
-DROP TABLE IF EXISTS eventos;
-CREATE TABLE eventos (
-  id_evento int(11) NOT NULL AUTO_INCREMENT,
-  titulo varchar(220) DEFAULT NULL,
-  cor varchar(10) DEFAULT NULL,
+DROP TABLE IF EXISTS reservas;
+CREATE TABLE reservas (
+  id_reserva int(11) NOT NULL AUTO_INCREMENT,
+  nome_responsavel varchar(220) DEFAULT NULL,
+  praia varchar(10) DEFAULT NULL,
   start datetime DEFAULT NULL,
   end datetime DEFAULT NULL,
-  PRIMARY KEY (id_evento)
+  PRIMARY KEY (id_reserva)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
