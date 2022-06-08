@@ -125,51 +125,73 @@
                 <!-- Fim da pesquisa de clima -->
             </div>
         </section><!-- Fim do Home-->
-    </main>
 
-    <footer>
-        <!--Início do rodapé-->
-        <section class="container-fluid">
-            <div class="row text-center">
+        <footer>
+            <!--Início do rodapé-->
+            <section class="container-fluid">
+                <div class="row text-center">
 
-                <div class="col-md ">
-                    <ul>
-                        <li class="bordar-icone-rodape">
-                            <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="bordar-icone-rodape">
-                            <a href="https://www.instagram.com/" target="_blank" class="btn">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="bordar-icone-rodape">
-                            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="btn">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="bordar-icone-rodape">
-                            <a href="https://www.youtube.com/" target="_blank" class="btn">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="col-md ">
+                        <ul>
+                            <li class="bordar-icone-rodape">
+                                <a href="https://www.facebook.com/profile.php?id=100079971168000" target="_blank" class="btn">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="bordar-icone-rodape">
+                                <a href="https://www.instagram.com/" target="_blank" class="btn">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="bordar-icone-rodape">
+                                <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="btn">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="bordar-icone-rodape">
+                                <a href="https://www.youtube.com/" target="_blank" class="btn">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md">
+                        <h4>BeeLockers</h4>
+                        <ol>
+                            <li>
+                                <a href="quemSomos.php">Sobre Nós</a>
+                            </li>
+                            <li>
+                                <a href="home.php">Home</a>
+                            </li>
+                            <li>
+                                <a href="agenda.php">Agenda</a>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md">
+                        <h4>Para você</h4>
+                        <ol>
+                            <li>
+                                <a href="cadastroUsuario.php">Cadastre-se</a>
+                            </li>
+                            <li>
+                                <a href="home.php">Login</a>
+                            </li>
+                            <li>
+                                <a href="reserva.php">Reserva</a>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-md text-center">
+                        <h4>Bee Lockers</h4>
+                        <p>Diversão com segurança</p>
+                    </div>
                 </div>
-
-                <div class="col-md">
-                    <h4>BeeLockers</h4>
-                    <ol>
-                        <li>
-                            <a href="quemSomos.php">Sobre Nós</a>
-                        </li>
-                        <li>
-                            <a href="home.php">Home</a>
-                        </li>
-                        <li>
-                            <a href="agenda.php">Agenda</a>
-                        </li>
-                    </ol>
+                <div class="bordar-rodape text-center pt-2">
+                    <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
                 </div>
                 <div class="col-md">
                     <h4>Para você</h4>
