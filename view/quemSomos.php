@@ -174,22 +174,22 @@
                 <div class="card-body">
 
                     <div class="container">
-                        <div class="row align-items-center justify-content-around">
-                            <div class="col-md-3">
+                        <div class="row align-items-center justify-content-between ">
+                            <div class="col-md-3 align-self-start">
                                 <img src="../assets/img/missao.jpg" class="img-fluid">
                                 <h4>Missão</h4>
                                 <p>
                                     Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
                                 </p>
                             </div>
-                            <div class="col-md-3">
-                                <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
+                            <div class="col-md-3 align-self-start">
+                                <img src="../assets/img/visao.png" class="img-fluid">
                                 <h4>Visão</h4>
                                 <p>
                                     Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
                                 </p>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 align-self-start">
                                 <img src="../assets/img/valores.png" class="img-fluid">
                                 <h4>Valores</h4>
                                 <p>
@@ -203,28 +203,25 @@
             </div>
         </section><!--/FIM seção Missão, Visão e Valores -->
 
-        <section id="home"><!-- Início da seção Contato-->
+    <section class="caixa"><!-- Início da seção Contato-->
             <div class="row justify-content-center">
                 <div class="col-6 div-home">
                     <div class="card">
                         <div class="card-body">
-                            <div class="col-md">
-                                <h2 class="text-center">Localização</h2>
+                            <h2 class="text-center">Localização</h2>
 
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="100%" height="370" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="100%" height="370" allowfullscreen="" loading="lazy"></iframe>
+                            <p>
+                                <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo - 04941-175
+                            </p>
+                            <div class="col">
                                 <p>
-                                    <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo - 04941-175
+                                    <span class="fw-bold">Tel:</span>(11)5833-0861
                                 </p>
-                                <div class="col">
-                                    <p>
-                                        <span class="fw-bold">Tel:</span>(11)5833-0861
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
     </main><!-- Fim da seção contato-->

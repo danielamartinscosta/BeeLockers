@@ -128,7 +128,7 @@
                                 Falta pouco para você ter acesso ao melhor sistema de guarda volume. Cadastre-se e aproveite.
                             </p>
                             <p>
-                                Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
+                                Se você já é cadastrado, <a href="home.php" class="text-warning">Clique aqui</a> para fazer login.
                             </p>
                         </div>
                     </div>
