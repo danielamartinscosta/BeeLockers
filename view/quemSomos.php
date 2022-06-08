@@ -167,41 +167,43 @@
                 </div>
             </div>
         </section>
-    </main><!-- Fim do Conteúdo Principal-->
 
-    <!--/Início seção Missão, Visão e Valores -->
-    <section class="caixa">
+        <!--/Início seção Missão, Visão e Valores -->
+        <section class="caixa">
+            <div class="card">
+                <div class="card-body">
 
-        <div class="container">
-            <div class="row align-items-center justify-content-around">
-                <div class="col-md-3">
-                    <img src="../assets/img/missao.png" class="img-fluid">
-                    <h4>Missão</h4>
-                    <p>
-                        Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
-                    <h4>Visão</h4>
-                    <p>
-                        Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="../assets/img/valores.png" class="img-fluid">
-                    <h4>Valores</h4>
-                    <p>
-                        Nosso principal valor é a ética nas relações. Visamos responsabilidade nas ações e compromisso com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
-                    </p>
+                    <div class="container">
+                        <div class="row align-items-center justify-content-around">
+                            <div class="col-md-3">
+                                <img src="../assets/img/missao.jpg" class="img-fluid">
+                                <h4>Missão</h4>
+                                <p>
+                                    Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="../assets/img/visao.png" class="img-fluid justify-content-center">
+                                <h4>Visão</h4>
+                                <p>
+                                    Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="../assets/img/valores.png" class="img-fluid">
+                                <h4>Valores</h4>
+                                <p>
+                                    Nosso principal valor é a ética nas relações. Visamos responsabilidade nas ações e compromisso com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
-    </section>
-    <!--/FIM seção Missão, Visão e Valores -->
-    <main>
-        <!-- Início da seção Contato-->
-        <section id="home">
+        </section><!--/FIM seção Missão, Visão e Valores -->
+
+        <section id="home"><!-- Início da seção Contato-->
             <div class="row justify-content-center">
                 <div class="col-6 div-home">
                     <div class="card">

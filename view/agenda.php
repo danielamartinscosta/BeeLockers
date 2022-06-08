@@ -83,13 +83,13 @@
                             Falta pouco para você ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
                         </p>
                         <p>
-                            Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
+                            Se você já é cadastrado, <a href="home.php" class="text-warning">Clique aqui</a> para fazer login.
                         </p>
                     </div>
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col div-home">
+                    <div class="col-8 div-home">
                         <div class="card">
                             <div class="card-body">
                                 <p>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="row fw-bolder justify-content-center">
                     <!-- Início do Conteúdo das imagens - Carrossel-->
-                    <div class="col">
+                    <div class="col-8">
 
                             <div id="praia" class="carousel slide" data-bs-ride="carousel"><!-- Início Carousel -->
 

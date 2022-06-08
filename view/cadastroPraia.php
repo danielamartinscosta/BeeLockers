@@ -67,3 +67,93 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
+    <main>
+        <!-- Início do Conteúdo Principal-->
+        <section id="home">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md div-home text-center">
+                        <div>
+                            <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
+                            </h1>
+                            <p>Tem um local que gostaria de disponibilizar para locação de armários e ganhar uma grana? Faça parceria com a gente!</p>
+                            <p>
+                                Falta pouco para você se tornar parceiro (a) e ter acesso ao melhor sistema de guarda volume. Cadastre-se e aproveite.
+                            </p>
+                            <p>
+                                Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <form method="post" action="../model/cadastrarPraia.php" enctype="multipart/form-data" class="col-md-8">
+                        <div class="card">
+                            <div class="card-body mb-2 fw-bolder">
+
+                                <div class="row">
+                                    <div>
+                                        <label for="inputNomePraia" class="form-label">Praia:</label>
+                                        <input type="name" name="nome" id="inputNomePraia" class="form-control" placeholder="Digite o nome da praia" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputCep" class="form-label">CEP:</label>
+                                        <input type="number" name="cep" id="inputCep" placeholder="Informe o CEP" required class="form-control">
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputRua" class="form-label">endereço:</label>
+                                        <input type="text" name="rua" id="inputRua" class="form-control" required placeholder="Informe o endereço">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="inputNumero" class="form-label">Número:</label>
+                                        <input type="number" name="cpf" id="inputNumero" class="form-control" placeholder="Número" required>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="inputBairro" class="form-label">Bairro:</label>
+                                        <input type="text" name="bairro" id="inputBairro" placeholder="Digite o Bairro" required class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <label for="inputImagemPraia" class="form-label">Imagem:</label>
+                                        <input type="file" name="imagem_praia" id="inputImagemPraia" class="form-control" placeholder="Escolha uma imagem" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group form-inline form-switch div-checkbox">
+                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required >
+                                        <label for="txtPermissao" class="form-check-label text-white">
+                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
+                                            e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row text-center">
+
+                                    <div class="col">
+                                        <button type="submit" class="btn text-white btn-custom">Cadastrar</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </section>
+    </main><!-- Fim do Conteúdo Principal-->

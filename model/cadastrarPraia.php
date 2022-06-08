@@ -27,10 +27,33 @@ $imagem_praia = $_POST['imagem_praia'];
 $endereco_praia = $_POST['endereco_praia'];
 
 
+// salvar imagem
+if ($_FILES['imagem_praia']['name']) {
+    $dir = "../assets/imagem_praia/";  //diretório para salvar a imagem
+    $arr_ext = $_FILES['imagem_praia']['name'];
+    $separa = explode(".", $arr_ext);
+    $ext = array_reverse($separa);
+    $imagem_praia = strtolower($nome_praia . "." . $ext[0]); //converter o nome para minúsculo
+
+
+    $from = $_FILES['imagem_praia']['tmp_name'];
+    $to = $dir . $imagem_praia;
+    //echo $to . "<br>";
+    if (move_uploaded_file($from, $to)) { //mover o arquivo para o diretório
+        //echo "ok";
+
+    } else {
+        echo "error";
+    }
+} else {
+    $imagem_praia = null;
+}
+
+
 include "connect.php";
 
 // variavel da query
-$sql = "INSERT INTO cadastro_usuario (
+$sql = "INSERT INTO praia (
     nome_praia,
     imagem_praia, 
     endereco_praia

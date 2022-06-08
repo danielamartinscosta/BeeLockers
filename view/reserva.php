@@ -1,3 +1,4 @@
+<?php include("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -101,8 +102,8 @@
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
 
-    <section id="home">
-        <div class="container-fluid">
+    <main id="home">
+        <section class="container-fluid">
             <!-- Início do calendário  -->
             <div class="row">
                 <div class="col-md-7 div-home text-center">
@@ -117,15 +118,15 @@
                     </div>
                 </div>
             <!-- Fim do calendário  -->
-                <div class="col-md div-home">
+                <div class="col div-home">
                     <div class="row fw-bolder">
                         <div class="col div-home">
-                            <div class="card mb-3">
+                            <div class="card">
                                 <div class="card-header bg-transparent border-warning text-center">
                                     <h2>Tabela de valores</h2>
                                 </div>
                                 <div class="row card-body">
-                                    <div class="col-md-7">
+                                    <div class="col">
                                         <ul>
                                             <ol>1 HORA</ol>
                                             <ol>2 HORAS</ol>
@@ -134,7 +135,7 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col">
                                         <ul>
                                             <ol>R$ 10,00</ol>
                                             <ol>R$ 20,00</ol>
@@ -144,24 +145,24 @@
                                         </ul>
                                     </div>
                                     <hr>
-                                    <div class="col-md-7">
+                                    <div class="col-md">
                                         <ul>
                                             <ol>UTILIZAÇÃO DO CHUVEIRO</ol>
                                         </ul>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md">
                                         <ul>
                                             <ol>2 MNT R$ 3,00</ol>
                                         </ul>
                                     </div>
                                     <hr>
-                                    <div class="col-md-7">
+                                    <div class="col">
                                         <ul>
                                             <ol>ÁGUA</ol>
-                                            <ol>CADEADO - NUMERAÇÃO</ol>
+                                            <ol>CADEADO</ol>
                                         </ul>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col">
                                         <ul>
                                             <ol>R$ 3,00</ol>
                                             <ol>GRÁTIS</ol>
@@ -173,14 +174,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
        
-        </div>
-        <div class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Detalhes do Evento</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Detalhes da reserva</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -188,11 +188,11 @@
                     <div class="modal-body">
                         <div class="visevent">
                             <dl class="row">
-                                <dt class="col-sm-3">ID do evento</dt>
-                                <dd class="col-sm-9" id="id"></dd>
+                                <dt class="col-sm-3">ID da reserva</dt>
+                                <dd class="col-sm-9" id="id_reserva"></dd>
 
                                 <dt class="col-sm-3">Nome</dt>
-                                <dd class="col-sm-9" id="title"></dd>
+                                <dd class="col-sm-9" id="nome_responsavel"></dd>
 
                                 <dt class="col-sm-3">Início da reserva</dt>
                                 <dd class="col-sm-9" id="start"></dd>
@@ -205,17 +205,17 @@
                         <div class="formedit">
                             <span id="msg-edit"></span>
                             <form id="editevent" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" name="id" id="id">
+                                <input type="hidden" name="id_reserva" id="id_reserva">
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Título</label>
+                                    <label class="col-sm-2 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="title" class="form-control" id="title" placeholder="Título do evento">
+                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva" value="<?= isset($nome)? $nome: ''?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Cor</label>
+                                    <label class="col-sm-2 col-form-label">Praia</label>
                                     <div class="col-sm-10">
-                                        <select name="color" class="form-control" id="color">
+                                        <select name="praia" class="form-control" id="praia">
                                             <option value="">Selecione</option>
                                             <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
                                             <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
@@ -254,9 +254,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -271,13 +271,13 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="title" class="form-control" id="title" placeholder="Responsável pela reserva">
+                                    <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Cor</label>
+                                <label class="col-sm-2 col-form-label">Praia</label>
                                 <div class="col-sm-10">
-                                    <select name="color" class="form-control" id="color">
+                                    <select name="cor" class="form-control" id="praia">
                                         <option value="">Selecione</option>
                                         <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
                                         <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
@@ -313,8 +313,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <!--Início do rodapé-->

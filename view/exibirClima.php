@@ -82,7 +82,7 @@
                             Confira qual a cidade ideal para curtir um passeio incrível ainda hoje.
                         </p>
                         <p>
-                            Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login e faça já a sua reserva!
+                            Se você já é cadastrado, <a href="home.php" class="text-warning">Clique aqui</a> para fazer login e faça já a sua reserva!
                         </p>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
     </main>
 
     <footer>
-    <!--Início do rodapé-->
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -197,6 +197,7 @@
             </div>
         </section>
     </footer>
+    <!--Fim do rodapé-->
 
 
 
