@@ -176,21 +176,21 @@
                     <div class="container">
                         <div class="row align-items-center justify-content-between ">
                             <div class="col-md-3 align-self-start">
-                                <img src="../assets/img/missao.jpg" class="img-fluid">
+                                <img src="../assets/img/missao1.png" class="img-fluid">
                                 <h4>Missão</h4>
                                 <p>
                                     Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
                                 </p>
                             </div>
                             <div class="col-md-3 align-self-start">
-                                <img src="../assets/img/visao.png" class="img-fluid">
+                                <img src="../assets/img/visao1.png" class="img-fluid">
                                 <h4>Visão</h4>
                                 <p>
                                     Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
                                 </p>
                             </div>
                             <div class="col-md-3 align-self-start">
-                                <img src="../assets/img/valores.png" class="img-fluid">
+                                <img src="../assets/img/valores1.png" class="img-fluid">
                                 <h4>Valores</h4>
                                 <p>
                                     Nosso principal valor é a ética nas relações. Visamos responsabilidade nas ações e compromisso com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
