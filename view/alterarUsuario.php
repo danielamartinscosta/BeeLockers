@@ -193,8 +193,8 @@
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputCpf" class="form-label">CPF:</label>
-                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XXX.XXX.XXX.-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" value="<?= isset($cpf)? $cpf: ''?>">
+                                        <label for="cpf" class="form-label">CPF:</label>
+                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx" value="<?= isset($cpf)? $cpf: ''?>">
                                     </div>
 
                                     <div class="col-md">

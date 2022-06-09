@@ -21,6 +21,60 @@
     <title>Bee Lockers - Cadastrar Parceria</title>
 </head>
 
+<script type="text/javascript">
+
+        function mask(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmask()", 1)
+        }
+
+        function execmask() {
+            v_obj.value = v_fun(v_obj.value)
+        }
+        
+        
+        function maskcnpj(v){
+            v=v.replace(/\D/g,"");                        
+            v=v.replace(/^(\d{2})(\d)/,"$1.$2");          
+            v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3");
+            v=v.replace(/\.(\d{3})(\d)/,".$1/$2");       
+            v=v.replace(/(\d{4})(\d)/,"$1-$2");
+            return v;
+}
+
+
+        function masktel(v) {
+            v = v.replace(/\D/g, "");
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+            return v;
+        }
+
+        function idcss(el) {
+            return document.getElementById(el);
+        }
+
+        window.onload = function() {
+
+
+            //CELULAR -------
+            idcss('inputPhone').setAttribute('maxlength', 15);
+            idcss('inputPhone').onkeypress = function() {
+                mask(this, masktel);
+            }
+            //-----------
+
+            //CNPJ --------
+	        idcss('inputCnpj').setAttribute('maxlength', 18);
+	        idcss('inputCnpj').onkeypress = function(){
+		        mask( this, maskcnpj );
+	}
+	//-------------
+
+        }
+    </script>
+
 <body>
     <header>
         <!-- Início Cabeçalho -->
@@ -114,8 +168,8 @@
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputCpf" class="form-label">CNPJ:</label>
-                                        <input type="number" name="cpf" id="inputCpf" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required pattern="[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2}" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
+                                        <label for="cnpj" class="form-label">CNPJ:</label>
+                                        <input type="text" name="cnpj" id="inputCnpj" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required maxlength="18" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
                                     </div>
 
                                     <div class="col-md">
