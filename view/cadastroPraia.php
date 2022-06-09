@@ -8,6 +8,7 @@
     <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
     <meta name="author" content="Geovani, Daniela, Julyane, Emily e Pedro">
     <meta name="keyword" content="Praia, armário, guarda volumes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ícone página -->
@@ -20,6 +21,50 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Bee Lockers - Cadastro de Praia</title>
 </head>
+
+<script>
+
+
+
+
+$(function(){
+
+$("#buscar_cep").click(function(){
+
+  //Nova variável "cep" somente com dígitos.
+  var cep = $("#cep").val().replace(/\D/g, '');
+
+  //Verifica se campo cep possui valor informado.
+  if (cep != "") {
+
+      //Expressão regular para validar o CEP.
+      var validacep = /^[0-9]{8}$/;
+
+      //Valida o formato do CEP.
+      if(validacep.test(cep)) {
+
+       //Consulta o webservice viacep.com.br/
+      $.getJSON("//viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+              if (!("erro" in dados)) {
+                  //Atualiza os campos com os valores da consulta.
+                  $("#rua").val(dados.logradouro);
+                  $("#bairro").val(dados.bairro);
+              } //end if.
+              else {
+                  //CEP pesquisado não foi encontrado.
+                  alert("CEP não encontrado.");
+              }
+          });
+      } //end if.
+      else {
+          alert("Formato de CEP inválido.");
+      }
+  } //end if.
+});
+});
+
+</script>
 
 <body>
 
@@ -103,12 +148,13 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputCep" class="form-label">CEP:</label>
-                                        <input type="number" name="cep" id="inputCep" placeholder="Informe o CEP" required class="form-control">
+                                        <input type="text" class="form-control" name="cep" id="cep" placeholder="Informe o CEP"  required maxlength="9" >
+                                        <button type="button" id="buscar_cep"> buscar CEP
                                     </div>
 
                                     <div class="col-md">
                                         <label for="inputRua" class="form-label">endereço:</label>
-                                        <input type="text" name="rua" id="inputRua" class="form-control" required placeholder="Informe o endereço">
+                                        <input type="text" name="rua" id="rua" class="form-control" required placeholder="Informe o endereço" readonly>
                                     </div>
                                 </div>
 
@@ -120,7 +166,7 @@
 
                                     <div class="col-md">
                                         <label for="inputBairro" class="form-label">Bairro:</label>
-                                        <input type="text" name="bairro" id="inputBairro" placeholder="Digite o Bairro" required class="form-control">
+                                        <input type="text" name="bairro" id="bairro" placeholder="Digite o Bairro" required class="form-control" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
