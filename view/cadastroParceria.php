@@ -143,14 +143,14 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <form method="post" action="../model/cadastrarUsuario.php" enctype="multipart/form-data" class="col-md-8">
+                    <form method="post" action="../model/cadastroParceria.php" enctype="multipart/form-data" class="col-md-8">
                         <div class="card">
                             <div class="card-body mb-2 fw-bolder">
 
                                 <div class="row">
                                     <div>
-                                        <label for="inputNome" class="form-label">Razão Social:</label>
-                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <label for="inputRazao_social" class="form-label">Razão Social:</label>
+                                        <input type="name" name="razao_social" id="inputRazao_social" class="form-control" placeholder="Digite a Razão Social" required>
                                     </div>
                                 </div>
 
@@ -161,14 +161,14 @@
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="inputPhone" class="form-label">Fone:</label>
+                                        <label for="inputPhone" class="form-label">Telefone:</label>
                                         <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="cnpj" class="form-label">CNPJ:</label>
+                                        <label for="inputCnpj" class="form-label">CNPJ:</label>
                                         <input type="text" name="cnpj" id="inputCnpj" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required maxlength="18" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
                                     </div>
 
@@ -180,7 +180,7 @@
 
                                 <div class="row">
                                     <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" checked="checked">
+                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
                                         <label for="txtPermissao" class="form-check-label text-white">
                                         De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
                                         e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.

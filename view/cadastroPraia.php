@@ -140,8 +140,8 @@ $("#buscar_cep").click(function(){
 
                                 <div class="row">
                                     <div>
-                                        <label for="inputNomePraia" class="form-label">Praia:</label>
-                                        <input type="name" name="nome" id="inputNomePraia" class="form-control" placeholder="Digite o nome da praia" required>
+                                        <label for="nome_praia" class="form-label">Praia:</label>
+                                        <input type="name" name="nome_praia" id="nome_praia" class="form-control" placeholder="Digite o nome da praia" required>
                                     </div>
                                 </div>
 
@@ -161,7 +161,7 @@ $("#buscar_cep").click(function(){
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputNumero" class="form-label">Número:</label>
-                                        <input type="number" name="cpf" id="inputNumero" class="form-control" placeholder="Número" required>
+                                        <input type="text" name="numero" id="inputNumero" class="form-control" placeholder="Número" required>
                                     </div>
 
                                     <div class="col-md">
@@ -171,8 +171,8 @@ $("#buscar_cep").click(function(){
                                 </div>
                                 <div class="row">
                                     <div>
-                                        <label for="inputImagemPraia" class="form-label">Imagem:</label>
-                                        <input type="file" name="imagem_praia" id="inputImagemPraia" class="form-control" placeholder="Escolha uma imagem" required>
+                                        <label for="imagem_praia" class="form-label">Imagem:</label>
+                                        <input type="file" name="imagem_praia" id="imagem_praia" class="form-control" placeholder="Escolha uma imagem" >
                                     </div>
                                 </div>
 

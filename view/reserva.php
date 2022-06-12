@@ -194,6 +194,9 @@
                                 <dt class="col-sm-3">Nome</dt>
                                 <dd class="col-sm-9" id="nome_responsavel"></dd>
 
+                                <dt class="col-sm-3">Praia</dt>
+                                <dd class="col-sm-9" id="praia"></dd>
+
                                 <dt class="col-sm-3">Início da reserva</dt>
                                 <dd class="col-sm-9" id="start"></dd>
 
@@ -218,15 +221,6 @@
                                         <select name="praia" class="form-control" id="praia">
                                             <option value="">Selecione</option>
                                             <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
-                                            <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
-                                            <option style="color:#FF4500;" value="#FF4500">Laranja</option>
-                                            <option style="color:#8B4513;" value="#8B4513">Marrom</option>
-                                            <option style="color:#1C1C1C;" value="#1C1C1C">Preto</option>
-                                            <option style="color:#436EEE;" value="#436EEE">Royal Blue</option>
-                                            <option style="color:#A020F0;" value="#A020F0">Roxo</option>
-                                            <option style="color:#40E0D0;" value="#40E0D0">Turquesa</option>
-                                            <option style="color:#228B22;" value="#228B22">Verde</option>
-                                            <option style="color:#8B0000;" value="#8B0000">Vermelho</option>
                                         </select>
                                     </div>
                                 </div>
@@ -267,7 +261,7 @@
                     </div>
                     <div class="modal-body">
                         <span id="msg-reservas"></span>
-                        <form id="addevent" method="POST" enctype="multipart/form-data">
+                        <form id="addevent" method="POST" action="../model/reservas.php"enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
@@ -280,15 +274,6 @@
                                     <select name="cor" class="form-control" id="praia">
                                         <option value="">Selecione</option>
                                         <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
-                                        <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
-                                        <option style="color:#FF4500;" value="#FF4500">Laranja</option>
-                                        <option style="color:#8B4513;" value="#8B4513">Marrom</option>
-                                        <option style="color:#1C1C1C;" value="#1C1C1C">Preto</option>
-                                        <option style="color:#436EEE;" value="#436EEE">Royal Blue</option>
-                                        <option style="color:#A020F0;" value="#A020F0">Roxo</option>
-                                        <option style="color:#40E0D0;" value="#40E0D0">Turquesa</option>
-                                        <option style="color:#228B22;" value="#228B22">Verde</option>
-                                        <option style="color:#8B0000;" value="#8B0000">Vermelho</option>
                                     </select>
                                 </div>
                             </div>
@@ -390,7 +375,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>

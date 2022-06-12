@@ -2,12 +2,48 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-        locale: 'pt-br',
         plugins: ['interaction', 'dayGrid'],
         //defaultDate: '2022-04-12',
+        initialView: 'dayGridMonth',
+        locale: 'pt-br', // determina o idioma utilizado
+        timeZone: 'America/Sao_Paulo',
+        headerToolbar:{
+            start: 'dayGridMonth, timeGridWeek, timeGridDay',
+            center: 'title',
+            end: 'today,prev,next'
+        },
         editable: true,
         eventLimit: true, // limitar a quantidade de eventos no dia - deixar como true
+        buttonText: {
+            today: 'hoje',
+            month: 'mês',
+            week: 'semana',
+            day: 'dia',
+            list: 'lista',
+        },
+        slotDuration: '01:00',
+        slotLabelFormat: {
+            hour: 'numeric',
+            minute: '2-digit',
+            omitZeroMinute: false,
+            meridiem: 'short'
+        },
+        businessHours: {
+            // determina os dias da semana disponíveis
+            daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
+
+            startTime: '05:00', // determina a hora inicial para agendamento
+            endTime: '19:00', // determina a hora final para agendamento
+        },
         events: 'listaReservas.php',
+        events: [
+            {
+                title: 'The Title',
+                start: '2022-06-12T10:00:00',
+                end: '2022-06-12T16:00:00',
+
+            }
+        ],
         extraParams: function () {
             return {
                 cachebuster: new Date().valueOf()
@@ -20,11 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
             $('#visualizar #id_reserva').val(info.event.id_reserva);
             $('#visualizar #nome_responsavel').text(info.event.nome_responsavel);
             $('#visualizar #nome_responsavel').val(info.event.nome_responsavel);
+            $('#visualizar #praia').text(info.event.praia);
+            $('#visualizar #praia').val(info.event.praia);
             $('#visualizar #start').text(info.event.star.toLocaleString());
             $('#visualizar #start').val(info.event.start.toLocaleString());
             $('#visualizar #end').text(info.event.end.toLocaleString());
             $('#visualizar #end').val(info.event.end.toLocaleString());
-            $('#visualizar #praia').val(info.event.backgroundColor);
             $('#visualizar').modal('show');
         },
         selectable: true,

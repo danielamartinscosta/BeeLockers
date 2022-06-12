@@ -24,7 +24,11 @@ mysql describe endereco_praia
 // inserir os dados no formulário 
 $nome_praia = $_POST['nome_praia'];
 $imagem_praia = $_POST['imagem_praia'];
-$endereco_praia = $_POST['endereco_praia'];
+$rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$bairro = $_POST['bairro'];
+$cep = $_POST['cep'];
+//$id_praia = $_POST['id_praia'];
 
 
 // salvar imagem
@@ -53,25 +57,41 @@ if ($_FILES['imagem_praia']['name']) {
 include "connect.php";
 
 // variavel da query
-$sql = "INSERT INTO praia (
+$sqlPraia = "INSERT INTO praia (
     nome_praia,
     imagem_praia, 
-    endereco_praia
     
     ) VALUES (
         '$nome_praia',
         '$imagem_praia',
-        '$endereco_praia'
     )";
 
-// realizar o insert de dados
-$result = $conn->query($sql);
+// realizar o insert de dados na primeira tabela
+$resultPraia = $conn->query($sqlPraia);
+
+$sqlEndereco = "INSERT INTO endereco_praia (
+    rua,
+    numero,
+    bairro,
+    cep,
+    id_praia
+    
+    ) VALUES (
+        '$rua',
+        '$numero',
+        '$bairro',
+        '$cep',
+        '$id_praia'
+
+    )";
+
+$resultEndereco = $conn->query($sqlEndereco);
 
 // testar se o cadastro foi feito com sucesso
-if ($result) {
+if ($resultPraia && $resultEndereco) {
     echo "cadastro realizado com sucesso!";
 } else {
     echo "Cadastro não realizado, tente novamente";
 }
 
-header("location:../view/cadastroPraia.php");
+//header("location:../view/cadastroPraia.php");

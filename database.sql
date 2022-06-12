@@ -23,8 +23,8 @@ DROP TABLE IF EXISTS parceria;
 CREATE TABLE parceria(
 id_empresa int(11) AUTO_INCREMENT,
 id_praia int(11) NOT NULL,
-razão_social varchar(255) DEFAULT NULL,
-cnpj int(14) DEFAULT NULL,
+razao_social varchar(255) DEFAULT NULL,
+cnpj varchar(18) DEFAULT NULL,
 email varchar(255) UNIQUE DEFAULT NULL,
 telefone varchar(25) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
@@ -45,8 +45,8 @@ PRIMARY KEY (id_praia)
 DROP TABLE IF EXISTS endereco_praia;
 CREATE TABLE endereco_praia(
 id_endereço int(11) AUTO_INCREMENT,
-numero varchar(20) not null,
 rua varchar (50) not null,
+numero varchar(20) not null,
 bairro varchar (50) not null,
 cep varchar (8) not null,
 id_praia int(11),
@@ -67,9 +67,10 @@ DROP TABLE IF EXISTS reservas;
 CREATE TABLE reservas (
   id_reserva int(11) NOT NULL AUTO_INCREMENT,
   nome_responsavel varchar(220) DEFAULT NULL,
-  praia varchar(10) DEFAULT NULL,
-  start datetime DEFAULT NULL,
-  end datetime DEFAULT NULL,
-  PRIMARY KEY (id_reserva)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  start TIMESTAMP DEFAULT NULL,
+  end TIMESTAMP DEFAULT NULL,
+  id_praia INT(11) DEFAULT NULL,
+  PRIMARY KEY (id_reserva),
+  FOREIGN KEY (id_praia) references praia (id_praia)
+) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
