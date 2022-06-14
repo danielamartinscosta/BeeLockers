@@ -7,10 +7,10 @@ mysql> describe usuario;
 +------------+--------------+------+-----+-------------------+----------------+
 | id_usuario | int(11)      | NO   | PRI | NULL              | auto_increment |
 | nome       | varchar(255) | YES  |     | NULL              |                |
-| cpf        | varchar(11)  | YES  |     | NULL              |                |
+| cpf        | varchar(14)  | YES  |     | NULL              |                |
 | email      | varchar(255) | YES  | UNI | NULL              |                |
 | sexo       | varchar(10)  | YES  |     | NULL              |                |
-| telefone   | varchar(25)  | YES  |     | NULL              |                |
+| telefone   | varchar(12)  | YES  |     | NULL              |                |
 | senha      | varchar(255) | YES  |     | NULL              |                |
 | dtnasc     | varchar(25)  | YES  |     | NULL              |                |
 | id_praia   | int(11)      | YES  | MUL | NULL              |                |

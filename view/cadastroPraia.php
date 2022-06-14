@@ -147,25 +147,25 @@ $("#buscar_cep").click(function(){
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputCep" class="form-label">CEP:</label>
+                                        <label for="cep" class="form-label">CEP:</label>
                                         <input type="text" class="form-control" name="cep" id="cep" placeholder="Informe o CEP"  required maxlength="9" >
                                         <button type="button" id="buscar_cep"> buscar CEP
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="inputRua" class="form-label">endereço:</label>
+                                        <label for="rua" class="form-label">endereço:</label>
                                         <input type="text" name="rua" id="rua" class="form-control" required placeholder="Informe o endereço" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputNumero" class="form-label">Número:</label>
+                                        <label for="numero" class="form-label">Número:</label>
                                         <input type="text" name="numero" id="inputNumero" class="form-control" placeholder="Número" required>
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="inputBairro" class="form-label">Bairro:</label>
+                                        <label for="bairro" class="form-label">Bairro:</label>
                                         <input type="text" name="bairro" id="bairro" placeholder="Digite o Bairro" required class="form-control" readonly>
                                     </div>
                                 </div>

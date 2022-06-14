@@ -149,32 +149,32 @@
 
                                 <div class="row">
                                     <div>
-                                        <label for="inputRazao_social" class="form-label">Razão Social:</label>
-                                        <input type="name" name="razao_social" id="inputRazao_social" class="form-control" placeholder="Digite a Razão Social" required>
+                                        <label for="razao_social" class="form-label">Razão Social:</label>
+                                        <input type="name" name="razao_social" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou quiosque" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
+                                        <label for="email" class="form-label">E-mail:</label>
+                                        <input type="email" name="email" id="email" placeholder="Seu e-mail" required class="form-control">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="inputPhone" class="form-label">Telefone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
+                                        <label for="telefone" class="form-label">Telefone:</label>
+                                        <input type="text" name="telefone" id="telefone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputCnpj" class="form-label">CNPJ:</label>
-                                        <input type="text" name="cnpj" id="inputCnpj" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required maxlength="18" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
+                                        <label for="cnpj" class="form-label">CNPJ:</label>
+                                        <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required maxlength="18" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
                                     </div>
 
                                     <div class="col-md">
-                                        <label for="inputSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="senha" id="inputSenha" placeholder="Digite sua senha" required class="form-control">
+                                        <label for="senha" class="form-label">Senha:</label>
+                                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required class="form-control">
                                     </div>
                                 </div>
 

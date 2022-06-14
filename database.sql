@@ -9,7 +9,7 @@ nome varchar(255) DEFAULT NULL,
 cpf varchar(14) DEFAULT NULL,
 email varchar(255) UNIQUE DEFAULT NULL,
 sexo varchar(10) DEFAULT NULL,
-telefone varchar(25) DEFAULT NULL,
+telefone varchar(14) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
 dtnasc varchar(25) DEFAULT NULL,
 id_praia int(11),
@@ -26,7 +26,7 @@ id_praia int(11) NOT NULL,
 razao_social varchar(255) DEFAULT NULL,
 cnpj varchar(18) DEFAULT NULL,
 email varchar(255) UNIQUE DEFAULT NULL,
-telefone varchar(25) DEFAULT NULL,
+telefone varchar(14) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
 id_tipo INT(11),
 data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -39,19 +39,11 @@ CREATE TABLE praia(
 id_praia int(11) AUTO_INCREMENT,
 nome_praia varchar(255) DEFAULT NULL,
 imagem_praia varchar(255) DEFAULT NULL,
-PRIMARY KEY (id_praia)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-DROP TABLE IF EXISTS endereco_praia;
-CREATE TABLE endereco_praia(
-id_endereço int(11) AUTO_INCREMENT,
 rua varchar (50) not null,
 numero varchar(20) not null,
 bairro varchar (50) not null,
 cep varchar (8) not null,
-id_praia int(11),
-PRIMARY KEY (id_endereço),
-FOREIGN KEY (id_praia) references praia (id_praia)
+PRIMARY KEY (id_praia)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 DROP TABLE IF EXISTS tipo;
