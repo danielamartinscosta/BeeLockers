@@ -22,14 +22,12 @@ FOREIGN KEY (id_praia) REFERENCES praia (id_praia)
 DROP TABLE IF EXISTS parceria;
 CREATE TABLE parceria(
 id_empresa int(11) AUTO_INCREMENT,
-id_praia int(11) NOT NULL,
 razao_social varchar(255) DEFAULT NULL,
 cnpj varchar(18) DEFAULT NULL,
 email varchar(255) UNIQUE DEFAULT NULL,
 telefone varchar(14) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
-id_tipo INT(11),
-data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_praia int(11) NOT NULL,
 PRIMARY KEY (id_empresa),
 FOREIGN KEY (id_praia) references praia (id_praia)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;

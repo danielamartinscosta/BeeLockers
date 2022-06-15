@@ -237,8 +237,8 @@
             </div>
 
             <div class="col-md text-center text-dark">
-                <p><strong> Faça parte desse time você também.</strong></p>
-                <P><strong>Venha para a Bee Lockers</strong></P>
+                <p><strong> Ficou com alguma dúvida?.</strong></p>
+                <P><strong>Entre em contato com a gente</strong></P>
             </div>
             <div class="row div-home justify-content-center">
                 <div class="card col-6">

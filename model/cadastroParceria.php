@@ -50,8 +50,7 @@ echo "$razao_social<br> $cnpj<br> $email<br> $telefone<br>$senha<br>";
 // testar se o cadastro foi feito com sucesso
 if ($resultParceria) {
     echo "cadastro realizado com sucesso!";
+    //header("location:../view/cadastroPraia.php");
 } else {
     echo "Cadastro não realizado, tente novamente";
 }
-
-//header("location:../view/cadastroPraia.php");

@@ -17,32 +17,26 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Bee Lockers - Pesquisar Usuário</title>
+    <title>Bee Lockers - Pesquisar Praias</title>
 </head>
 
 <body>
 
-    <!--
-mysql> describe usuario;
-+------------+--------------+------+-----+-------------------+----------------+
-| Field      | Type         | Null | Key | Default           | Extra          |
-+------------+--------------+------+-----+-------------------+----------------+
-| id_usuario | int(11)      | NO   | PRI | NULL              | auto_increment |
-| nome       | varchar(255) | YES  |     | NULL              |                |
-| cpf        | varchar(11)  | YES  |     | NULL              |                |
-| email      | varchar(255) | YES  | UNI | NULL              |                |
-| sexo       | varchar(10)  | YES  |     | NULL              |                |
-| telefone   | varchar(25)  | YES  |     | NULL              |                |
-| senha      | varchar(255) | YES  |     | NULL              |                |
-| dtnasc     | varchar(25)  | YES  |     | NULL              |                |
-| id_praia   | int(11)      | YES  | MUL | NULL              |                |
-| id_tipo    | int(11)      | YES  |     | NULL              |                |
-| data       | timestamp    | YES  |     | CURRENT_TIMESTAMP |                |
-+------------+--------------+------+-----+-------------------+----------------+
--->
-
-    <?php /*
-    //testar de o usuário está logado
+    <?php 
+/* mysql> desc praia;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id_praia     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nome_praia   | varchar(255) | YES  |     | NULL    |                |
+| imagem_praia | varchar(255) | YES  |     | NULL    |                |
+| rua          | varchar(50)  | NO   |     | NULL    |                |
+| numero       | varchar(20)  | NO   |     | NULL    |                |
+| bairro       | varchar(50)  | NO   |     | NULL    |                |
+| cep          | varchar(8)   | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+*//*
+    //testar se o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
@@ -112,7 +106,7 @@ mysql> describe usuario;
 
                 <div class="card">
                     <div class="card-header text-center">
-                        <h2>Administração de Usuários</h2>
+                        <h2>Administração de Praias</h2>
                     </div>
                     
                     <div class="card-body">
@@ -124,7 +118,8 @@ mysql> describe usuario;
                                 </div>
 
                                 <div class="col-md-2">
-                                    <button type="submit" class="btn text-white btn-custom">Pesquisar</button>                            
+                                    <button type="submit" class="btn text-white btn-custom">Pesquisar</button>
+                                    
                                 </div>
                             </div>
 
@@ -134,12 +129,11 @@ mysql> describe usuario;
                                     <thead>
                                         <tr class="text-warning">
                                             <th scope="col">ID</th>
-                                            <th scope="col">NOME</th>
-                                            <th scope="col">CPF</th>
-                                            <th scope="col">NASCIMENTO</th>
-                                            <th scope="col">E-MAIL</th>
-                                            <th scope="col">SEXO</th>
-                                            <th scope="col">TELEFONE</th>
+                                            <th scope="col">PRAIA</th>
+                                            <th scope="col">CEP</th>
+                                            <th scope="col">ENDEREÇO</th>
+                                            <th scope="col">Nº</th>
+                                            <th scope="col">BAIRRO</th>
                                             <th scope="col">AÇÃO</th>
                                         </tr>
                                     </thead>
@@ -156,7 +150,7 @@ mysql> describe usuario;
 
 
 
-                                        $sql = "SELECT * FROM usuario WHERE nome LIKE '%$nomePesq%'";
+                                        $sql = "SELECT * FROM praia WHERE nome_praia LIKE '%$nomePesq%'";
 
                                         //buscar no banco de dados por meio da query select
                                         $result = $conn->query($sql);
@@ -164,29 +158,24 @@ mysql> describe usuario;
                                         // montar a lista na tabela
 
                                         while ($linha = $result->fetch_array()) { // mysqli_num or mysqli_assoc
-                                            $id = $linha['id_usuario'];
-                                            $nome = $linha['nome'];
-                                            $cpf = $linha['cpf'];
-                                            //formatar a data a ser exibida
-                                            //$dtnasc = $linha['dtnasc'];
-                                            $date = date_create($linha['dtnasc']);
-                                            $dtnasc = date_format($date, "d/m/Y");
-                                            $email = $linha['email'];
-                                            $sexo = $linha['sexo'];
-                                            $telefone = $linha['telefone'];
+                                            $id_praia = $linha['id_praia'];
+                                            $nome_praia = $linha['nome_praia'];
+                                            $cep = $linha['cep'];
+                                            $rua = $linha['rua'];
+                                            $numero = $linha['numero'];
+                                            $bairro = $linha['bairro'];
 
                                             //montar a tabela 
                                             $html = <<<HTML
                                     <tr class="text-white">
-                                    <td>$id</td>
-                                    <td>$nome</td>
-                                    <td>$cpf</td>
-                                    <td>$dtnasc</td>
-                                    <td>$email</td>
-                                    <td>$sexo</td>
-                                    <td>$telefone</td>
+                                    <td>$id_praia</td>
+                                    <td>$nome_praia</td>
+                                    <td>$cep</td>
+                                    <td>$rua</td>
+                                    <td>$numero</td>
+                                    <td>$bairro</td>
                                     <td>
-                                        <a href="alterarUsuario.php?id_usuario=$id" class="text-decoration-none me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" 
+                                        <a href="alterarCadPraia.php?id_praia=$id_praia" class="text-decoration-none me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" 
                                             viewBox="0 0 504.914 504.914" style="enable-background:new 0 0 504.914 504.914;" xml:space="preserve">
                                         <g transform="translate(1)">
                                             <polygon style="fill:#E2E3E5;" points="144.371,462.4 8.143,494.4 41.057,359.086 370.2,29.029 474.429,132.343 	"/>
@@ -228,7 +217,7 @@ mysql> describe usuario;
                                  
                                         </svg>
                                         </a>
-                                        <a href='../model/excluirUsuario.php?id_usuario=$id'  class="text-decoration-none ms-2" ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+                                        <a href='../model/excluirpraia.php?id_praia=$id_praia'  class="text-decoration-none ms-2" ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
                                         viewBox="0 0 280.028 280.028" style="enable-background:new 0 0 280.028 280.028;" xml:space="preserve">
                                     <g>
                                         <path style="fill:#CCD0D2;" d="M39.379,70.007v192.519c0,9.661,7.841,17.502,17.502,17.502h166.266

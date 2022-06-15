@@ -27,7 +27,7 @@
 
 
 
-<?php 
+    <?php
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -43,14 +43,14 @@
         echo "Deu ruim!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $usuario= implode(" ",$_SESSION);
-?>
+    $usuario = implode(" ", $_SESSION);
+    ?>
     <title>Bee Lockers - Reservar</title>
 </head>
 
 <body>
 
-    
+
 
     <header>
         <!-- Início Cabeçalho -->
@@ -84,7 +84,7 @@
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="perfilUsuario.php" class="nav-link"><?=$usuario?></a>
+                            <a href="perfilUsuario.php" class="nav-link"><?= $usuario ?></a>
                         </li>
                         <li class="nav-item">
                             <a href="../model/logoff.php" class="nav-link">Sair</a>

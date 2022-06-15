@@ -5,8 +5,11 @@ include "connect.php";
 
 $id_praia = $_POST['id_praia'];
 $nome_praia = $_POST['nome_praia'];
-$imagem_praia = $_POST['imagem_praia'];
-$endereco_praia = $_POST['endereco_praia'];
+$imagem_praia = $_FILES['imagem_praia']['name'];
+$rua = $_POST['endereco_praia'];
+$numero = $_POST['numero'];
+$bairro= $_POST['bairro'];
+$cep = $_POST['cep'];
 
 
 $dir = '../assets/imagem_praia';
@@ -36,16 +39,19 @@ if ($_FILES['imagem_praia']['name']) {
   $imagem_praia = null;
 }
 
-$result = "UPDATE usuario SET 
+$result = "UPDATE praia SET 
 nome_praia = '$nome_praia',
 imagem_praia = $imagem_praia,
-endereco_praia = $endereco_praia
+rua = '$rua',
+numero = '$numero',
+bairro = '$bairro',
+cep = '$cep'
 WHERE id_praia='$id_praia'";
 
 
-$resultado = mysqli_query($conn, $result);
+$result = mysqli_query($conn, $result);
 
-if ($resultado) {  //para confirmar a alteração ou informar o erro
+if ($result) {  //para confirmar a alteração ou informar o erro
   echo "Atualização realizada com sucesso!";
 } else {
   echo "Atualização não realizada <br/><br/>";
@@ -53,4 +59,4 @@ if ($resultado) {  //para confirmar a alteração ou informar o erro
 
 
 
-header('Location:../view/exibirPraia.php');
+//header('Location:../view/exibirPraia.php');
