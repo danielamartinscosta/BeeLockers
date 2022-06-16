@@ -78,7 +78,7 @@ mysql> describe usuario;
                             <a href="homeAdmin.php" class="nav-link">Painel</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pesquisarUsuários.php" class="nav-link">Usuários</a>
+                            <a href="pesquisarUsuario.php" class="nav-link">Usuários</a>
                         </li>
                         <li class="nav-item">
                             <a href="pesquisarPraias.php" class="nav-link">Praias</a>

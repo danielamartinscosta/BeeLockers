@@ -72,7 +72,7 @@
                             <a href="homeAdmin.php" class="nav-link">Painel</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pesquisarUsuários.php" class="nav-link">Usuários</a>
+                            <a href="pesquisarUsuario.php" class="nav-link">Usuários</a>
                         </li>
                         <li class="nav-item">
                             <a href="pesquisarPraias.php" class="nav-link">Praias</a>
@@ -175,7 +175,7 @@
                                     <td>$numero</td>
                                     <td>$bairro</td>
                                     <td>
-                                        <a href="alterarCadPraia.php?id_praia=$id_praia" class="text-decoration-none me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" 
+                                        <a href="alterarPraia.php?id_praia=$id_praia" class="text-decoration-none me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" 
                                             viewBox="0 0 504.914 504.914" style="enable-background:new 0 0 504.914 504.914;" xml:space="preserve">
                                         <g transform="translate(1)">
                                             <polygon style="fill:#E2E3E5;" points="144.371,462.4 8.143,494.4 41.057,359.086 370.2,29.029 474.429,132.343 	"/>

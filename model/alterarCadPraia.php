@@ -6,14 +6,14 @@ include "connect.php";
 $id_praia = $_POST['id_praia'];
 $nome_praia = $_POST['nome_praia'];
 $imagem_praia = $_FILES['imagem_praia']['name'];
-$rua = $_POST['endereco_praia'];
+$rua = $_POST['rua'];
 $numero = $_POST['numero'];
 $bairro= $_POST['bairro'];
 $cep = $_POST['cep'];
 
 
 $dir = '../assets/imagem_praia';
-$id = isset($_POST['id_praia']) ? $_POST['id_praia'] : '';
+$id_praia = isset($_POST['id_praia']) ? $_POST['id_praia'] : '';
 
 if ($_FILES['imagem_praia']['name']) {
   if (is_file('../assets/imagem_praia/' . $imagem_praia)) { //verifica se a imagem existe
@@ -23,7 +23,7 @@ if ($_FILES['imagem_praia']['name']) {
   $arr_ext = $_FILES['imagem_praia']['name'];
   $separa = explode(".", $arr_ext);
   $ext = array_reverse($separa);
-  $avatar = strtolower($email . "." . $ext[0]); //converter o nome para minúsculo
+  //$imagem_praia = strtolower($email . "." . $ext[0]); //converter o nome para minúsculo
 
 
   $from = $_FILES['imagem_praia']['tmp_name'];
@@ -46,12 +46,12 @@ rua = '$rua',
 numero = '$numero',
 bairro = '$bairro',
 cep = '$cep'
-WHERE id_praia='$id_praia'";
+WHERE id_praia ='$id_praia'";
 
 
-$result = mysqli_query($conn, $result);
+$resultado = mysqli_query($conn, $result);
 
-if ($result) {  //para confirmar a alteração ou informar o erro
+if ($resultado) {  //para confirmar a alteração ou informar o erro
   echo "Atualização realizada com sucesso!";
 } else {
   echo "Atualização não realizada <br/><br/>";

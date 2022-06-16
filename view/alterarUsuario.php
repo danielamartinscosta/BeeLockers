@@ -22,7 +22,7 @@
 
     <script>
         function mascara_cpf() {
-            var cpf = document.getElementById('inputCpf')
+            var cpf = document.getElementById('cpf')
             if (cpf.value.length == 3 || cpf.value.length == 7) {
                 cpf.value += "."
             } else if (cpf.value.length == 11) {
@@ -154,11 +154,8 @@
                 <div class="row">
                     <div class="col-md div-home text-center">
                         <div>
-                            <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
+                            <h1><span>Alteração de cadastro de <nobr></span>usuário</nobr>
                             </h1>
-                            <p>
-                                Falta pouco para você ter acesso ao melhor sistema de guarda volume.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +191,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx" value="<?= isset($cpf)? $cpf: ''?>">
+                                        <input type="text" name="cpf" id="cpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx" value="<?= isset($cpf)? $cpf: ''?>">
                                     </div>
 
                                     <div class="col-md">

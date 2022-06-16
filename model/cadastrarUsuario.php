@@ -31,7 +31,7 @@ $dtnasc = $_POST['dtnasc'];
 
 include "connect.php";
 
-echo $nome, $cpf, $email, $sexo, $telefone, $senha, $dtnasc; 
+echo "$nome<br> $cpf<br> $email<br> $sexo<br> $telefone<br> $senha<br> $dtnasc"; 
 
 // variavel da query
 $sql = "INSERT INTO usuario (

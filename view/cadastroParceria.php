@@ -59,15 +59,15 @@
 
 
             //CELULAR -------
-            idcss('inputPhone').setAttribute('maxlength', 15);
-            idcss('inputPhone').onkeypress = function() {
+            idcss('telefone').setAttribute('maxlength', 15);
+            idcss('telefone').onkeypress = function() {
                 mask(this, masktel);
             }
             //-----------
 
             //CNPJ --------
-	        idcss('inputCnpj').setAttribute('maxlength', 18);
-	        idcss('inputCnpj').onkeypress = function(){
+	        idcss('cnpj').setAttribute('maxlength', 18);
+	        idcss('cnpj').onkeypress = function(){
 		        mask( this, maskcnpj );
 	}
 	//-------------
@@ -150,7 +150,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="razao_social" class="form-label">Razão Social:</label>
-                                        <input type="name" name="razao_social" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou quiosque" required>
+                                        <input type="name" name="razao_social" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
                                     </div>
                                 </div>
 

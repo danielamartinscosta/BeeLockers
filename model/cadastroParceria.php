@@ -26,7 +26,7 @@ $senha = $_POST['senha'];
 include "connect.php";
 
 // variavel da query
-$sqlParceria = "INSERT INTO parceria (
+$sql = "INSERT INTO parceria (
     razao_social, 
     email,  
     telefone,
@@ -42,13 +42,13 @@ $sqlParceria = "INSERT INTO parceria (
     )";
 
 // realizar o insert de dados
-$resultParceria = $conn->query($sqlParceria);
+$result = $conn->query($sql);
 
-
+echo "$sql<br>"; 
 echo "$razao_social<br> $cnpj<br> $email<br> $telefone<br>$senha<br>";
 
 // testar se o cadastro foi feito com sucesso
-if ($resultParceria) {
+if ($result) {
     echo "cadastro realizado com sucesso!";
     //header("location:../view/cadastroPraia.php");
 } else {

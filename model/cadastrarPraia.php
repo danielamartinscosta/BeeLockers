@@ -48,7 +48,7 @@ if ($_FILES['imagem_praia']['name']) {
 include "connect.php";
 
 // variavel da query
-$sqlPraia = "INSERT INTO praia (
+$sql = "INSERT INTO praia (
     nome_praia,
     imagem_praia,
     rua,
@@ -66,13 +66,13 @@ $sqlPraia = "INSERT INTO praia (
     )";
 
 // realizar o insert de dados na primeira tabela
-$resultPraia = $conn->query($sqlPraia);
+$result = $conn->query($sql);
 
 
 echo "$nome_praia<br>$imagem_praia<br>$rua<br>$numero<br>$bairro<br>$cep";
 
 // testar se o cadastro foi feito com sucesso
-if ($resultPraia) {
+if ($result) {
     echo "cadastro realizado com sucesso!";
 } else {
     echo "Cadastro não realizado, tente novamente";
