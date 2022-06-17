@@ -21,6 +21,23 @@
 </head>
 
 <body>
+    <?php /*
+    //testar de o usuário está logado
+    //verificar se existe uma sessão aberta no servidor
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+
+    //testar se o usuário está logado ou não
+    if (isset($_SESSION['email'])) {
+        echo $_SESSION['email'];
+    } else {
+        // apagar a variável de sessão
+        unset($_SESSION['email']);
+        header("Location: ../index.php");
+    }
+*/
+    ?>
 
     <header>
         <!-- Início Cabeçalho -->

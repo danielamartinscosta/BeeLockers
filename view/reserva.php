@@ -29,10 +29,10 @@
     <script src='../js/core/locales/pt-br.js'></script>
     <script src="../js/personalizacaoAgenda.js"></script>
 
-   <?php
+    <?php
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
-   /* if (session_status() !== PHP_SESSION_ACTIVE) {
+    /* if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
 
@@ -49,7 +49,7 @@
 
     $usuario = implode(" ", $_SESSION);*/
     ?>
- 
+
     <title>Bee Lockers - Reservar</title>
 </head>
 
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-            <!-- Fim do calendário  -->
+                <!-- Fim do calendário  -->
                 <div class="col div-home">
                     <div class="row fw-bolder">
                         <div class="col div-home">
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </section>
-       
+
         <section class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -212,15 +212,16 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva" value="<?= isset($nome)? $nome: ''?>">
+                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva" value="<?= isset($nome) ? $nome : '' ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Praia</label>
                                     <div class="col-sm-10">
                                         <select name="praia" class="form-control" id="praia">
-                                            <option value="">Selecione</option>
-                                            <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
+                                            <?php
+
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -261,7 +262,7 @@
                     </div>
                     <div class="modal-body">
                         <span id="msg-reservas"></span>
-                        <form id="addevent" method="POST" action="../model/reservas.php"enctype="multipart/form-data">
+                        <form id="addevent" method="POST" action="../model/reservas.php" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
@@ -272,8 +273,13 @@
                                 <label class="col-sm-2 col-form-label">Praia</label>
                                 <div class="col-sm-10">
                                     <select name="cor" class="form-control" id="praia">
-                                        <option value="">Selecione</option>
-                                        <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
+                                        <?php
+                                        $sql="SELECT * FROM praia ORDER BY nome_praia";
+                                        $res=mysqli_query($conn,$sql);
+                                        while($registro=mysqli_fetch_row($res));
+                                        echo '<option value="$nome_praia"></option>';
+
+                                        ?>
                                     </select>
                                 </div>
                             </div>

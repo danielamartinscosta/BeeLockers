@@ -40,7 +40,7 @@
     } else {
         // apagar a variável de sessão
         unset($_SESSION['email']);
-        echo "Deu ruim!!", $_SESSION;
+        echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
     $usuario = implode(" ", $_SESSION);

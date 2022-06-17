@@ -21,7 +21,9 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
 
         header("Location: ../view/agenda.php");
     } else {
-        echo "Não foi possível logar, verifique usuário e senha!";
+        echo '<div class="alert alert-danger" role="alert">
+        Não foi possível logar, verifique usuário e senha!
+      </div>';
     }
 }
 ?>

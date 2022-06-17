@@ -4,10 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendar = new FullCalendar.Calendar(calendarEl, {
         plugins: ['interaction', 'dayGrid'],
         //defaultDate: '2022-04-12',
-        initialView: 'dayGridMonth',
         locale: 'pt-br', // determina o idioma utilizado
-        timeZone: 'America/Sao_Paulo',
-        headerToolbar:{
+        headerToolbar: {
             start: 'dayGridMonth, timeGridWeek, timeGridDay',
             center: 'title',
             end: 'today,prev,next'
@@ -36,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
             endTime: '19:00', // determina a hora final para agendamento
         },
         events: 'listaReservas.php',
-        events: [
+        /*events: [
             {
                 title: 'The Title',
                 start: '2022-06-12T10:00:00',
                 end: '2022-06-12T16:00:00',
 
             }
-        ],
+        ],*/
         extraParams: function () {
             return {
                 cachebuster: new Date().valueOf()

@@ -12,11 +12,8 @@ sexo varchar(10) DEFAULT NULL,
 telefone varchar(14) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
 dtnasc varchar(25) DEFAULT NULL,
-id_praia int(11),
-id_tipo int(11),
 data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-PRIMARY KEY (id_usuario),
-FOREIGN KEY (id_praia) REFERENCES praia (id_praia)
+PRIMARY KEY (id_usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 DROP TABLE IF EXISTS parceria;
@@ -27,9 +24,7 @@ email varchar(255) UNIQUE DEFAULT NULL,
 telefone varchar(14) DEFAULT NULL,
 cnpj varchar(18) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
-id_praia int(11) NOT NULL,
-PRIMARY KEY (id_parceria),
-FOREIGN KEY (id_praia) references praia (id_praia)
+PRIMARY KEY (id_parceria)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 DROP TABLE IF EXISTS praia;
@@ -41,15 +36,15 @@ rua varchar (50) not null,
 numero varchar(20) not null,
 bairro varchar (50) not null,
 cep varchar (8) not null,
-PRIMARY KEY (id_praia)
+id_parceria int(11),
+PRIMARY KEY (id_praia),
+FOREIGN KEY (id_parceria) references parceria (id_parceria)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 DROP TABLE IF EXISTS tipo;
 CREATE TABLE tipo (
 id_tipo int(11) AUTO_INCREMENT,
-admin int not null,
-usuario int not null,
-perceria int not NULL,
+nome_tipo varchar (50) not null,
 PRIMARY KEY (id_tipo)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
