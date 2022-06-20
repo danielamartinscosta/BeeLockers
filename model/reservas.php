@@ -52,13 +52,13 @@ $conn->close();*/
 
 
 //tentativa antiga
-$query_reservas = "INSERT INTO reservas (nome_responsavel, praia, start, end) VALUES ($nome_responsavel, $praia, $start, $end)";
+//$sql = "INSERT INTO reservas (nome_responsavel, praia, start, end) VALUES ($nome_responsavel, $praia, $start, $end)";
 
-$insert_reservas = $conn->prepare($query_reservas);
-$insert_reservas->bindParam('$nome_responsavel', $dados['nome_responsavel']);
-$insert_reservas->bindParam('$praia', $dados['praia']);
-$insert_reservas->bindParam('$start', $data_start_conv);
-$insert_reservas->bindParam('$end', $data_end_conv);
+$insert_reservas = mysqli_prepare($conn, "INSERT INTO reservas (nome_responsavel, praia, start, end) VALUES ($nome_responsavel, $praia, $start, $end)");
+$insert_reservas->bind_param('$nome_responsavel', $dados['nome_responsavel']);
+$insert_reservas->bind_param('$praia', $dados['praia']);
+$insert_reservas->bind_param('$start', $data_start_conv);
+$insert_reservas->bind_param('$end', $data_end_conv);
 
 
 if ($insert_reservas->execute()) {

@@ -5,43 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
         plugins: ['interaction', 'dayGrid'],
         //defaultDate: '2022-04-12',
         locale: 'pt-br', // determina o idioma utilizado
-        headerToolbar: {
-            start: 'dayGridMonth, timeGridWeek, timeGridDay',
-            center: 'title',
-            end: 'today,prev,next'
-        },
         editable: true,
         eventLimit: true, // limitar a quantidade de eventos no dia - deixar como true
-        buttonText: {
-            today: 'hoje',
-            month: 'mês',
-            week: 'semana',
-            day: 'dia',
-            list: 'lista',
-        },
-        slotDuration: '01:00',
-        slotLabelFormat: {
-            hour: 'numeric',
-            minute: '2-digit',
-            omitZeroMinute: false,
-            meridiem: 'short'
-        },
-        businessHours: {
-            // determina os dias da semana disponíveis
-            daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
-
-            startTime: '05:00', // determina a hora inicial para agendamento
-            endTime: '19:00', // determina a hora final para agendamento
-        },
-        events: 'listaReservas.php',
-        /*events: [
-            {
-                title: 'The Title',
-                start: '2022-06-12T10:00:00',
-                end: '2022-06-12T16:00:00',
-
-            }
-        ],*/
+        events: '../model/listaReservas.php',
         extraParams: function () {
             return {
                 cachebuster: new Date().valueOf()
@@ -52,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(info.event);
             $('#visualizar #id_reserva').text(info.event.id_reserva);
             $('#visualizar #id_reserva').val(info.event.id_reserva);
-            $('#visualizar #nome_responsavel').text(info.event.nome_responsavel);
-            $('#visualizar #nome_responsavel').val(info.event.nome_responsavel);
-            $('#visualizar #praia').text(info.event.praia);
-            $('#visualizar #praia').val(info.event.praia);
-            $('#visualizar #start').text(info.event.star.toLocaleString());
+            $('#visualizar #nome').text(info.event.nome);
+            $('#visualizar #nome').val(info.event.nome);
+            $('#visualizar #nome_praia').text(info.event.nome_praia);
+            $('#visualizar #nome_praia').val(info.event.nome_praia);
+            $('#visualizar #start').text(info.event.start.toLocaleString());
             $('#visualizar #start').val(info.event.start.toLocaleString());
             $('#visualizar #end').text(info.event.end.toLocaleString());
             $('#visualizar #end').val(info.event.end.toLocaleString());
@@ -64,11 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         selectable: true,
         select: function (info) {
+            const myModal = new bootstrap.Modal(document.getElementById('cadastrar'))
             //alert('Início do evento: ' + info.start.toLocaleString());
-            $('#cadastrar #start').val(info.start.toLocaleString());
+            /*$('#cadastrar #start').val(info.start.toLocaleString());
             $('#cadastrar #end').val(info.end.toLocaleString());
-            $('#cadastrar').modal('show');
-        }
+            $('#cadastrar').modal('show');*/
+        } 
 
     });
 
@@ -79,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function DataHora(event, objeto) {
     var keypress = (window.event) ? event.keyCode : event.which;
     campo = eval(objeto);
-    if (campo.value == '00/00/0000 00:00') {
+    if (campo.value == '00/00/0000 00:00:00') {
         campo.value = "";
     }
 
@@ -113,7 +80,7 @@ $(document).ready(function () {
         event.preventDefault(); //não fecha a janela modal sem autorização
         $.ajax({
             method: "POST",
-            url: "reservas.php",
+            url: "../model/reservas.php",
             data: new FormData(this),
             contentType: false,
             processData: false,
@@ -142,7 +109,7 @@ $(document).ready(function () {
         event.preventDefault();
         $.ajax({
             method: "POST",
-            url: "editarReserva.php",
+            url: "../model/editarReserva.php",
             data: new FormData(this),
             contentType: false,
             processData: false,

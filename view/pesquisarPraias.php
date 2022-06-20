@@ -217,7 +217,7 @@
                                  
                                         </svg>
                                         </a>
-                                        <a href='../model/excluirpraia.php?id_praia=$id_praia'  class="text-decoration-none ms-2" ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+                                        <a href='../model/excluirPraia.php?id_praia=$id_praia'  class="text-decoration-none ms-2" ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
                                         viewBox="0 0 280.028 280.028" style="enable-background:new 0 0 280.028 280.028;" xml:space="preserve">
                                     <g>
                                         <path style="fill:#CCD0D2;" d="M39.379,70.007v192.519c0,9.661,7.841,17.502,17.502,17.502h166.266

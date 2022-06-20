@@ -37,28 +37,21 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="nav-menu">
-                    <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="home.php" class="nav-link">Home</a>
+                            <a href="homeAdmin.php" class="nav-link">Painel</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agenda.php" class="nav-link">Agendar</a>
+                            <a href="pesquisarUsuario.php" class="nav-link">Usuários</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quemSomos.php" class="nav-link">Quem somos</a>
+                            <a href="pesquisarPraias.php" class="nav-link">Praias</a>
                         </li>
                         <li class="nav-item">
-                            <a href="exibirClima.php" class="nav-link">Clima</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="parcerias.php" class="nav-link">Parcerias</a>
-                        </li>
+                            <a href="pesquisarParcerias.php" class="nav-link">Parcerias</a>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="home.php" class="nav-link">Entrar</a>
+                            <a href="../model/logoff.php" class="nav-link">Sair</a>
                         </li>
                     </ul>
                 </div>

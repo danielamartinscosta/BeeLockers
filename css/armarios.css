@@ -1,0 +1,61 @@
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.disponivel{
+    width: 100px;
+    height: 50px;
+    background-color: #1eae98;
+    color: #fff;
+    text-align: center;
+}
+
+.selecionado{
+    width: 100px;
+    height: 50px;
+    background-color: #ff7b54;
+    color: #fff;
+    text-align: center;
+}
+
+.ocupado{
+    width: 100px;
+    height: 50px;
+    background-color: #ff8887;
+    color: #fff;
+    text-align: center;
+}
+
+.container_armarios{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.item_container{
+    width: 35%;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 8px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.confirmar{
+    width: 100px;
+    height: 60px;
+    background-color: #28b5b5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 100px;
+}

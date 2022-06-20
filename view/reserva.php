@@ -14,7 +14,7 @@
     <!-- ícone página -->
     <link rel="shortcut icon" href="../assets/img/iconeBee.png" type="image/x-icon">
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
@@ -28,6 +28,9 @@
     <script src='../js/daygrid/main.min.js'></script>
     <script src='../js/core/locales/pt-br.js'></script>
     <script src="../js/personalizacaoAgenda.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <?php
     //testar de o usuário está logado
@@ -192,7 +195,7 @@
                                 <dd class="col-sm-9" id="id_reserva"></dd>
 
                                 <dt class="col-sm-3">Nome</dt>
-                                <dd class="col-sm-9" id="nome_responsavel"></dd>
+                                <dd class="col-sm-9" id="nome"></dd>
 
                                 <dt class="col-sm-3">Praia</dt>
                                 <dd class="col-sm-9" id="praia"></dd>
@@ -212,15 +215,18 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva" value="<?= isset($nome) ? $nome : '' ?>">
+                                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Responsável pela reserva" value="<?= isset($nome) ? $nome : '' ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Praia</label>
                                     <div class="col-sm-10">
-                                        <select name="praia" class="form-control" id="praia">
+                                        <select name="nome_praia" class="form-control" id="nome_praia">
                                             <?php
-
+                                            $sql = "SELECT * FROM praia ORDER BY '$nome_praia'";
+                                            $res = mysqli_query($conn, $sql);
+                                            while ($registro = mysqli_fetch_row($res));
+                                            echo '<option value="$nome_praia"></option>';
                                             ?>
                                         </select>
                                     </div>
@@ -241,6 +247,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-10">
                                         <button type="button" class="btn btn-primary btn-canc-edit">Cancelar</button>
+
                                         <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
                                     </div>
                                 </div>
@@ -251,32 +258,33 @@
             </div>
         </section>
 
-        <section class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="cadastrarModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Reservar horário</h5>
-                        <button type="button" class="close warning btn-success" data-dismiss="modal" aria-label="Close">
+                        <h5 class="modal-title" id="cadastrarModalLabel">Reservar horário</h5>
+                        <button type="button" class="close warning btn-success" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <span id="msg-reservas"></span>
-                        <form id="addevent" method="POST" action="../model/reservas.php" enctype="multipart/form-data">
+                        <form id="addevent" method="POST" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nome_responsavel" class="form-control" id="nome_responsavel" placeholder="Responsável pela reserva">
+                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Responsável pela reserva">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Praia</label>
                                 <div class="col-sm-10">
-                                    <select name="cor" class="form-control" id="praia">
+                                    <select name="nome_praia" class="form-control" id="nome_praia">
                                         <?php
-                                        $sql="SELECT * FROM praia ORDER BY nome_praia";
-                                        $res=mysqli_query($conn,$sql);
-                                        while($registro=mysqli_fetch_row($res));
+
+                                        $sql = "SELECT * FROM praia ORDER BY '$nome_praia'";
+                                        $res = mysqli_query($conn, $sql);
+                                        while ($registro = mysqli_fetch_row($res));
                                         echo '<option value="$nome_praia"></option>';
 
                                         ?>
@@ -305,6 +313,8 @@
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer>
@@ -381,9 +391,7 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
