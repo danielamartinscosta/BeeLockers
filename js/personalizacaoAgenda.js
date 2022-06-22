@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         selectable: true,
         select: function (info) {
-            const myModal = new bootstrap.Modal(document.getElementById('cadastrar'))
+            //const myModal = new bootstrap.Modal(document.getElementById('cadastrar'))
             //alert('Início do evento: ' + info.start.toLocaleString());
-            /*$('#cadastrar #start').val(info.start.toLocaleString());
+            $('#cadastrar #start').val(info.start.toLocaleString());
             $('#cadastrar #end').val(info.end.toLocaleString());
-            $('#cadastrar').modal('show');*/
+            $('#cadastrar').modal('show');
         } 
 
     });
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function DataHora(event, objeto) {
     var keypress = (window.event) ? event.keyCode : event.which;
     campo = eval(objeto);
-    if (campo.value == '00/00/0000 00:00:00') {
+    if (campo.value == '00/00/0000 00:00') {
         campo.value = "";
     }
 

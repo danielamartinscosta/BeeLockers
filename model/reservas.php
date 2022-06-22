@@ -2,8 +2,10 @@
 
 session_start();
 
-include_once ("../config/config.php");
+include_once ("connect.php");
 
+
+//Receber os dados do formulário
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 //Converter a data e hora do formato brasileiro para o formato do Banco de Dados

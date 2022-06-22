@@ -140,9 +140,30 @@
                     //$retornoArmario = $selectArmario-> fetch_array();
                     //$sql = mysqli_fetch_array();
 
+                    //trazer dados do banco
+                    $sql = "SELECT * FROM armarios";
 
-                    //$sql = "SELECT * FROM armarios";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            if ($result['status_armario'] == 'disponivel') {
+                                $statusClass = 'disponivel';
 
+                                $link = "<a class='link-info' data-number='{$result['numero']}' data-toggle='modal' data-target='#modalInfo' href='Ver Info'></a>";
+                            };
+
+                            if ($statusClass == 'ocupado') :
+                                echo "<div class='item_container {$statusClass}' data-number='{$result['numero']}'>{$result['numero']}'.$link.'</div>";
+                            else :
+                                echo "<div class='item_container {$statusClass}' data-number='{$result['numero']}'>{$result['numero']}</div>";
+
+                            endif;
+                        }
+                    } else {
+                        echo "error" . $conn->error;
+                    }
+
+                    $conn->close();
                     //buscar no banco de dados por meio da query select
                     /*$result = $conn->query("SELECT * FROM armarios");
 
@@ -221,7 +242,7 @@
 
                     </div>
                 </div>
-                
+
         </section>
 
 

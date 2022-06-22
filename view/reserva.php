@@ -1,4 +1,4 @@
-<?php include("../config/config.php"); ?>
+<?php include("../model/connect.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -35,7 +35,7 @@
     <?php
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
-    /* if (session_status() !== PHP_SESSION_ACTIVE) {
+    if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
 
@@ -50,7 +50,7 @@
 
 
 
-    $usuario = implode(" ", $_SESSION);*/
+    $usuario = implode(" ", $_SESSION);
     ?>
 
     <title>Bee Lockers - Reservar</title>
@@ -90,13 +90,14 @@
                         <li class="nav-item">
                             <a href="parcerias.php" class="nav-link">Parcerias</a>
                         </li>
-                        <!--<li class="nav-item divisor"></li>
-                        <li class="nav-item">
-                            <a href="perfilUsuario.php" class="nav-link"><?= $usuario ?></a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a href="../model/logoff.php" class="nav-link">Sair</a>
-                        </li>
+                        <li class="nav-item divisor">
+                            </li>
+                            <li class="nav-item">
+                                <a href="perfilUsuario.php" class="nav-link"><?= $usuario ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../model/logoff.php" class="nav-link">Sair</a>
+                            </li>
                     </ul>
                 </div>
 
@@ -213,9 +214,16 @@
                             <form id="editevent" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="id_reserva" id="id_reserva">
                                 <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label class="form-label">ID</label>
+                                        <input type="text" name="id" id="inputId" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Responsável pela reserva" value="<?= isset($nome) ? $nome : '' ?>">
+                                        <input type="text" name="nome" class="form-control" id="inputNome" placeholder="Responsável pela reserva" value="<?= $usuario ?>" readonly="readonly">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -223,10 +231,7 @@
                                     <div class="col-sm-10">
                                         <select name="nome_praia" class="form-control" id="nome_praia">
                                             <?php
-                                            $sql = "SELECT * FROM praia ORDER BY '$nome_praia'";
-                                            $res = mysqli_query($conn, $sql);
-                                            while ($registro = mysqli_fetch_row($res));
-                                            echo '<option value="$nome_praia"></option>';
+                                             $sql = "SELECT * FROM praia ORDER BY '$nome_praia'";
                                             ?>
                                         </select>
                                     </div>

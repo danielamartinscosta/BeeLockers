@@ -63,7 +63,7 @@ CREATE TABLE armarios(
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 INSERT INTO armarios(
-  id, numero_armario, status_armario) VALUES (1, 1, disponivel), 
+  id_armario, numero_armario, status_armario) VALUES (1, 1, disponivel), 
   (2, 2, disponivel),
   (3, 3, disponivel),
   (4, 4, disponivel),
