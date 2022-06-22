@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col-8 div-home">
+                    <div class="col-md-10 div-home">
                         <div class="card">
                             <div class="card-body">
                                 <p>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="row fw-bolder justify-content-center">
                     <!-- Início do Conteúdo das imagens - Carrossel-->
-                    <div class="col-8">
+                    <div class="col-md-10">
 
                             <div id="praia" class="carousel slide" data-bs-ride="carousel"><!-- Início Carousel -->
 

@@ -70,7 +70,7 @@
     <main>
         <!-- Início do Conteúdo Principal-->
         <section id="home">
-            <div class="container-fluid">
+            <div class="container-fluid div-home">
 
                 <div class="row">
                     <div class="col-md text-center">
@@ -241,46 +241,41 @@
                 <P><strong>Entre em contato com a gente</strong></P>
             </div>
             <div class="row div-home justify-content-center">
-                <div class="card col-6">
+                <div class="card col-md-6">
                     <div class="card-body ">
                         <div class="col-md text-center">
                             <h2>
                                 <nobr>Contato</nobr>
                             </h2>
                         </div>
-                        <div class="flex-container">
-                            <div class="col">
-                                <!-- FOrmulario -->
-                                <form>
-                                    <div class="m-1">
-                                        <label for="nome" class="form-label"><strong>Nome:</strong></label>
-                                        <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
-                                    </div>
-                                    <div class="m-1">
-                                        <label for="email" class="form-label"><strong>E-mail:</strong></label>
-                                        <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="form-control">
-                                    </div>
-                                    <div class="m-1">
-                                        <label for="Tel" class="form-label col-md-12">
-                                            <strong>Tel:</strong>
-                                            <input type="tel" id="tel_celular" placeholder="(11)-00000-0000" class="form-control">
-                                        </label>
-                                    </div>
-                                    <div class="m-1">
-                                        <label for="assunto" class="form-label"><strong>Assunto:</strong></label>
-                                        <input type="text" name="assunto" id="assunto" placeholder="" class="form-control">
-                                    </div>
-                                    <div>
-                                        <label for="msg" class="form-label col-md-12">
-                                            <strong>Mensagem:</strong>
-                                            <textarea name="msg" id="msg" rows="5" class="form-control"></textarea>
-                                        </label>
-                                    </div>
-                                    <div class="col ">
-                                        <button type="submit" class="btn text-white btn-custom">Enviar</button>
-                                    </div>
-                                </form>
-                            </div>
+                        <div class="row justify-content-center">
+                            <!-- FOrmulario -->
+                            <form class="col-md-4">
+                                <div class="m-1">
+                                    <label for="nome" class="form-label">Nome:</label>
+                                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
+                                </div>
+                                <div class="m-1">
+                                    <label for="email" class="form-label">E-mail:</label>
+                                    <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="form-control">
+                                </div>
+                                <div class="m-1">
+                                    <label for="Tel" class="form-label">Tel:</label>
+                                    <input type="tel" id="tel_celular" placeholder="(11)-00000-0000" class="form-control">
+                                    
+                                </div>
+                                <div class="m-1">
+                                    <label for="assunto" class="form-label">Assunto:</label>
+                                    <input type="text" name="assunto" id="assunto" placeholder="" class="form-control">
+                                </div>
+                                <div>
+                                    <label for="msg" class="form-label">Mensagem:</label>
+                                    <textarea name="msg" id="msg" rows="5" class="form-control" width="100em"></textarea>
+                                </div>
+                                <div class="col text-center">
+                                    <button type="submit" class="btn text-white btn-custom">Enviar</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -53,12 +53,20 @@
                             <a href="parcerias.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item">
-                            <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-ninja"></i>
+                            </a>
+                            <ol class="dropdown-menu" aria-labelledby="menuPerfil">
+                                <li>
+                                    <a class="dropdown-item" href="">Meus dados</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="">Logout</a>
+                                </li>
+                            </ol>
                         </li>
-                        <li class="nav-item">
-                            <a href="home.php" class="nav-link">Entrar</a>
-                        </li>
+
                     </ul>
                 </div>
 

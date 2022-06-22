@@ -80,11 +80,16 @@
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid div-home ">
-                <h1 class="text-center"><span>Painel <nobr></span>Administrador</nobr>
-                </h1>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-3">
+            <div class="row">
+                    <div class="col-md text-center">
+                        <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr></h1>
+                    </div>
+                    <div class="col-md text-center">
+                        <h2>Painel <span>Administrativo</span></nobr></h2>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="col-md-3 caixa">
                         <div class="card">
                             <div class="container">
                                 <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/Usuários.png" alt="usuários"></a>
@@ -92,8 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2"></div>
-                    <div class="col-3">
+                    <div class="col-md-3 caixa">
                         <div class="card">
                             <div class="container">
                                 <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
@@ -105,9 +109,8 @@
             </div>
         </section>
         <section>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-3">
+            <div class="row justify-content-around">
+                <div class="col-md-3 caixa">
                     <div class="card">
                         <div class="container">
                             <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/praia.png" alt="praias"></a>
@@ -115,8 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2"></div>
-                <div class="col-3">
+                <div class="col-md-3 caixa">
                     <div class="card">
                         <div class="container">
                             <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="parecrias"></a>

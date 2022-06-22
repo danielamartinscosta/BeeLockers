@@ -85,7 +85,7 @@
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-md text-center">
+                    <div class="col-md text-center div-home">
                         <h1>
                             <nobr></span>Bee <span>Lockers</span></nobr>
                         </h1>

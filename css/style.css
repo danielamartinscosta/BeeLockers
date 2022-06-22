@@ -11,6 +11,10 @@ header{
     width: 100%;
     z-index: 2;
 }
+.dropdown .dropdown-toggle .dropdown-menu {
+    background-color: rgb(55, 160, 148);
+
+}
 .clear{
     clear: both;
 }
@@ -73,7 +77,7 @@ h2 {
 }
 
 #home .div-home {
-    margin: 2.5em 0;
+    margin-top: 3em;
 }
 
 #home p {
@@ -96,6 +100,7 @@ p{
 
 label {
     color: #000;
+    font-weight: bolder;
 }
 
 .btn-custom {
@@ -115,7 +120,7 @@ label {
 
 /* ================= Recursos =================*/
 .caixa{
-    margin: 4em 0;
+    margin-top: 2em;
 }
 
 /* ================= Rodapé =================*/
@@ -201,6 +206,7 @@ footer .bordar-rodape{
     .caixa {
         text-align: center;
     }
+    
 }
 
 /* Small devices (landscape phones, 576px and up) */

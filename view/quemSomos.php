@@ -112,7 +112,7 @@
     <main>
         <!-- Início do Conteúdo Principal-->
         <section id="home">
-            <div class="container-fluid">
+            <div class="container-fluid div-home">
 
                 <div class="row">
                     <div class="col-md text-center">
@@ -124,7 +124,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-md-8 div-home">
+                <div class="col-md-10 div-home">
                     <div class="card">
                         <div class="card-body">
                             <p>
@@ -205,7 +205,7 @@
 
     <section class="caixa"><!-- Início da seção Contato-->
             <div class="row justify-content-center">
-                <div class="col-6 div-home">
+                <div class="col-md-6 div-home">
                     <div class="card">
                         <div class="card-body">
                             <h2 class="text-center">Localização</h2>
