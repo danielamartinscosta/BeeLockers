@@ -16,7 +16,7 @@ if ($conn->query($sql) === TRUE) {
     }
     unlink($dir . $imagem_praia); // se existir deleta
     $conn->close(); // fechar a conexão
-    header('Location:../view/pesquisarpraia.php');
+    header('Location:../view/pesquisarPraias.php');
 } else {
     echo "Error ao deletar: " . $conn->error;
 }
