@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleAgendar.css">
     <link rel="stylesheet" href="../css/styleCalendar.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href='../css/core/main.min.css' rel='stylesheet' />
     <link href='../css/daygrid/main.min.css' rel='stylesheet' />
     <script src='../js/core/main.min.js'></script>
