@@ -78,6 +78,9 @@
                         <p>
                             Não tem cadastro? <a class="text-warning" href="cadastroParceria.php">Clique aqui</a> para se cadastrar.
                         </p>
+                        <p>
+                                Se você já é cadastrado, <a href="homeParceria.php">Clique aqui</a> para fazer login.
+                            </p>
                     </div>
                 </div>
             </div>
