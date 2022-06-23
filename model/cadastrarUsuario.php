@@ -61,7 +61,7 @@ $result = $conn->query($sql);
 
 //testar se o cadastro foi feito com sucesso
 if ($result) {
-    header('Location:../view/reserva.php');
+    //header('Location:../view/reserva.php');
 
 } else {
     echo "Não foi possivel realizar o cadastro";
