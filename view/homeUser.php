@@ -19,22 +19,25 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <?php
-    //testar de o usuário está logado
+ //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
 
     //testar se o usuário está logado ou não
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['email_session'])) {
+        //echo $_SESSION['email_session'];
     } else {
         // apagar a variável de sessão
-        unset($_SESSION['email']);
-        echo "Error!!", $_SESSION;
+        unset($_SESSION['email_session']);
+        echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $usuario = implode(" ", $_SESSION);
+    $usuario = $_SESSION['nome_session'];
+    $email = $_SESSION['email_session'];
     ?>
+    
     
     <title>Bee Lockers - Home</title>
 </head>

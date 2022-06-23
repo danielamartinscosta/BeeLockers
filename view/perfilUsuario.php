@@ -35,6 +35,7 @@
         header("Location: ../index.php");
     }
     $usuario = $_SESSION['nome_session'];
+    $email = $_SESSION['email_session'];
     ?>
     
     <title>Bee Lockers - Reservar</title>
@@ -111,7 +112,7 @@
                 <div class="row">
                     <div class="col-md text-center">
                         <P>
-                            Olá <?= $usuario ?>, aqui você pode atualizar seus dados caso queira.
+                            Olá <?=$usuario?>, aqui você pode atualizar seus dados caso queira.
                         </P>
                     </div>
                 </div>
@@ -124,14 +125,14 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <input type="name" name="nome" id="inputNome" value="<?=$usuario?>" class="form-control" placeholder="Digite seu nome completo" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
+                                        <input type="email" name="email" id="inputEmail" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control">
                                     </div>
                                 </div>
                                 <div class="row">
