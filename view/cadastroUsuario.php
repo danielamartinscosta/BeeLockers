@@ -131,7 +131,7 @@
                 <div class="row justify-content-center">
                     <form method="post" action="../model/cadastrarUsuario.php" enctype="multipart/form-data" class="col-md-8">
                         <div class="card">
-                            <div class="card-body mb-2 fw-bolder">
+                            <div class="card-body mb-2">
 
                                 <div class="row">
                                     <div>
@@ -146,7 +146,7 @@
                                         <input type="hidden" name="id_tipo" id="id_tipo" class="form-control" placeholder=""  >
                                     </div>
                                 </div>
-
+        
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>

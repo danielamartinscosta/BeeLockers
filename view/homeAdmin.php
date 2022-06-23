@@ -66,18 +66,8 @@
                         <li class="nav-item">
                             <a href="pesquisarParcerias.php" class="nav-link">Parcerias</a>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user-ninja"></i>
-                            </a>
-                            <ol class="dropdown-menu" aria-labelledby="menuPerfil">
-                                <li>
-                                    <a class="dropdown-item nav-link" href="perfilUsuario.php">Meus dados</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item nav-link" href="../model/logoff.php" href="">Logout</a>
-                                </li>
-                            </ol>
+                        <li class="nav-item">
+                            <a href="../model/logoff.php" class="nav-link">Sair</a>
                         </li>
                     </ul>
                 </div>
