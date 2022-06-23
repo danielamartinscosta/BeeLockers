@@ -69,11 +69,11 @@ $sql = "INSERT INTO praia (
 $result = $conn->query($sql);
 
 
-echo "$nome_praia<br>$imagem_praia<br>$rua<br>$numero<br>$bairro<br>$cep";
 
 // testar se o cadastro foi feito com sucesso
 if ($result) {
     echo "cadastro realizado com sucesso!";
+    header('location:../view/parceriasUser.php');
 } else {
     echo "Cadastro não realizado, tente novamente";
 }

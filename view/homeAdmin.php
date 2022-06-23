@@ -113,7 +113,7 @@
                 <div class="col-md-3 caixa">
                     <div class="card">
                         <div class="container">
-                            <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
+                            <a href="../view/pesquisarParcerias.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
                             <h4 class="text-center">Parcerias</h4>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                 <div class="col-md-3 caixa">
                     <div class="card">
                         <div class="container">
-                            <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="parecrias"></a>
+                            <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="reservas"></a>
                             <h4 class="text-center">Reservas</h4>
                         </div>
                     </div>

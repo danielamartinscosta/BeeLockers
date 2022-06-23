@@ -22,58 +22,57 @@
 </head>
 
 <script type="text/javascript">
+    function mask(o, f) {
+        v_obj = o
+        v_fun = f
+        setTimeout("execmask()", 1)
+    }
 
-        function mask(o, f) {
-            v_obj = o
-            v_fun = f
-            setTimeout("execmask()", 1)
+    function execmask() {
+        v_obj.value = v_fun(v_obj.value)
+    }
+
+
+    function maskcnpj(v) {
+        v = v.replace(/\D/g, "");
+        v = v.replace(/^(\d{2})(\d)/, "$1.$2");
+        v = v.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+        v = v.replace(/\.(\d{3})(\d)/, ".$1/$2");
+        v = v.replace(/(\d{4})(\d)/, "$1-$2");
+        return v;
+    }
+
+
+    function masktel(v) {
+        v = v.replace(/\D/g, "");
+        v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+        v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+        return v;
+    }
+
+    function idcss(el) {
+        return document.getElementById(el);
+    }
+
+    window.onload = function() {
+
+
+        //CELULAR -------
+        idcss('telefone').setAttribute('maxlength', 15);
+        idcss('telefone').onkeypress = function() {
+            mask(this, masktel);
         }
+        //-----------
 
-        function execmask() {
-            v_obj.value = v_fun(v_obj.value)
+        //CNPJ --------
+        idcss('cnpj').setAttribute('maxlength', 18);
+        idcss('cnpj').onkeypress = function() {
+            mask(this, maskcnpj);
         }
-        
-        
-        function maskcnpj(v){
-            v=v.replace(/\D/g,"");                        
-            v=v.replace(/^(\d{2})(\d)/,"$1.$2");          
-            v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3");
-            v=v.replace(/\.(\d{3})(\d)/,".$1/$2");       
-            v=v.replace(/(\d{4})(\d)/,"$1-$2");
-            return v;
-}
+        //-------------
 
-
-        function masktel(v) {
-            v = v.replace(/\D/g, "");
-            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
-            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
-            return v;
-        }
-
-        function idcss(el) {
-            return document.getElementById(el);
-        }
-
-        window.onload = function() {
-
-
-            //CELULAR -------
-            idcss('telefone').setAttribute('maxlength', 15);
-            idcss('telefone').onkeypress = function() {
-                mask(this, masktel);
-            }
-            //-----------
-
-            //CNPJ --------
-	        idcss('cnpj').setAttribute('maxlength', 18);
-	        idcss('cnpj').onkeypress = function(){
-		        mask( this, maskcnpj );
-	}
-	//-------------
-
-        }
-    </script>
+    }
+</script>
 
 <body>
     <header>
@@ -132,8 +131,8 @@
                             <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
                             </h1>
                             <p>Tem um local que gostaria de disponibilizar para locação de armários e ganhar uma grana? Faça parceria com a gente!</p>
-                            <p>    
-                            Falta pouco para você se tornar parceiro (a) e ter acesso ao melhor sistema de guarda volume.  Cadastre-se e aproveite.
+                            <p>
+                                Falta pouco para você se tornar parceiro (a) e ter acesso ao melhor sistema de guarda volume. Cadastre-se e aproveite.
                             </p>
                             <p>
                                 Se você já é cadastrado, <a href="home.php">Clique aqui</a> para fazer login.
@@ -149,55 +148,61 @@
 
                                 <div class="row">
                                     <div>
-                                        <label for="razao_social" class="form-label">Razão Social:</label>
-                                        <input type="name" name="razao_social" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
+                                        <label for="id_tipo" class="form-label"></label>
+                                        <input type="hidden" name="id_tipo" id="id_tipo" class="form-control" placeholder="">
                                     </div>
+
+                                    <div class="row">
+                                        <div>
+                                            <label for="razao_social" class="form-label">Razão Social:</label>
+                                            <input type="name" name="razao_social" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <label for="email" class="form-label">E-mail:</label>
+                                            <input type="email" name="email" id="email" placeholder="Seu e-mail" required class="form-control">
+                                        </div>
+
+                                        <div class="col-md">
+                                            <label for="telefone" class="form-label">Telefone:</label>
+                                            <input type="text" name="telefone" id="telefone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <label for="cnpj" class="form-label">CNPJ:</label>
+                                            <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required maxlength="18" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
+                                        </div>
+
+                                        <div class="col-md">
+                                            <label for="senha" class="form-label">Senha:</label>
+                                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group form-inline form-switch div-checkbox">
+                                            <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
+                                            <label for="txtPermissao" class="form-check-label text-white">
+                                                De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
+                                                e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row text-center">
+
+                                        <div class="col">
+                                            <button type="submit" class="btn text-white btn-custom">Cadastrar</button>
+                                        </div>
+
+                                    </div>
+
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="email" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="email" placeholder="Seu e-mail" required class="form-control">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="telefone" class="form-label">Telefone:</label>
-                                        <input type="text" name="telefone" id="telefone" class="form-control" required placeholder="(xx) xxxxx-xxxx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="cnpj" class="form-label">CNPJ:</label>
-                                        <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="XX.XXX.XXX/XXXX-XX" required maxlength="18" title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="senha" class="form-label">Senha:</label>
-                                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
-                                        <label for="txtPermissao" class="form-check-label text-white">
-                                        De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" target="_blank">condições da Bee Loockers</a>
-                                        e<a class="text-warning" href="" target="_blank"> política de privacidade</a>.
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="row text-center">
-
-                                    <div class="col">
-                                        <button type="submit" class="btn text-white btn-custom">Cadastrar</button>
-                                    </div>
-
-                                </div>
-
                             </div>
-                        </div>
                     </form>
                 </div>
 
@@ -206,7 +211,8 @@
         </section>
     </main><!-- Fim do Conteúdo Principal-->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -274,7 +280,8 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 

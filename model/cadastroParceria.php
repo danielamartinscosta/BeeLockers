@@ -22,7 +22,7 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $cnpj = $_POST['cnpj'];
 $senha = $_POST['senha'];
-$id_tipo = $_POST['3'];
+$id_tipo = $_POST['id_tipo'];
 
 include "connect.php";
 
@@ -47,8 +47,6 @@ $sql = "INSERT INTO parceria (
 // realizar o insert de dados
 $result = $conn->query($sql);
 
-echo "$sql<br>"; 
-echo "$razao_social<br> $cnpj<br> $email<br> $telefone<br>$senha<br>";
 
 // testar se o cadastro foi feito com sucesso
 if ($result) {

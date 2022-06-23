@@ -143,7 +143,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="id_tipo" class="form-label"></label>
-                                        <input type="hidden" name="id_tipo" id="id_tipo" class="form-control" placeholder="Digite seu nome completo"  >
+                                        <input type="hidden" name="id_tipo" id="id_tipo" class="form-control" placeholder=""  >
                                     </div>
                                 </div>
 
