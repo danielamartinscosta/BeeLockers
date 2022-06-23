@@ -35,19 +35,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="nav-menu">
+                <div class="collapse navbar-collapse " id="nav-menu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a href="home.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agenda.php" class="nav-link">Agendar</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="quemSomos.php" class="nav-link">Quem somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="exibirClima.php" class="nav-link">Clima</a>
                         </li>
                         <li class="nav-item">
                             <a href="parcerias.php" class="nav-link">Parcerias</a>
@@ -86,7 +80,6 @@
                             Está pensando em viajar para a praia e não sabe como guardar seus pertences em segurança?
                         </p>
                         <h2>Temos a solução ideal para você!!!</h2>
-                        <h1>Entre já e confira!</h1>
                     </div>
                 </div>
 

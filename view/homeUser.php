@@ -37,36 +37,35 @@
 
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="home.php" class="nav-link">Home</a>
+                    <li class="nav-item">
+                            <a href="homeUser.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agenda.php" class="nav-link">Agendar</a>
+                            <a href="agendaUser.php" class="nav-link">Agendar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quemSomos.php" class="nav-link">Quem somos</a>
+                            <a href="quemSomosUser.php" class="nav-link">Quem somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="exibirClima.php" class="nav-link">Clima</a>
+                            <a href="exibirClimaUser.php" class="nav-link">Clima</a>
                         </li>
                         <li class="nav-item">
-                            <a href="parcerias.php" class="nav-link">Parcerias</a>
+                            <a href="parceriasUser.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown col-md-1">
                             <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user-ninja"></i>
                             </a>
-                            <ol class="dropdown-menu" aria-labelledby="menuPerfil">
+                            <ol class="dropdown-menu " aria-labelledby="menuPerfil">
                                 <li>
-                                    <a class="dropdown-item" href="">Meus dados</a>
+                                    <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="">Logout</a>
+                                    <a class="dropdown-item"  href="../model/logoff.php">Sair</a>
                                 </li>
                             </ol>
                         </li>
-
                     </ul>
                 </div>
 
@@ -94,55 +93,7 @@
                             Está pensando em viajar para a praia e não sabe como guardar seus pertences em segurança?
                         </p>
                         <h2>Temos a solução ideal para você!!!</h2>
-                        <h1>Entre já e confira!</h1>
                     </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <form class="col-md-4 div-home" method="post" action="../model/logar.php" enctype="multipart/form-data">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="fw-bolder">
-
-                                    <div class="m-1">
-                                        <label for="txtUsuario" class="form-label">Usuário:</label>
-                                        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail">
-                                    </div>
-                                    <div class="m-1">
-                                        <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="senha" id="inputSenha" class="form-control" placeholder="Digite sua Senha">
-                                    </div>
-
-                                </div>
-                                <div class="row mb-2">
-
-                                    <div class="col text-center">
-                                        <button type="submit" class="btn text-white btn-custom ">Login</button>
-                                    </div>
-
-                                </div>
-                                <div class="row text-center mb-2">
-
-                                    <div class="col">
-                                        <a href="esqueciSenha.php" class="btn text-warning">Esqueci minha senha</a>
-                                    </div>
-                                    <div class="col">
-                                        <a href="cadastroUsuario.php" class="btn text-warning">Criar uma conta</a>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="form-group form-inline form-switch div-checkbox">
-                                        <input type="checkbox" id="txtPermissao" name="txtPermissao" value="1" class="form-check-input" required>
-                                        <label for="txtPermissao" class="form-check-label text-white">
-                                            De acordo com as Leis 12.965/2014 e 13.709/2018, que regulam o uso da Internet e o tratamento de dados pessoais no Brasil, ao me inscrever autorizo Bee Lockers a enviar notificações por e-mail ou outros meios e concordo com sua Política de Privacidade. <a class="text-warning" href="" data-toggle="modal" data-target="#condicoesUso">Condições da Bee Loockers</a>
-                                            e <a class="text-warning" href="" data-toggle="modal" data-target="#politica" target="_blank"> política de privacidade</a>.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>

@@ -1,10 +1,13 @@
+<?php include("../config/config.php"); ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
     <meta name="author" content="Geovani, Daniela, Julyane, Emily e Pedro">
     <meta name="keyword" content="Praia, armário, guarda volumes">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ícone página -->
@@ -15,35 +18,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <link href='../css/core/main.min.css' rel='stylesheet' />
-    <link href='../css/daygrid/main.min.css' rel='stylesheet' />
-    <script src='../js/core/main.min.js'></script>
-    <script src='../js/interaction/main.min.js'></script>
-    <script src='../js/daygrid/main.min.js'></script>
-    <script src='../js/core/locales/pt-br.js'></script>
-    <script src="../js/personalizacaoAgenda.js"></script>
-
-
-
-    <?php
-    //testar de o usuário está logado
-    //verificar se existe uma sessão aberta no servidor
-    if (session_status() !== PHP_SESSION_ACTIVE) {
-        session_start();
-    }
-
-    //testar se o usuário está logado ou não
-    if (isset($_SESSION['email'])) {
-        //echo $_SESSION['email'];
-    } else {
-        // apagar a variável de sessão
-        unset($_SESSION['email']);
-        echo "Erro!!", $_SESSION;
-        header("Location: ../index.php");
-    }
-    $usuario = implode(" ", $_SESSION);
-    ?>
-    <title>Bee Lockers - Reservar</title>
+    <link rel="stylesheet" href="../css/styleClima.css">
+    <title>Bee Lockers - Clima</title>
 </head>
 
 <body>
@@ -80,7 +56,7 @@
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item dropdown col-md-1">
-                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user-ninja"></i>
                             </a>
                             <ol class="dropdown-menu " aria-labelledby="menuPerfil">
@@ -104,87 +80,56 @@
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid">
-
                 <div class="row">
-                    <div class="col-md div-home caixa text-center">
+                    <div class="col-md div-home text-center">
                         <h1>
-                            <span><nobr></span>Bee <span>Lockers</span></nobr>
+                            <nobr>Bee <span>Lockers</span></nobr>
                         </h1>
+                        <p>
+                            Confira qual a cidade ideal para curtir um passeio incrível ainda hoje.
+                        </p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md text-center">
-                        <P>
-                            Olá <?= $usuario ?>, aqui você pode atualizar seus dados caso queira.
-                        </P>
-                    </div>
-                </div>
+                <!-- início da pesquisa de clima -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 mt-2 div-clima">
+                        <div class="card cor-clima shadow-lg">
+                            <div class="card-body">
+                                <div class="row fw-bolder">
 
-                <div class="row justify-content-center caixa">
-                    <form method="post" action="" enctype="multipart/form-data" class="col-md-6">
-                        <div class="card">
-                            <div class="card-body mb-2 fw-bolder">
-
-                                <div class="row">
-                                    <div>
-                                        <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required>
+                                    <div class="card-header text-center bg-transparent border-success">
+                                        <h2>Consulta de Clima</h2>
                                     </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
+                                    <div class="card-body text-center">
+                                        <div class="city">Cidade</div>
+                                        <div class="date">Domingo, 30 Novembro 2022</div>
+                                        <div class="container-img">
+                                            <img src="../assets/img/unknown.png" alt="imagem-clima">
+                                        </div>
+                                        <div class="container-temp">
+                                            <div>22</div>
+                                            <span>°C</span>
+                                        </div>
+                                        <div class="weather">Nublado</div>
+                                        <div class="low-high"> Mínima de: 22°C /Máxima de: 23°C</div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputDate" class="form-label">Data de nascimento:</label>
-                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="inputSexo" class="form-label">Sexo:</label><br>
-                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
-                                            <option value="F" selected>Feminino</option>
-                                            <option value="M">Masculino</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="row text-center mt-4">
-
-                                    <div class="col">
-                                        <button type="submit" class="btn text-white btn-custom">Atualizar</button>
+                                    <div class="card-footer text-center bg-transparent border-success">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control shadow-lg " placeholder="Digite o nome da Cidade" aria-label="digite o nome da Cidade" aria-describedby="button-addon2">
+                                            <button class="btn btn-success text-white" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                                        </div>
                                     </div>
 
                                 </div>
-
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-
-
+                <!-- Fim da pesquisa de clima -->
             </div>
-        </section>
-    </main><!-- Fim do Conteúdo Principal-->
+        </section><!-- Fim do Home-->
+    </main>
 
     <footer><!--Início do rodapé-->
         <section class="container-fluid">
@@ -259,10 +204,11 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="../js/clima.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="../js/clima.js"></script>
 
 </body>
+
 </html>

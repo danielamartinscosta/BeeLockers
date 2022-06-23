@@ -38,21 +38,34 @@
 
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="home.php" class="nav-link">Home</a>
+                    <li class="nav-item">
+                            <a href="homeUser.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quemSomos.php" class="nav-link">Quem somos</a>
+                            <a href="agendaUser.php" class="nav-link">Agendar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="parcerias.php" class="nav-link">Parcerias</a>
+                            <a href="quemSomosUser.php" class="nav-link">Quem somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="exibirClimaUser.php" class="nav-link">Clima</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="parceriasUser.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item">
-                            <a href="cadastroUsuario.php" class="nav-link">Inscrever-se</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="home.php" class="nav-link">Entrar</a>
+                        <li class="nav-item dropdown col-md-1">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-ninja"></i>
+                            </a>
+                            <ol class="dropdown-menu " aria-labelledby="menuPerfil">
+                                <li>
+                                    <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"  href="../model/logoff.php">Sair</a>
+                                </li>
+                            </ol>
                         </li>
                     </ul>
                 </div>
@@ -75,9 +88,6 @@
                             Falta pouco para você ser um de nossos parceiros e ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
                         </p>
                         <p>Tem um quiosque ou um local disponível para locação de armários? Seja um parceiro Bee Lockers e veja os benefícios que podemos te oferecer!</p>
-                        <p>
-                            Não tem cadastro? <a class="text-warning" href="cadastroParceria.php">Clique aqui</a> para se cadastrar.
-                        </p>
                     </div>
                 </div>
             </div>
