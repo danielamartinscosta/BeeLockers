@@ -47,9 +47,6 @@
         echo "Error!!", $_SESSION;
         header("Location: ../index.php");
     }
-
-
-
     $usuario = implode(" ", $_SESSION);
     ?>
 
