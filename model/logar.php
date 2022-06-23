@@ -4,7 +4,7 @@ session_start();
 include "../model/connect.php";
 
 
-$email = $_POST['email'];
+/*$email = $_POST['email'];
 $senha = $_POST['senha'];
 
 // se o login do banco for igual ao login do formulario e senha igual a senha
@@ -64,14 +64,14 @@ if($contagem == 1 and $tipo == 1) {
     header("location:../view/parceriasUser.php");
 
 }
-
+*/
 
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 $id_tipo = isset($_POST['id_tipo']) ? $_POST['id_tipo'] : '';
 
 
-if (isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['id_tipo'])) {
+if (isset($_POST['email']) && isset($_POST['senha'])) {
     $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";
 
     $result = $conn->query($sql);

@@ -41,7 +41,7 @@ $sql = "INSERT INTO parceria (
         '$telefone',
         '$cnpj',
         '$senha',
-        '3'
+        '$id_tipo'
     )";
 
 // realizar o insert de dados
@@ -54,4 +54,5 @@ if ($result) {
     header("location:../view/cadastroPraia.php");
 } else {
     echo "Cadastro não realizado, tente novamente";
-}
+    echo $sql;
+};
