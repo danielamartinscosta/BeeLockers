@@ -63,7 +63,7 @@ if($result->num_rows === 1 and $tipo == 1) {
         Não foi possível logar, verifique usuário e senha!
       </div>';
 
-      echo $tipo;
+      
     }
 
 ?>

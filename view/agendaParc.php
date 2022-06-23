@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/styleAgendar.css">
+    
     <?php
-   //testar de o usuário está logado
+    //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
@@ -35,51 +36,11 @@
         echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $usuario = $_SESSION['nome_session'];
+    $usuario = $_SESSION['razao_social_session'];
     $email = $_SESSION['email_session'];
     ?>
-    <title>Bee Lockers - Quem Somos</title>
-
-    </script>
-    <script type="text/javascript">
-        function mask(o, f) {
-            v_obj = o
-            v_fun = f
-            setTimeout("execmask()", 1)
-        }
-
-        function execmask() {
-            v_obj.value = v_fun(v_obj.value)
-        }
-
-        function masktel(v) {
-            v = v.replace(/\D/g, "");
-            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
-            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
-            return v;
-        }
-
-
-
-
-
-
-        function idcss(el) {
-            return document.getElementById(el);
-        }
-
-        window.onload = function() {
-
-
-            //CELULAR -------
-            idcss('tel_celular').setAttribute('maxlength', 15);
-            idcss('tel_celular').onkeypress = function() {
-                mask(this, masktel);
-            }
-            //-------------
-
-        }
-    </script>
+    
+    <title>Bee Lockers - Agenda</title>
 </head>
 
 <body>
@@ -100,19 +61,19 @@
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                            <a href="homeUser.php" class="nav-link">Home</a>
+                            <a href="homeParc.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agendaUser.php" class="nav-link">Agendar</a>
+                            <a href="agendaParc.php" class="nav-link">Agendar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quemSomosUser.php" class="nav-link">Quem somos</a>
+                            <a href="quemSomosParc.php" class="nav-link">Quem somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="exibirClimaUser.php" class="nav-link">Clima</a>
+                            <a href="exibirClimaParc.php" class="nav-link">Clima</a>
                         </li>
                         <li class="nav-item">
-                            <a href="parceriasUser.php" class="nav-link">Parcerias</a>
+                            <a href="parceriasParc.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item dropdown col-md-1">
@@ -139,122 +100,121 @@
     <main>
         <!-- Início do Conteúdo Principal-->
         <section id="home">
-            <div class="container-fluid div-home">
+            <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-md text-center">
+                    <div class="col-md div-home text-center">
                         <h1>
                             <nobr>Bee <span>Lockers</span></nobr>
                         </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-10 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>
-                                Somos uma empresa brasileira que trabalha com o objetivo de promover lazer e segurança lado a lado. Nascemos da ideia de tornar o lazer, um momento inesquecível e sem preocupações.
-                            </p>
-                            <p> Desde 2022 atuando no desenvolvimento de soluções tecnológicas para sistema de agendamento, voltado para o setor de entretenimento - cultura de lazer. </p>
-                            <p>
-                                A BeeLockers é pioneira e líder em sistema de agendamento para locação de armários nas praias do litoral brasileiro. Possui um completo conjunto de soluções que atendem as necessidades de agendamento, com praticidade e otimização de tempo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row fw-bolder justify-content-center">
-                <div class="col-md-4 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center">O motivo de existimos?</h2>
-                            <p>
-                                A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
-                                Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e
-                                deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
-                            </p>
-                        </div>
+                        <p>
+                            Falta pouco para você ter acesso ao melhor sistemas de guarda volume. Cadastre-se e aproveite.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-5 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center">Como surgiu a ideia do Bee Lockers?</h2>
-                            <p>
-                                A Bee Lockers nasceu com objetivo de facilitar e tirar a preocupação durante seus momentos de lazer.
-                                Pensando nisso criamos um sistemas de guarda-volume para praia, aonde você pode ir em uma empresa parceira e
-                                deixar seus pertences sobre nossos cuidados durante o tempo que você precisar.
-                            </p>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 caixa">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Somos uma empresa que trabalha com o objetivo de promover lazer e segurança lado a lado
+                                </p>
+                                <p>
+                                    Pensando nisso gostariamos de te oferecer a locação de nossoss armários para você guardar seus 
+                                    pertences enquanto você se diverti.
+                                </p>
+
+                                <p>
+                                    Com apenas alguns cliques, acesse nossa agenda e reserve um lugar seguro para deixar seus itens pessoais. Viaje e descubra que dá para curtir uma praia sem preocupações.
+                                    Nunca foi tão fácil agendar! 
+                                </p>
+                                
+                                <p>
+                                    E ai? Qual é a sua praia? Clique em agendar e Confira qual o melhor destino para você!
+                                </p>
+
+                                <a href="reserva.php" class="btn text-white btn-custom">Agendar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="row fw-bolder justify-content-center">
+                    <!-- Início do Conteúdo das imagens - Carrossel-->
+                    <div class="col-md-10">
+
+                            <div id="praia" class="carousel slide" data-bs-ride="carousel"><!-- Início Carousel -->
+
+                                <!--Indicadores-->
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="0" class="active"></button>
+                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#praia" data-bs-slide-to="3"></button>
+                                </div>
+                                <!--Indicadores-->
+
+                                <div class="carousel-inner"><!-- Início Inner -->
+
+                                    <div class="carousel-item active">
+                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/guaruja.png" alt="Guaruja">
+
+                                        <div class="carousel-caption">
+                                            <h3>Praia de Guaruja</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/itarare.jpg" alt="itarare">
+
+                                        <div class="carousel-caption">
+                                            <h3>Praia de Itarare</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/praia_grande.jpg" alt="PraiaGrande">
+
+                                        <div width="100%" class="carousel-caption">
+                                            <h3>Praia Grande</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img width="100%" class="d-block img-fluid" src="../assets/imagem_praia/ubatuba.jpg" alt="Ubatuba">
+                                        <div class="carousel-caption">
+                                            <h3>Praia de Ubatuba</h3>
+                                        </div>
+                                    </div>
+
+                                </div><!-- Fim Inner -->
+
+                                <!-- Início Controle -->
+                                <a href="#praia" class="carousel-control-prev" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a href="#praia" class="carousel-control-next" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                                <!-- Fim Controle -->
+                                <script>$('.carousel').slick({
+                                        dots: true,
+                                        infinite: true,
+                                        speed: 999,
+                                        slidesToShow: 4,
+                                        slidesToScroll: 4,
+                                        });
+                                </script>
+
+                            </div><!-- Fim Carousel -->
+                    </div>
+                    <!-- Fim do Conteúdo das imagens - Carrossel-->
+                </div>
+
             </div>
         </section>
+    </main><!-- Fim do Conteúdo Principal-->
 
-        <!--/Início seção Missão, Visão e Valores -->
-        <section class="caixa">
-            <div class="card">
-                <div class="card-body">
-
-                    <div class="container">
-                        <div class="row align-items-center justify-content-between ">
-                            <div class="col-md-3 align-self-start">
-                                <img src="../assets/img/missao1.png" class="img-fluid">
-                                <h4>Missão</h4>
-                                <p>
-                                    Garantir excelência em nossos serviços oferecidos, trazendo a oportunidade de nossos clientes se divertirem, tendo seus objetos guardados em segurança, nosso principal foco é a prevenção de percas.
-                                </p>
-                            </div>
-                            <div class="col-md-3 align-self-start">
-                                <img src="../assets/img/visao1.png" class="img-fluid">
-                                <h4>Visão</h4>
-                                <p>
-                                    Estar entre as principais empresas que influenciam projetos que levam a sustentabilidade global auxiliando na prevenção de perca de objetos em áreas litorâneas.
-                                </p>
-                            </div>
-                            <div class="col-md-3 align-self-start">
-                                <img src="../assets/img/valores1.png" class="img-fluid">
-                                <h4>Valores</h4>
-                                <p>
-                                    Nosso principal valor é a ética nas relações. Visamos responsabilidade nas ações e compromisso com nossos clientes, trabalhando sempre com transparência, inovação, tecnologia, sustentabilidade e qualidade em atendimento.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section><!--/FIM seção Missão, Visão e Valores -->
-
-    <section class="caixa"><!-- Início da seção Contato-->
-            <div class="row justify-content-center">
-                <div class="col-md-6 div-home">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center">Localização</h2>
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.399832915192!2d-46.7685394850196!3d-23.69741168461548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5212f9627de5%3A0x1c5ccd29c1a3e96a!2sEtec%20Jardim%20%C3%82ngela!5e0!3m2!1spt-BR!2sbr!4v1621474060887!5m2!1spt-BR!2sbr" width="100%" height="370" allowfullscreen="" loading="lazy"></iframe>
-                            <p>
-                                <span class="fw-bold">Endereço:</span> Estrada da Baronesa, 1695 - Jardim Nakamura - São Paulo - 04941-175
-                            </p>
-                            <div class="col">
-                                <p>
-                                    <span class="fw-bold">Tel:</span>(11)5833-0861
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main><!-- Fim da seção contato-->
-
-    <footer>
-        <!--Início do rodapé-->
+    <footer><!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -322,12 +282,12 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer>
-    <!--Fim do rodapé-->
+    </footer><!--Fim do rodapé-->
 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>

@@ -34,7 +34,7 @@
         echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $usuario = $_SESSION['nome_session'];
+    $usuario = $_SESSION['razao_social_session'];
     $email = $_SESSION['email_session'];
     ?>
 
@@ -59,19 +59,19 @@
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                            <a href="homeUser.php" class="nav-link">Home</a>
+                            <a href="homeParc.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agendaUser.php" class="nav-link">Agendar</a>
+                            <a href="agendaParc.php" class="nav-link">Agendar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quemSomosUser.php" class="nav-link">Quem somos</a>
+                            <a href="quemSomosParc.php" class="nav-link">Quem somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="exibirClimaUser.php" class="nav-link">Clima</a>
+                            <a href="exibirClimaParc.php" class="nav-link">Clima</a>
                         </li>
                         <li class="nav-item">
-                            <a href="parceriasUser.php" class="nav-link">Parcerias</a>
+                            <a href="parceriasParc.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item dropdown col-md-1">
