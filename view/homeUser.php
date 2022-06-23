@@ -1,10 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Site de reserva de guarda volumes para você aproveitar seu lazer sem ter que se preocupar com seus bens">
     <meta name="author" content="Geovani, Daniela, Julyane, Emily e Pedro">
     <meta name="keyword" content="Praia, armário, guarda volumes">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ícone página -->
@@ -15,35 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <link href='../css/core/main.min.css' rel='stylesheet' />
-    <link href='../css/daygrid/main.min.css' rel='stylesheet' />
-    <script src='../js/core/main.min.js'></script>
-    <script src='../js/interaction/main.min.js'></script>
-    <script src='../js/daygrid/main.min.js'></script>
-    <script src='../js/core/locales/pt-br.js'></script>
-    <script src="../js/personalizacaoAgenda.js"></script>
-
-
-
-    <?php
-    //testar de o usuário está logado
-    //verificar se existe uma sessão aberta no servidor
-    if (session_status() !== PHP_SESSION_ACTIVE) {
-        session_start();
-    }
-
-    //testar se o usuário está logado ou não
-    if (isset($_SESSION['email'])) {
-        //echo $_SESSION['email'];
-    } else {
-        // apagar a variável de sessão
-        unset($_SESSION['email']);
-        echo "Erro!!", $_SESSION;
-        header("Location: ../index.php");
-    }
-    $usuario = implode(" ", $_SESSION);
-    ?>
-    <title>Bee Lockers - Reservar</title>
+    <title>Bee Lockers - Home</title>
 </head>
 
 <body>
@@ -80,7 +54,7 @@
                         </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item dropdown col-md-1">
-                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user-ninja"></i>
                             </a>
                             <ol class="dropdown-menu " aria-labelledby="menuPerfil">
@@ -99,94 +73,119 @@
         </nav>
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
-
+    
     <main>
         <!-- Início do Conteúdo Principal-->
         <section id="home">
-            <div class="container-fluid">
+            <div class="container-fluid div-home ">
 
                 <div class="row">
-                    <div class="col-md div-home caixa text-center">
-                        <h1>
-                            <span><nobr></span>Bee <span>Lockers</span></nobr>
+                    <div class="col-md text-center">
+                        <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
                         </h1>
                     </div>
                 </div>
 
                 <div class="row">
+
                     <div class="col-md text-center">
-                        <P>
-                            Olá <?= $usuario ?>, aqui você pode atualizar seus dados caso queira.
-                        </P>
+                        <p>
+                            Está pensando em viajar para a praia e não sabe como guardar seus pertences em segurança?
+                        </p>
+                        <h2>Temos a solução ideal para você!!!</h2>
                     </div>
                 </div>
-
-                <div class="row justify-content-center caixa">
-                    <form method="post" action="" enctype="multipart/form-data" class="col-md-6">
-                        <div class="card">
-                            <div class="card-body mb-2 fw-bolder">
-
-                                <div class="row">
-                                    <div>
-                                        <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="inputNome" class="form-control" placeholder="Digite seu nome completo" required>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="inputDate" class="form-label">Data de nascimento:</label>
-                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control">
-                                    </div>
-
-                                    <div class="col-md">
-                                        <label for="inputSexo" class="form-label">Sexo:</label><br>
-                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
-                                            <option value="F" selected>Feminino</option>
-                                            <option value="M">Masculino</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="row text-center mt-4">
-
-                                    <div class="col">
-                                        <button type="submit" class="btn text-white btn-custom">Atualizar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-
             </div>
         </section>
+
+        <!-- Modal termos de uso -->
+        <section class="modal fade" id="condicoesUso" tabindex="-1" aria-labelledby="condicoesDeUso" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center" id="condicoesDeUso">Termo de Uso</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatum facere tempore iste id optio, veniam nostrum ad quibusdam eius officia, qui dolor aperiam exercitationem? Esse sed alias possimus at?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim da janela Modal Termos de Uso -->
+
+        <!-- Modal termos de uso -->
+        <section class="modal fade" id="politica" tabindex="-1" aria-labelledby="politicaPrivacidade" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="politicaPrivacidade">Política de Privacidade</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis assumenda odit quae numquam obcaecati necessitatibus reiciendis saepe et vero totam earum odio dolor maxime ex corrupti, voluptate possimus fuga velit?</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatum facere tempore iste id optio, veniam nostrum ad quibusdam eius officia, qui dolor aperiam exercitationem? Esse sed alias possimus at?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto eveniet. Harum accusamus beatae vero dolore nihil quae quod commodi. Quam aut necessitatibus officiis repudiandae molestias quas aperiam tenetur quae!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim da janela Modal Termos de Uso -->
+
+        <section class="caixa">
+            <!--/Início seção recursos -->
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="container">
+                        <div class="row align-items-center">
+
+                            <div class="col-md-4">
+                                <img src="../assets/img/facil.png" class="img-fluid">
+                                <h4>Fácil de usar</h4>
+                                <p>
+                                    O BeeLockers vai além do básico e permite que você faça seus passeios e atividades, essenciais para seu lazer, sem nenhuma preocupação. Simples como tem que ser!
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../assets/img/economize.png" class="img-fluid">
+                                <h4>Economize seu tempo</h4>
+                                <p>
+                                    Tempo é dinheiro! Em segundos, você tem tudo sob controle e aproveite seu tempo com o que realmente importa pra você!
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../assets/img/suporte.png" class="img-fluid">
+                                <h4>Suporte amigo</h4>
+                                <p>
+                                    Dúvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui pra resolver seus problemas e deixar sua vida bem mais fácil!
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/FIM seção recursos -->
+
     </main><!-- Fim do Conteúdo Principal-->
 
-    <footer><!--Início do rodapé-->
+    
+
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -254,15 +253,15 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="../js/clima.js"></script>
-
 </body>
+
 </html>

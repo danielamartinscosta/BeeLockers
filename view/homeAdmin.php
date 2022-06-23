@@ -66,8 +66,18 @@
                         <li class="nav-item">
                             <a href="pesquisarParcerias.php" class="nav-link">Parcerias</a>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item">
-                            <a href="../model/logoff.php" class="nav-link">Sair</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-ninja"></i>
+                            </a>
+                            <ol class="dropdown-menu" aria-labelledby="menuPerfil">
+                                <li>
+                                    <a class="dropdown-item nav-link" href="perfilUsuario.php">Meus dados</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item nav-link" href="../model/logoff.php" href="">Logout</a>
+                                </li>
+                            </ol>
                         </li>
                     </ul>
                 </div>
@@ -80,34 +90,38 @@
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid div-home ">
-                <h1 class="text-center"><span>Painel <nobr></span>Administrador</nobr>
-                </h1>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-3">
-                        <div class="card">
-                            <div class="container">
-                                <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/Usuários.png" alt="usuários"></a>
-                                <h4 class="text-center">Usuários</h4>
-                            </div>
+            <div class="row">
+                <div class="col-md text-center">
+                    <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md text-center">
+                    <h2>Painel <span>Administrativo</span></nobr></h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-3 caixa">
+                    <div class="card">
+                        <div class="container">
+                            <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/Usuários.png" alt="usuários"></a>
+                            <h4 class="text-center">Usuários</h4>
                         </div>
                     </div>
-                    <div class="col-2"></div>
-                    <div class="col-3">
-                        <div class="card">
-                            <div class="container">
-                                <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
-                                <h4 class="text-center">Parcerias</h4>
-                            </div>
+                </div>
+                <div class="col-md-3 caixa">
+                    <div class="card">
+                        <div class="container">
+                            <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
+                            <h4 class="text-center">Parcerias</h4>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-3">
+
+            <div class="row justify-content-center">
+                <div class="col-md-3 caixa">
                     <div class="card">
                         <div class="container">
                             <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/praia.png" alt="praias"></a>
@@ -115,8 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2"></div>
-                <div class="col-3">
+                <div class="col-md-3 caixa">
                     <div class="card">
                         <div class="container">
                             <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="parecrias"></a>

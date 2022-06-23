@@ -33,7 +33,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
 
         $_SESSION['email'] = $email;
 
-        header("Location: ../view/agenda.php");
+        header("Location: ../view/agendaUser.php");
     } else {
         echo '<div class="alert alert-danger" role="alert">
         Não foi possível logar, verifique usuário e senha!

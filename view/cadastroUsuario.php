@@ -88,13 +88,7 @@
                             <a href="home.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agenda.php" class="nav-link">Agendar</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="quemSomos.php" class="nav-link">Quem somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="exibirClima.php" class="nav-link">Clima</a>
                         </li>
                         <li class="nav-item">
                             <a href="parcerias.php" class="nav-link">Parcerias</a>

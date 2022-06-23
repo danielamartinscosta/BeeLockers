@@ -47,9 +47,6 @@
         echo "Error!!", $_SESSION;
         header("Location: ../index.php");
     }
-
-
-
     $usuario = implode(" ", $_SESSION);
     ?>
 
@@ -75,29 +72,35 @@
 
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="home.php" class="nav-link">Home</a>
+                    <li class="nav-item">
+                            <a href="homeUser.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="agenda.php" class="nav-link">Agendar</a>
+                            <a href="agendaUser.php" class="nav-link">Agendar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quemSomos.php" class="nav-link">Quem somos</a>
+                            <a href="quemSomosUser.php" class="nav-link">Quem somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="exibirClima.php" class="nav-link">Clima</a>
+                            <a href="exibirClimaUser.php" class="nav-link">Clima</a>
                         </li>
                         <li class="nav-item">
-                            <a href="parcerias.php" class="nav-link">Parcerias</a>
+                            <a href="parceriasUser.php" class="nav-link">Parcerias</a>
                         </li>
-                        <li class="nav-item divisor">
-                            </li>
-                            <li class="nav-item">
-                                <a href="perfilUsuario.php" class="nav-link"><?= $usuario ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../model/logoff.php" class="nav-link">Sair</a>
-                            </li>
+                        <li class="nav-item divisor"></li>
+                        <li class="nav-item dropdown col-md-1">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-ninja"></i>
+                            </a>
+                            <ol class="dropdown-menu " aria-labelledby="menuPerfil">
+                                <li>
+                                    <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"  href="../model/logoff.php">Sair</a>
+                                </li>
+                            </ol>
+                        </li>
                     </ul>
                 </div>
 
