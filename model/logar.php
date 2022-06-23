@@ -11,12 +11,14 @@ $senha = $_POST['senha'];
 
 $logar = $conn->query("SELECT * FROM usuario WHERE email='$email' AND senha='$senha'");
 
+$login = $conn->query("SELECT * FROM parceria WHERE email='$email' AND senha='$senha'");
+
 while($linha = mysqli_fetch_array($logar)){
     $tipo = $linha['id_tipo'];
     $nome = $linha['nome'];
 }
 
-$contagem = mysqli_num_rows($logar);
+$contagem = mysqli_num_rows($logar) OR ($login);
 if($contagem == 1 and $tipo == 1) {
     $_SESSION['email_session'] = $email;
     $_SESSION['nome_session'] = $nome;
@@ -47,8 +49,15 @@ if($contagem == 1 and $tipo == 1) {
 }elseif ($contagem == 1 and $tipo == 3){
     $conn->query("SELECT * FROM parceria WHERE email='$email' AND senha='$senha'");
 
-    $tipo = $linha['id_tipo'];
-    $nome = $linha['nome'];
+    $_SESSION['email_session'] = $email;
+    $_SESSION['razao_social_session'] = $razao_social;
+    $_SESSION['senha_session'] = $senha;
+    $_SESSION['cnpj_session'] = $cnpj;
+    $_SESSION['telefone_session'] = $telefone;
+    
+
+    //$tipo = $linha['id_tipo'];
+    //$nome = $linha['nome'];
 
     //libera acesso ao usuario
 

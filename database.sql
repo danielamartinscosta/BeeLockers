@@ -2,7 +2,13 @@ CREATE DATABASE `bee_lockers`;
 
 USE bee_lockers;
 
-DROP TABLE IF EXISTS usuario;
+DROP TABLE IF EXISTS tipo;
+CREATE TABLE tipo (
+id_tipo int(11) AUTO_INCREMENT,
+nome_tipo varchar (50) not null,
+PRIMARY KEY (id_tipo)
+) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
+
 CREATE TABLE usuario(
 id_usuario int(11) AUTO_INCREMENT,
 nome varchar(255) DEFAULT NULL,
@@ -43,12 +49,6 @@ PRIMARY KEY (id_praia),
 FOREIGN KEY (id_parceria) references parceria (id_parceria)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
-CREATE TABLE tipo (
-id_tipo int(11) AUTO_INCREMENT,
-nome_tipo varchar (50) not null,
-PRIMARY KEY (id_tipo)
-) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
-
 CREATE TABLE reservas (
   id_reserva int(11) NOT NULL AUTO_INCREMENT,
   nome_responsavel varchar(220) DEFAULT NULL,
@@ -67,20 +67,20 @@ CREATE TABLE armarios(
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 INSERT INTO armarios(
-  id_armario, numero_armario, status_armario) VALUES (1, 1, disponivel), 
-  (2, 2, disponivel),
-  (3, 3, disponivel),
-  (4, 4, disponivel),
-  (5, 5, disponivel),
-  (6, 6, disponivel),
-  (7, 7, disponivel),
-  (8, 8, disponivel),
-  (9, 9, disponivel),
-  (10, 10, disponivel);
+  id_armario, numero_armario, status_armario) VALUES (1, 1, 'disponivel'), 
+  (2, 2, 'disponivel'),
+  (3, 3, 'disponivel'),
+  (4, 4, 'disponivel'),
+  (5, 5, 'disponivel'),
+  (6, 6, 'disponivel'),
+  (7, 7, 'disponivel'),
+  (8, 8, 'disponivel'),
+  (9, 9, 'disponivel'),
+  (10, 10, 'disponivel');
 
- INSERT INTO `tipo` (`id_tipo`, `nome_tipo`) VALUES ('2', 'admin'),
-('3', 'usuario'),
-('4', 'parceria'); 
+ INSERT INTO `tipo` (`id_tipo`, `nome_tipo`) VALUES ('1', 'admin'),
+('2', 'usuario'),
+('3', 'parceria'); 
 
 INSERT INTO `usuario` (`id_usuario`, `nome`, `cpf`, `email`, `sexo`, `telefone`, `senha`, `dtnasc`, `id_tipo`, `data`) VALUES (NULL, 'Admin', '', 'admin@admin.com', 'm', '', '123456', '01/01/2022', '1', CURRENT_TIMESTAMP);
 

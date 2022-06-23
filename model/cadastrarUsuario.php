@@ -27,7 +27,7 @@ $sexo = $_POST['sexo'];
 $telefone = $_POST['telefone'];
 $senha = $_POST['senha'];
 $dtnasc = $_POST['dtnasc'];
-$id_tipo = $_POST['2'];
+$id_tipo = $_POST['id_tipo'];
 
 
 include "connect.php";

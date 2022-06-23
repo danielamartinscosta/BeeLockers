@@ -168,9 +168,9 @@ mysql> describe usuario;
                                             $nome = $linha['nome'];
                                             $cpf = $linha['cpf'];
                                             //formatar a data a ser exibida
-                                            //$dtnasc = $linha['dtnasc'];
-                                            $date = date_create($linha['dtnasc']);
-                                            $dtnasc = date_format($date, "d/m/Y");
+                                            $dtnasc = $linha['dtnasc'];
+                                            //$date = date_create($linha['dtnasc']);
+                                            //$dtnasc = date_format($date, "d/m/Y");
                                             $email = $linha['email'];
                                             $sexo = $linha['sexo'];
                                             $telefone = $linha['telefone'];
