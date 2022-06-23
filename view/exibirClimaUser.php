@@ -19,6 +19,23 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleClima.css">
+    <?php
+    //testar de o usuário está logado
+    //verificar se existe uma sessão aberta no servidor
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+
+    //testar se o usuário está logado ou não
+    if (isset($_SESSION['email'])) {
+    } else {
+        // apagar a variável de sessão
+        unset($_SESSION['email']);
+        echo "Error!!", $_SESSION;
+        header("Location: ../index.php");
+    }
+    $usuario = implode(" ", $_SESSION);
+    ?>
     <title>Bee Lockers - Clima</title>
 </head>
 
@@ -205,6 +222,7 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <script src="../js/clima.js"></script>

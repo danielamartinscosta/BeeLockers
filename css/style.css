@@ -12,8 +12,9 @@ header{
     z-index: 100000;
 }
 header ol {
-    background-color: rgb(55, 160, 148);
-    left: -7em;
+    left: -12em;
+    margin-right: 2em;
+    position: relative;
 
 }
 .clear{
@@ -86,6 +87,9 @@ main{
 
 #home span {
     color: #fff;
+}
+.modal{
+    margin-top: 10em;
 }
 p{
     font-size: 1rem;

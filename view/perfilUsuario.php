@@ -15,13 +15,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
-    <link href='../css/core/main.min.css' rel='stylesheet' />
-    <link href='../css/daygrid/main.min.css' rel='stylesheet' />
-    <script src='../js/core/main.min.js'></script>
-    <script src='../js/interaction/main.min.js'></script>
-    <script src='../js/daygrid/main.min.js'></script>
-    <script src='../js/core/locales/pt-br.js'></script>
-    <script src="../js/personalizacaoAgenda.js"></script>
 
 
 
@@ -53,6 +46,7 @@
         <nav class="navbar navbar-expand-sm navbar-light">
             <div class="container-fluid">
 
+            
                 <a href="home.php" class="navbar-brand">
                     <img src="../assets/img/logo.jpeg" width="120" class="img-fluid">
                 </a>
@@ -79,11 +73,11 @@
                             <a href="parceriasUser.php" class="nav-link">Parcerias</a>
                         </li>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item dropdown col-md-1">
-                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user-ninja"></i>
                             </a>
-                            <ol class="dropdown-menu " aria-labelledby="menuPerfil">
+                            <ol class="dropdown-menu align-self-start" aria-labelledby="menuPerfil">
                                 <li>
                                     <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
                                 </li>
@@ -260,6 +254,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="../js/clima.js"></script>
