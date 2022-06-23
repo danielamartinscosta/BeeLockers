@@ -30,9 +30,9 @@ $dtnasc = $_POST['dtnasc'];
 $id_tipo = $_POST['id_tipo'];
 
 
+
 include "connect.php";
 
-echo "$nome<br> $cpf<br> $email<br> $sexo<br> $telefone<br> $senha<br> $dtnasc <br> $id_tipo"; 
 
 // variavel da query
 $sql = "INSERT INTO usuario (

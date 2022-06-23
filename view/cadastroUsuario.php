@@ -141,6 +141,13 @@
                                 </div>
 
                                 <div class="row">
+                                    <div>
+                                        <label for="id_tipo" class="form-label"></label>
+                                        <input type="hidden" name="id_tipo" id="id_tipo" class="form-control" placeholder="Digite seu nome completo"  >
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
                                         <input type="email" name="email" id="inputEmail" placeholder="Seu e-mail" required class="form-control">
