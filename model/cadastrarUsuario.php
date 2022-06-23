@@ -27,11 +27,12 @@ $sexo = $_POST['sexo'];
 $telefone = $_POST['telefone'];
 $senha = $_POST['senha'];
 $dtnasc = $_POST['dtnasc'];
+$id_tipo = $_POST['2'];
 
 
 include "connect.php";
 
-echo "$nome<br> $cpf<br> $email<br> $sexo<br> $telefone<br> $senha<br> $dtnasc"; 
+echo "$nome<br> $cpf<br> $email<br> $sexo<br> $telefone<br> $senha<br> $dtnasc <br> $id_tipo"; 
 
 // variavel da query
 $sql = "INSERT INTO usuario (
@@ -41,7 +42,8 @@ $sql = "INSERT INTO usuario (
     sexo, 
     telefone, 
     senha, 
-    dtnasc 
+    dtnasc,
+    id_tipo 
     
     ) VALUES (
         '$nome',
@@ -50,7 +52,8 @@ $sql = "INSERT INTO usuario (
         '$sexo',
         '$telefone',
         '$senha',
-        '$dtnasc'
+        '$dtnasc',
+        '2'
     )";
 
 // realizar o insert de dados

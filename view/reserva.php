@@ -230,10 +230,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Praia</label>
                                     <div class="col-sm-10">
-                                        <select name="nome_praia" class="form-control" id="nome_praia">
-                                            <?php
-                                             $sql = "SELECT * FROM praia ORDER BY '$nome_praia'";
-                                            ?>
+                                        <select name="praia" class="form-control" id="praia" 
+                                            value="">
                                         </select>
                                     </div>
                                 </div>
