@@ -22,6 +22,7 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $cnpj = $_POST['cnpj'];
 $senha = $_POST['senha'];
+$id_tipo = $_POST['3'];
 
 include "connect.php";
 
@@ -31,14 +32,16 @@ $sql = "INSERT INTO parceria (
     email,  
     telefone,
     cnpj, 
-    senha
+    senha,
+    id_tipo
 
     ) VALUES (
         '$razao_social',
         '$email',
         '$telefone',
         '$cnpj',
-        '$senha'
+        '$senha',
+        '3'
     )";
 
 // realizar o insert de dados

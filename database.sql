@@ -12,8 +12,10 @@ sexo varchar(10) DEFAULT NULL,
 telefone varchar(14) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
 dtnasc varchar(25) DEFAULT NULL,
+id_tipo int(11) DEFAULT NULL,
 data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-PRIMARY KEY (id_usuario)
+PRIMARY KEY (id_usuario),
+FOREIGN KEY (id_tipo) references tipo (id_tipo)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 CREATE TABLE parceria(
@@ -30,10 +32,10 @@ CREATE TABLE praia(
 id_praia int(11) AUTO_INCREMENT,
 nome_praia varchar(255) DEFAULT NULL,
 imagem_praia varchar(255) DEFAULT NULL,
-rua varchar (50) not null,
-numero varchar(20) not null,
-bairro varchar (50) not null,
-cep varchar (8) not null,
+rua varchar (50) DEFAULT NULL,
+numero varchar(20) DEFAULT NULL,
+bairro varchar (50) DEFAULT NULL,
+cep varchar (8) DEFAULT NULL,
 id_parceria int(11),
 PRIMARY KEY (id_praia),
 FOREIGN KEY (id_parceria) references parceria (id_parceria)
@@ -73,3 +75,10 @@ INSERT INTO armarios(
   (8, 8, disponivel),
   (9, 9, disponivel),
   (10, 10, disponivel);
+
+ INSERT INTO `tipo` (`id_tipo`, `nome_tipo`) VALUES ('2', 'admin'),
+('3', 'usuario'),
+('4', 'parceria'); 
+
+INSERT INTO `usuario` (`id_usuario`, `nome`, `cpf`, `email`, `sexo`, `telefone`, `senha`, `dtnasc`, `id_tipo`, `data`) VALUES (NULL, 'Admin', '456.789.451-23', 'admin@admin.com', 'm', '1156897845', '123456', '01/01/2022', '1', CURRENT_TIMESTAMP);
+
