@@ -25,7 +25,9 @@ email varchar(255) UNIQUE DEFAULT NULL,
 telefone varchar(14) DEFAULT NULL,
 cnpj varchar(18) DEFAULT NULL,
 senha varchar(255) DEFAULT NULL,
-PRIMARY KEY (id_parceria)
+id_tipo int(11) DEFAULT NULL,
+PRIMARY KEY (id_parceria),
+FOREIGN KEY (id_tipo) references tipo (id_tipo)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 CREATE TABLE praia(
@@ -80,5 +82,5 @@ INSERT INTO armarios(
 ('3', 'usuario'),
 ('4', 'parceria'); 
 
-INSERT INTO `usuario` (`id_usuario`, `nome`, `cpf`, `email`, `sexo`, `telefone`, `senha`, `dtnasc`, `id_tipo`, `data`) VALUES (NULL, 'Admin', '456.789.451-23', 'admin@admin.com', 'm', '1156897845', '123456', '01/01/2022', '1', CURRENT_TIMESTAMP);
+INSERT INTO `usuario` (`id_usuario`, `nome`, `cpf`, `email`, `sexo`, `telefone`, `senha`, `dtnasc`, `id_tipo`, `data`) VALUES (NULL, 'Admin', '', 'admin@admin.com', 'm', '', '123456', '01/01/2022', '1', CURRENT_TIMESTAMP);
 
