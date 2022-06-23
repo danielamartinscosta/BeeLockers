@@ -18,24 +18,25 @@
 
 
 
-    <?php
-    //testar de o usuário está logado
+<?php
+ //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
 
     //testar se o usuário está logado ou não
-    if (isset($_SESSION['email'])) {
-        //echo $_SESSION['email'];
+    if (isset($_SESSION['email_session'])) {
+        //echo $_SESSION['email_session'];
     } else {
         // apagar a variável de sessão
-        unset($_SESSION['email']);
+        unset($_SESSION['email_session']);
         echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $usuario = implode(" ", $_SESSION);
+    $usuario = $_SESSION['nome_session'];
     ?>
+    
     <title>Bee Lockers - Reservar</title>
 </head>
 
