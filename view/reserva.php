@@ -109,25 +109,23 @@
         <div class="bar-laranja"></div>
     </header><!-- Fim Cabeçalho -->
 
-    <main id="home">
-        <section class="container-fluid">
+    <main>
+        <section id="home" class="container-fluid div-home">
             <!-- Início do calendário  -->
             <div class="row">
-                <div class="col-md-7 div-home text-center">
-                    <div class="row fw-bolder">
-                        <div class="col-md div-home">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div id='calendar'></div>
-                                </div>
+                <div class="col-md-8 div-home text-center">
+                    <div class="col-md">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id='calendar'></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Fim do calendário  -->
-                <div class="col div-home">
+                <div class="col-sm div-home">
                     <div class="row fw-bolder">
-                        <div class="col div-home">
+                        <div class="col">
                             <div class="card">
                                 <div class="card-header bg-transparent border-warning text-center">
                                     <h2>Tabela de valores</h2>
@@ -224,7 +222,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Nome</label>
+                                    <label class="col-sm-2 form-label">Nome</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="nome" class="form-control" id="inputNome" placeholder="Responsável pela reserva" value="<?= $usuario ?>" readonly="readonly">
                                     </div>
@@ -395,6 +393,9 @@
     </footer>
     <!--Fim do rodapé-->
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 
 

@@ -19,6 +19,25 @@
     <!-- CSS próprio -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleAgendar.css">
+    
+    <?php
+    //testar de o usuário está logado
+    //verificar se existe uma sessão aberta no servidor
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+
+    //testar se o usuário está logado ou não
+    if (isset($_SESSION['email'])) {
+    } else {
+        // apagar a variável de sessão
+        unset($_SESSION['email']);
+        echo "Error!!", $_SESSION;
+        header("Location: ../index.php");
+    }
+    $usuario = implode(" ", $_SESSION);
+    ?>
+    
     <title>Bee Lockers - Agenda</title>
 </head>
 
