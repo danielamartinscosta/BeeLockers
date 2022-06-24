@@ -73,7 +73,7 @@ $result = $conn->query($sql);
 // testar se o cadastro foi feito com sucesso
 if ($result) {
     echo "cadastro realizado com sucesso!";
-    header('location:../view/parceriasUser.php');
+    header('location:../view/homeParceria.php');
 } else {
     echo "Cadastro não realizado, tente novamente";
 }

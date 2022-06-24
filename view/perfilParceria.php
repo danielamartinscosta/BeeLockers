@@ -34,8 +34,10 @@
         echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $razao_social = $_SESSION['razao_social_session'];
+    $usuario = $_SESSION['razao_social_session'];
     $email = $_SESSION['email_session'];
+    $fone = $_SESSION['telefone_session'];
+    $cnpj = $_SESSION['cnpj_session']; 
     ?>
    
     <title>Bee Lockers - Reservar</title>
@@ -81,7 +83,7 @@
                             </a>
                             <ol class="dropdown-menu align-self-start" aria-labelledby="menuPerfil">
                                 <li>
-                                    <a class="dropdown-item" href="perfilParceria.php"><?= $razao_social ?></a>
+                                    <a class="dropdown-item" href="perfilParceria.php"><?= $usuario ?></a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item"  href="../model/logoff.php">Sair</a>
@@ -112,7 +114,7 @@
                 <div class="row">
                     <div class="col-md text-center">
                         <P>
-                            Olá <?=$razao_social?>, aqui você pode atualizar seus dados caso queira.
+                            Olá <?=$_SESSION['razao_social_session']?>, aqui você pode atualizar seus dados caso queira.
                         </P>
                     </div>
                 </div>
@@ -125,7 +127,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="razao_social" class="form-label">Parceria:</label>
-                                        <input type="name" name="razao_social" id="razao_social" value="<?= $razao_social ?>" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
+                                        <input type="text" name="razao_social" id="razao_social" value="<?= $usuario ?>" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
                                     </div>
                                 </div>
 
@@ -138,14 +140,14 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="telefone" class="form-label">Telefone:</label>
-                                        <input type="text" name="telefone" id="telefone"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="telefone" value="<?= $fone ?>"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="cnpj" class="form-label">CNPJ:</label>
-                                        <input type="text" name="cnpj" id="cnpj" autocomplete="off" onkeyup="mascara_cnpj()" class="form-control" maxlength="18" placeholder="XXX.XXX.XXX-XX" required title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
+                                        <input type="text" name="cnpj" id="cnpj" value="<?= $cnpj ?>" autocomplete="off" onkeyup="mascara_cnpj()" class="form-control" maxlength="18" placeholder="XXX.XXX.XXX-XX" required title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx">
                                     </div>
                                 </div>
 

@@ -44,6 +44,7 @@ $logar = $conn->query("SELECT * FROM parceria WHERE email='$email' AND senha='$s
 while($linha = mysqli_fetch_array($logar)){
     $nome = $linha['razao_social'];
     $fone = $linha['telefone'];
+    $cnpj = $linha['cnpj'];
 }
 
 $sql = "SELECT senha, email FROM parceria WHERE email='$email' AND senha='$senha'";
@@ -57,12 +58,19 @@ if($result->num_rows === 1) {
     $_SESSION['email_session'] = $email;
     $_SESSION['razao_social_session'] = $nome;
     $_SESSION['senha_session'] = $senha;
-    $_SESSION['cpf_session'] = $cnpj;
+    $_SESSION['cnpj_session'] = $cnpj;
     $_SESSION['telefone_session'] = $fone;
 
     //libera acesso a parceria
 
-    header("location:../view/parceriasUser.php");
+    header("location:../view/perfilParceria.php");
 
 
+}else {
+    echo '<div class="alert alert-danger" role="alert">
+    Não foi possível logar, verifique usuário e senha!
+  </div>';
+
+  
 }
+?>

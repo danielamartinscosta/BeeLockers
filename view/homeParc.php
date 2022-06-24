@@ -73,7 +73,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="parceriasParc.php" class="nav-link">Parcerias</a>
-                        </li>
+                            </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item dropdown col-md-1">
                             <a class="nav-link dropdown-toggle" id="menuPerfil" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -81,7 +81,7 @@
                             </a>
                             <ol class="dropdown-menu " aria-labelledby="menuPerfil">
                                 <li>
-                                    <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
+                                    <a class="dropdown-item" href="perfilParceria.php"><?= $usuario ?></a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="../model/logoff.php">Sair</a>

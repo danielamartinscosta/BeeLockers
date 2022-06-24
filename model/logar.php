@@ -22,7 +22,7 @@ while($linha = mysqli_fetch_array($logar)){
     $fone = $linha['telefone'];
     $cpf = $linha['cpf'];
     $dtnasc = $linha['dtnasc'];
-    $sexo =$linha['sexo'];
+    $sexo = $linha['sexo'];
 }
 
 $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";
