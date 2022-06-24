@@ -130,20 +130,20 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="inputNome" value="<?=$usuario?>" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <input type="name" name="nome" id="nome" value="<?=$usuario?>" class="form-control" placeholder="Digite seu nome completo" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control" readonly>
+                                        <input type="email" name="email" id="email" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone" value="<?=$fone?>"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="telefone" value="<?=$fone?>"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
