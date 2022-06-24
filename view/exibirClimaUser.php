@@ -80,7 +80,7 @@
                             </a>
                             <ol class="dropdown-menu " aria-labelledby="menuPerfil">
                                 <li>
-                                    <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
+                                    <a class="dropdown-item" href="perfilUsuario.php">Meus Dados</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item"  href="../model/logoff.php">Sair</a>

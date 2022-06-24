@@ -12,9 +12,10 @@ header{
     z-index: 100000;
 }
 header ol {
-    left: -12em;
+    position: absolute;
+    left: -8em;
     margin-right: 2em;
-    position: relative;
+    
 
 }
 .clear{

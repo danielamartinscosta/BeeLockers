@@ -274,7 +274,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- FOrmulario -->
-                            <form class="col-md">
+                            <form class="col-md" method="post" enctype="multipart/form-data">
                                 <div class="m-1">
                                     <label for="nome" class="form-label">Nome:</label>
                                     <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" class="form-control">
@@ -284,8 +284,8 @@
                                     <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="form-control">
                                 </div>
                                 <div class="m-1">
-                                    <label for="Tel" class="form-label">Tel:</label>
-                                    <input type="tel" id="tel_celular" placeholder="(11)-00000-0000" class="form-control">
+                                    <label for="tel_celular" class="form-label">Tel:</label>
+                                    <input type="tel" name="telefone" id="tel_celular" placeholder="(11)-00000-0000" class="form-control">
                                     
                                 </div>
                                 <div class="m-1">
@@ -297,9 +297,51 @@
                                     <textarea name="msg" id="msg" rows="5" class="form-control"></textarea>
                                 </div>
                                 <div class="col text-center">
-                                    <button type="submit" class="btn text-white btn-custom">Enviar</button>
+                                    <button type="submit" class="btn text-white btn-custom" data-bs-toggle='modal' data-bs-target="#modalContato">Enviar</button>
                                 </div>
                             </form>
+
+                            <?php
+
+                                if(isset($_POST["email"]) && !empty($_POST["email"])){
+
+                                    $nome = addslashes($_POST["nome"]);
+                                    $email = addslashes($_POST["email"]);
+                                    $telefone = addslashes($_POST["telefone"]);
+                                    $assunto = addslashes($_POST["assunto"]);
+                                    $mensagem = addslashes($_POST["msg"]);
+
+                                    $to = " beelockers@outlook.com";
+                                    $subject = "Contato - Bee Lockers | ".$assunto;
+                                    $body = "Nome: ".$nome. "\r\n"
+                                            ."Email: ".$email. "\r\n"
+                                            ."Mensagem: ".$mensagem;
+                                    $header = "From:  beelockers@outlook.com"."\r\n"
+                                            ."Reply-To:".$email."\e\n"
+                                            ."X=Mailer:PHP/".phpversion();
+
+                                    if(mail($to, $subject, $body, $header)){
+                                        $html = <<<HTML
+                                        <div class="row justify-content-center">
+                                            <div class="rounded col-md-6 bg-dark text-light py-2 justify-content-center">
+                                                <p class="text-center" >Dados alterados com sucesso! Senha não foi alterada.</h1>
+                                            </div>
+                                        </div>               
+HTML;
+                                        echo $html;
+                                    }else{
+                                        $html = <<<HTML
+                                        <div class="row justify-content-center">
+                                            <div class="rounded col-md-6 bg-dark text-light py-2 justify-content-center">
+                                                <p class="text-center" >Ocorreu um erro ao tentar atualizar os dados.</h1>
+                                            </div>
+                                        </div>               
+HTML;
+                                        echo $html;
+                                    }
+                                }
+
+                            ?>
                         </div>
                     </div>
                 </div>
