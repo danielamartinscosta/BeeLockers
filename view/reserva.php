@@ -41,14 +41,16 @@
     }
 
     //testar se o usuário está logado ou não
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['email_session'])) {
+        //echo $_SESSION['email_session'];
     } else {
         // apagar a variável de sessão
-        unset($_SESSION['email']);
-        echo "Error!!", $_SESSION;
+        unset($_SESSION['email_session']);
+        echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-    $usuario = implode(" ", $_SESSION);
+    $usuario = $_SESSION['nome_session'];
+    $email = $_SESSION['email_session'];
     ?>
 
     <title>Bee Lockers - Reservar</title>
@@ -73,7 +75,7 @@
 
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                        <li class="nav-item">
                             <a href="homeUser.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
@@ -98,7 +100,7 @@
                                     <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item"  href="../model/logoff.php">Sair</a>
+                                    <a class="dropdown-item" href="../model/logoff.php">Sair</a>
                                 </li>
                             </ol>
                         </li>
@@ -215,6 +217,7 @@
                             <span id="msg-edit"></span>
                             <form id="editevent" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="id_reserva" id="id_reserva">
+
                                 <div class="form-group row">
                                     <div class="col-sm-10">
                                         <label class="form-label">ID</label>
@@ -225,14 +228,13 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="nome" class="form-control" id="inputNome" placeholder="Responsável pela reserva" value="<?= $usuario ?>" readonly="readonly">
+                                        <input type="text" name="inputNome" class="form-control" id="inputNome" placeholder="Responsável pela reserva" value="<?= $usuario ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Praia</label>
                                     <div class="col-sm-10">
-                                        <select name="praia" class="form-control" id="praia" 
-                                            value="">
+                                        <select name="praia" class="form-control" id="praia" value="">
                                         </select>
                                     </div>
                                 </div>
@@ -278,21 +280,28 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Responsável pela reserva">
+                                    <input type="text" name="nome" class="form-control" id="nome"
+                                    value="<?= $usuario ?>" readonly>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Praia</label>
                                 <div class="col-sm-10">
                                     <select name="nome_praia" class="form-control" id="nome_praia">
+                                        <option value="">Selecione a praia</option>
+                                        
                                         <?php
 
-                                        $sql = "SELECT * FROM praia ORDER BY '$nome_praia'";
-                                        $res = mysqli_query($conn, $sql);
-                                        while ($registro = mysqli_fetch_row($res));
-                                        echo '<option value="$nome_praia"></option>';
+                                        $sql = "SELECT * FROM praia ORDER BY nome_praia";
+                                        $res=mysqli_query($conn,$sql);
+                                        while($vpraia=mysqli_fetch_row($res)){
+                                            $vnome_praia= $vpraia[1];
+                                            echo "<option value=$vpraia>$vnome_praia</option>";
+                                        }
 
-                                        ?>
+                                        echo $nome_praia;
+
+                                        ?>">
                                     </select>
                                 </div>
                             </div>

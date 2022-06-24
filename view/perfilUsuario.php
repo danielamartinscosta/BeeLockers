@@ -37,7 +37,7 @@
     $usuario = $_SESSION['nome_session'];
     $email = $_SESSION['email_session'];
     ?>
-    
+   
     <title>Bee Lockers - Reservar</title>
 </head>
 
@@ -132,7 +132,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control">
+                                        <input type="email" name="email" id="inputEmail" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
