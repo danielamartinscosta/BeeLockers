@@ -20,6 +20,9 @@ while($linha = mysqli_fetch_array($logar)){
     $tipo = $linha['id_tipo'];
     $nome = $linha['nome'];
     $fone = $linha['telefone'];
+    $cpf = $linha['cpf'];
+    $dtnasc $linha['dtnasc'];
+    $sexo =$linha['sexo'];
 }
 
 $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";

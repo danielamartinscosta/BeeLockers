@@ -37,6 +37,9 @@
     $usuario = $_SESSION['nome_session'];
     $email = $_SESSION['email_session'];
     $fone = $_SESSION['telefone_session'];
+    $cpf = $_SESSION['cpf_session'];
+    $dtnasc = $_SESSION['dtnasc_session'];
+    $sexo = $_SESSION['sexo_session'];
     
     ?>
    
@@ -147,21 +150,21 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="cpf" class="form-label">CPF:</label>
-                                        <input type="text" name="cpf" id="inputCpf" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                                        <input type="text" name="cpf" id="inputCpf" value="<?= $cpf ?>" autocomplete="off" onkeyup="mascara_cpf()" class="form-control" maxlength="14" placeholder="XXX.XXX.XXX-XX" required title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputDate" class="form-label">Data de nascimento:</label>
-                                        <input type="date" name="dtnasc" id="inputDate" required class="form-control">
+                                        <input type="date" name="dtnasc" id="inputDate" value="<?= $dtnasc ?>" required class="form-control">
                                     </div>
 
                                     <div class="col-md">
                                         <label for="inputSexo" class="form-label">Sexo:</label><br>
-                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
-                                            <option value="F" selected>Feminino</option>
-                                            <option value="M">Masculino</option>
+                                        <select id="inputSexo" name="sexo" class="form-control"  checked="checked">
+                                            <option value="F" <?= $sexo == 'F' ? 'selected': '' ?>>Feminino</option>
+                                            <option value="M"  <?= $sexo == 'M' ? 'selected': '' ?>>Masculino</option>
                                         </select>
                                     </div>
                                 </div>
