@@ -61,6 +61,14 @@ $result = $conn->query($sql);
 
 //testar se o cadastro foi feito com sucesso
 if ($result) {
+    session_start();
+        $_SESSION['email_session'] = $email;
+        $_SESSION['nome_session'] = $nome;
+        $_SESSION['senha_session'] = $senha;
+        $_SESSION['cpf_session'] = $cpf;
+        $_SESSION['dtnasc_session'] = $dtnasc;
+        $_SESSION['sexo_session'] = $sexo;
+        $_SESSION['telefone_session'] = $telefone;
     header('Location:../view/perfilUsuario.php');
 
 } else {

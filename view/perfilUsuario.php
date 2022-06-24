@@ -36,6 +36,8 @@
     }
     $usuario = $_SESSION['nome_session'];
     $email = $_SESSION['email_session'];
+    $fone = $_SESSION['telefone_session'];
+    
     ?>
    
     <title>Bee Lockers - Reservar</title>
@@ -138,7 +140,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="inputPhone"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="inputPhone" value="<?=$fone?>"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 

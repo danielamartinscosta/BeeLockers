@@ -91,11 +91,11 @@
 
                                     <div class="m-1">
                                         <label for="txtUsuario" class="form-label">Parceria:</label>
-                                        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail">
+                                        <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu e-mail">
                                     </div>
                                     <div class="m-1">
                                         <label for="txtSenha" class="form-label">Senha:</label>
-                                        <input type="password" name="senha" id="inputSenha" class="form-control" placeholder="Digite sua Senha">
+                                        <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua Senha">
                                     </div>
 
                                 </div>

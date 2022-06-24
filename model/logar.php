@@ -19,6 +19,7 @@ $logar = $conn->query("SELECT * FROM usuario WHERE email='$email' AND senha='$se
 while($linha = mysqli_fetch_array($logar)){
     $tipo = $linha['id_tipo'];
     $nome = $linha['nome'];
+    $fone = $linha['telefone'];
 }
 
 $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";
@@ -35,7 +36,7 @@ if($result->num_rows === 1 and $tipo == 1) {
     $_SESSION['cpf_session'] = $cpf;
     $_SESSION['dtnasc_session'] = $dtnasc;
     $_SESSION['sexo_session'] = $sexo;
-    $_SESSION['telefone_session'] = $telefone;
+    $_SESSION['telefone_session'] = $fone;
 
     //libera acesso ao Admin
 

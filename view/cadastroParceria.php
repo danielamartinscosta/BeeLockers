@@ -150,7 +150,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="razao_social" class="form-label">Razão Social:</label>
-                                        <input type="name" name="razao_social" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
+                                        <input type="name" name="usuario" id="razao_social" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>
                                     </div>
                                 </div>
                                 

@@ -42,8 +42,7 @@ $logar = $conn->query("SELECT * FROM parceria WHERE email='$email' AND senha='$s
 
 //verifica o id da tabela com os dados informados
 while($linha = mysqli_fetch_array($logar)){
-    $tipo = $linha['id_tipo'];
-    $nome = $linha['nome'];
+    $nome = $linha['razao_social'];
 }
 
 $sql = "SELECT senha, email FROM parceria WHERE email='$email' AND senha='$senha'";
@@ -51,16 +50,16 @@ $result = $conn->query($sql);
 
 
 
-if($result->num_rows === 1 and $tipo == 3) {
+if($result->num_rows === 1) {
 
     session_start();
     $_SESSION['email_session'] = $email;
-    $_SESSION['razao_social_session'] = $razao_social;
+    $_SESSION['nome_session'] = $nome;
     $_SESSION['senha_session'] = $senha;
     $_SESSION['cpf_session'] = $cnpj;
     $_SESSION['telefone_session'] = $telefone;
 
-    //libera acesso ao Admin
+    //libera acesso a parceria
 
     header("location:../view/parceriasUser.php");
 

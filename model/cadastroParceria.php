@@ -50,7 +50,12 @@ $result = $conn->query($sql);
 
 // testar se o cadastro foi feito com sucesso
 if ($result) {
-    echo "cadastro realizado com sucesso!";
+    session_start();
+    $_SESSION['email_session'] = $email;
+    $_SESSION['nome_session'] = $nome;
+    $_SESSION['senha_session'] = $senha;
+    $_SESSION['cpf_session'] = $cnpj;
+    $_SESSION['telefone_session'] = $telefone;
     header("location:../view/cadastroPraia.php");
 } else {
     echo "Cadastro não realizado, tente novamente";
