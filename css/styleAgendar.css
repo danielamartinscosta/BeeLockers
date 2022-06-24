@@ -21,3 +21,24 @@ h5 {
     color: #E48900;
 }
 
+
+#imgPraia{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0px;
+    top: 0px;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+}
+
+#imgModal{
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 800px;
+}
+
+

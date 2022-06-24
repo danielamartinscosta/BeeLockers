@@ -270,8 +270,8 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="cadastrarModalLabel">Reservar horário</h5>
-                        <button type="button" class="close warning btn-success" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <button type="button" class="close warning btn-success" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="false">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -280,22 +280,21 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nome" class="form-control" id="nome"
-                                    value="<?= $usuario ?>" readonly>
+                                    <input type="text" name="id_usuario" class="form-control" id="id_usuario" value="<?= $usuario ?>" readonly>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Praia</label>
                                 <div class="col-sm-10">
-                                    <select name="nome_praia" class="form-control" id="nome_praia">
+                                    <select name="id_praia" class="form-control" id="id_praia">
                                         <option value="">Selecione a praia</option>
-                                        
+
                                         <?php
 
                                         $sql = "SELECT * FROM praia ORDER BY nome_praia";
-                                        $res=mysqli_query($conn,$sql);
-                                        while($vpraia=mysqli_fetch_row($res)){
-                                            $vnome_praia= $vpraia[1];
+                                        $res = mysqli_query($conn, $sql);
+                                        while ($vpraia = mysqli_fetch_row($res)) {
+                                            $vnome_praia = $vpraia[1];
                                             echo "<option value=$vpraia>$vnome_praia</option>";
                                         }
 
@@ -326,6 +325,43 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <div id="imgPraia" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Endereço - Praia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>
+                                <?php
+
+                                $sql = "SELECT  FROM praia ORDER BY nome_praia";
+                                $res = mysqli_query($conn, $sql);
+                                while ($vpraia = mysqli_fetch_row($res)) {
+                                    $vnome_praia = $vpraia[1];
+                                    echo "<option value=$vpraia>$vnome_praia</option>";
+                                }
+
+                                echo $nome_praia;
+
+                                ?>">
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
 
 

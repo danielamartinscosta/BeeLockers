@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //defaultDate: '2022-04-12',
         locale: 'pt-br', // determina o idioma utilizado
         editable: true,
-        eventLimit: true, // limitar a quantidade de eventos no dia - deixar como true
+        eventLimit: true, // limitar a quantidade de eventos no dia - deixar como true mantém o layout
         events: '../model/listaReservas.php',
         extraParams: function () {
             return {
@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(info.event);
             $('#visualizar #id_reserva').text(info.event.id_reserva);
             $('#visualizar #id_reserva').val(info.event.id_reserva);
-            $('#visualizar #nome').text(info.event.nome);
-            $('#visualizar #nome').val(info.event.nome);
-            $('#visualizar #nome_praia').text(info.event.nome_praia);
-            $('#visualizar #nome_praia').val(info.event.nome_praia);
+            $('#visualizar #id_usuario').text(info.event.id_usuario);
+            $('#visualizar #id_usuario').val(info.event.id_usuario);
+            $('#visualizar #id_praia').text(info.event.id_praia);
+            $('#visualizar #id_praia').val(info.event.id_praia);
             $('#visualizar #start').text(info.event.start.toLocaleString());
             $('#visualizar #start').val(info.event.start.toLocaleString());
             $('#visualizar #end').text(info.event.end.toLocaleString());

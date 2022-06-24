@@ -21,7 +21,7 @@ while($linha = mysqli_fetch_array($logar)){
     $nome = $linha['nome'];
     $fone = $linha['telefone'];
     $cpf = $linha['cpf'];
-    $dtnasc $linha['dtnasc'];
+    $dtnasc = $linha['dtnasc'];
     $sexo =$linha['sexo'];
 }
 

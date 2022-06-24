@@ -51,12 +51,13 @@ FOREIGN KEY (id_parceria) references parceria (id_parceria)
 
 CREATE TABLE reservas (
   id_reserva int(11) NOT NULL AUTO_INCREMENT,
-  nome_responsavel varchar(220) DEFAULT NULL,
   start TIMESTAMP DEFAULT NULL,
   end TIMESTAMP DEFAULT NULL,
   id_praia INT(11) DEFAULT NULL,
+  id_usuario int(11) DEFAULT NULL,
   PRIMARY KEY (id_reserva),
-  FOREIGN KEY (id_praia) references praia (id_praia)
+  FOREIGN KEY (id_praia) references praia (id_praia),
+  FOREIGN KEY (id_usuario) references usuario (id_usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
 CREATE TABLE armarios(
