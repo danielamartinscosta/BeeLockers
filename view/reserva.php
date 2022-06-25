@@ -276,7 +276,7 @@
                     </div>
                     <div class="modal-body">
                         <span id="msg-reservas"></span>
-                        <form id="addevent" method="POST" enctype="multipart/form-data">
+                        <form id="addevent" method="POST" action="../model/reservas.php" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome</label>
                                 <div class="col-sm-10">

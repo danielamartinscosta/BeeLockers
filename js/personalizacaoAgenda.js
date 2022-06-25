@@ -79,7 +79,7 @@ $(document).ready(function () {
     $("#addevent").on("submit", function (event) {
         event.preventDefault(); //não fecha a janela modal sem autorização
         $.ajax({
-            method: "POST",
+            method: "post",
             url: "../model/reservas.php",
             data: new FormData(this),
             contentType: false,

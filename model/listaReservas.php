@@ -2,7 +2,7 @@
 
 include 'connect.php';
 
-$resultado_reservas = " SELECT * FROM reservas";
+/*$resultado_reservas = " SELECT * FROM reservas";
 
 $result_reservas= mysqli_query($conn, $resultado_reservas);
 
@@ -17,7 +17,7 @@ if(($result_reservas) AND ($result_reservas->num_rows != 0)){
 
 }else {
     echo $id_reserva;
-}
+}*/
 
 //$result = $conn->query($sql);
 
@@ -59,8 +59,8 @@ while ($row_reservas = $resultado_reservas->fetch(MYSQLI_ASSOC)) {
         'end' => $end,
         'id_usuario' => $id_usuario,
         'id_praia' => $id_praia
-    ];*/
-}
+    ];*//*
+}*/
 
 echo json_encode($reservas);
 
