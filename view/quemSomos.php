@@ -38,12 +38,6 @@
             v = v.replace(/(\d)(\d{4})$/, "$1-$2");
             return v;
         }
-
-
-
-
-
-
         function idcss(el) {
             return document.getElementById(el);
         }

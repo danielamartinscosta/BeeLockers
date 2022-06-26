@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <?php /*
+    <?php
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -29,14 +29,16 @@
     }
 
     //testar se o usuário está logado ou não
-    if (isset($_SESSION['email'])) {
-        echo $_SESSION['email'];
+    if (isset($_SESSION['email_session'])) {
+        //echo $_SESSION['email_session'];
     } else {
         // apagar a variável de sessão
-        unset($_SESSION['email']);
+        unset($_SESSION['email_session']);
+        echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-*/
+    $usuario = $_SESSION['nome_session'];
+    $email = $_SESSION['email_session'];
     ?>
 
     <header>
@@ -80,54 +82,56 @@
         <!-- Início do Conteúdo Principal-->
         <section id="home">
             <div class="container-fluid div-home ">
-            <div class="row">
-                <div class="col-md text-center">
-                    <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr></h1>
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h1><span>Bem-vindo ao <nobr></span>Bee <span>Lockers</span></nobr>
+                        </h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md text-center">
-                    <h2>Painel <span>Administrativo</span></nobr></h2>
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h2>Painel <span>Administrativo</span></nobr>
+                        </h2>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-3 caixa">
-                    <div class="card">
-                        <div class="container">
-                            <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/Usuários.png" alt="usuários"></a>
-                            <h4 class="text-center">Usuários</h4>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 caixa">
+                        <div class="card">
+                            <div class="container">
+                                <a href="../view/pesquisarUsuario.php"><img class="img-fluid" src="../assets/img/Usuários.png" alt="usuários"></a>
+                                <h4 class="text-center">Usuários</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 caixa">
+                        <div class="card">
+                            <div class="container">
+                                <a href="../view/pesquisarParcerias.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
+                                <h4 class="text-center">Parcerias</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 caixa">
-                    <div class="card">
-                        <div class="container">
-                            <a href="../view/pesquisarParcerias.php"><img class="img-fluid" src="../assets/img/parcerias.png" alt="parcerias"></a>
-                            <h4 class="text-center">Parcerias</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-3 caixa">
-                    <div class="card">
-                        <div class="container">
-                            <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/praia.png" alt="praias"></a>
-                            <h4 class="text-center">Praias</h4>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 caixa">
+                        <div class="card">
+                            <div class="container">
+                                <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/praia.png" alt="praias"></a>
+                                <h4 class="text-center">Praias</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 caixa">
+                        <div class="card">
+                            <div class="container">
+                                <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="reservas"></a>
+                                <h4 class="text-center">Reservas</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 caixa">
-                    <div class="card">
-                        <div class="container">
-                            <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="reservas"></a>
-                            <h4 class="text-center">Reservas</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main><!-- Fim do Conteúdo Principal-->
 

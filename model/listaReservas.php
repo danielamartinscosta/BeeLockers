@@ -60,7 +60,7 @@ while ($row_reservas = $resultado_reservas->fetch(MYSQLI_ASSOC)) {
         'id_usuario' => $id_usuario,
         'id_praia' => $id_praia
     ];*//*
-}*/
+}*//*
 
 echo json_encode($reservas);
 
@@ -79,4 +79,22 @@ while ($linha = $result->fetch_array()) { // mysqli_num or mysqli_assoc
     $dtnasc = $linha['dtnasc'];
     $email = $linha['email'];
     $sexo = $linha['sexo'];
-    $telefone = $linha['telefone'];
+    $telefone = $linha['telefone'];*/
+
+
+    //tentativa 3 
+
+    //Trazer dados do banco
+
+$sql = "SELECT * FROM reservas order by id_reserva";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    //saída de dados
+    while($row = $result->fetch_assoc()){
+        echo "<div class=caixa id: " . $row['id_reserva']. " Nome: " . $row['id_usuario']. " </div>";
+    }
+}else {
+    echo "nenhum registro encontrado ";
+}
+

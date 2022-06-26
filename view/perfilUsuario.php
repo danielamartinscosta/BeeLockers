@@ -18,8 +18,8 @@
 
 
 
-<?php
- //testar de o usuário está logado
+    <?php
+    //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
@@ -40,9 +40,54 @@
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
-    
+
     ?>
-   
+
+    <script>
+        function mascara_cpf() {
+            var cpf = document.getElementById('inputCpf')
+            if (cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += "."
+            } else if (cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function mask(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmask()", 1)
+        }
+
+        function execmask() {
+            v_obj.value = v_fun(v_obj.value)
+        }
+
+        function masktel(v) {
+            v = v.replace(/\D/g, "");
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+            return v;
+        }
+
+        function idcss(el) {
+            return document.getElementById(el);
+        }
+
+        window.onload = function() {
+
+
+            //CELULAR -------
+            idcss('inputPhone').setAttribute('maxlength', 15);
+            idcss('inputPhone').onkeypress = function() {
+                mask(this, masktel);
+            }
+            //-----------
+        }
+    </script>
+
     <title>Bee Lockers - Reservar</title>
 </head>
 
@@ -53,7 +98,7 @@
         <nav class="navbar navbar-expand-sm navbar-light">
             <div class="container-fluid">
 
-            
+
                 <a href="home.php" class="navbar-brand">
                     <img src="../assets/img/logo.jpeg" width="120" class="img-fluid">
                 </a>
@@ -64,7 +109,7 @@
 
                 <div class="collapse navbar-collapse" id="nav-menu">
                     <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                        <li class="nav-item">
                             <a href="homeUser.php" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
@@ -89,7 +134,7 @@
                                     <a class="dropdown-item" href="perfilUsuario.php"><?= $usuario ?></a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item"  href="../model/logoff.php">Sair</a>
+                                    <a class="dropdown-item" href="../model/logoff.php">Sair</a>
                                 </li>
                             </ol>
                         </li>
@@ -109,7 +154,9 @@
                 <div class="row">
                     <div class="col-md div-home caixa text-center">
                         <h1>
-                            <span><nobr></span>Bee <span>Lockers</span></nobr>
+                            <span>
+                                <nobr>
+                            </span>Bee <span>Lockers</span></nobr>
                         </h1>
                     </div>
                 </div>
@@ -117,33 +164,33 @@
                 <div class="row">
                     <div class="col-md text-center">
                         <P>
-                            Olá <?=$usuario?>, aqui você pode atualizar seus dados caso queira.
+                            Olá <?= $usuario ?>, aqui você pode atualizar seus dados caso queira.
                         </P>
                     </div>
                 </div>
 
                 <div class="row justify-content-center caixa">
-                    <form method="post" action="" enctype="multipart/form-data" class="col-md-6">
+                    <form method="post" action="../model/alterarUser.php" enctype="multipart/form-data" class="col-md-6">
                         <div class="card">
                             <div class="card-body mb-2 fw-bolder">
 
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="nome" value="<?=$usuario?>" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <input type="name" name="nome" id="nome" value="<?= $usuario ?>" class="form-control" placeholder="Digite seu nome completo" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="email" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control" readonly>
+                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md">
-                                        <label for="inputPhone" class="form-label">Fone:</label>
-                                        <input type="text" name="telefone" id="telefone" value="<?=$fone?>"  maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <label for="telefone" class="form-label">Telefone:</label>
+                                        <input type="text" name="telefone" id="telefone" value="<?= $fone ?>" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
@@ -162,9 +209,9 @@
 
                                     <div class="col-md">
                                         <label for="inputSexo" class="form-label">Sexo:</label><br>
-                                        <select id="inputSexo" name="sexo" class="form-control"  checked="checked">
-                                            <option value="F" <?= $sexo == 'F' ? 'selected': '' ?>>Feminino</option>
-                                            <option value="M"  <?= $sexo == 'M' ? 'selected': '' ?>>Masculino</option>
+                                        <select id="inputSexo" name="sexo" class="form-control" checked="checked">
+                                            <option value="F" <?= $sexo == 'F' ? 'selected' : '' ?>>Feminino</option>
+                                            <option value="M" <?= $sexo == 'M' ? 'selected' : '' ?>>Masculino</option>
                                         </select>
                                     </div>
                                 </div>
@@ -187,7 +234,8 @@
         </section>
     </main><!-- Fim do Conteúdo Principal-->
 
-    <footer><!--Início do rodapé-->
+    <footer>
+        <!--Início do rodapé-->
         <section class="container-fluid">
             <div class="row text-center">
 
@@ -255,7 +303,8 @@
                 <p>Copyright &copy; 2022 <strong>BeeLockers</strong> │ Todos os direitos reservados</p>
             </div>
         </section>
-    </footer><!--Fim do rodapé-->
+    </footer>
+    <!--Fim do rodapé-->
 
 
 
@@ -267,4 +316,5 @@
     <script src="../js/clima.js"></script>
 
 </body>
+
 </html>
