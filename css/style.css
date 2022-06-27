@@ -55,8 +55,8 @@ nav {
 /* ================= Principal =================*/
 main{
     background: url("../assets/img/fundo_principal2.png") no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    /*background-size: 100% 100%;*/
+    background-size: cover;
     padding: 2em;
     color: #000;
 }

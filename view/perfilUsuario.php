@@ -36,7 +36,7 @@
     }
     $usuario = $_SESSION['nome_session'];
     $email = $_SESSION['email_session'];
-    $fone = $_SESSION['telefone_session'];
+    $telefone = $_SESSION['telefone_session'];
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
@@ -80,8 +80,8 @@
 
 
             //CELULAR -------
-            idcss('inputPhone').setAttribute('maxlength', 15);
-            idcss('inputPhone').onkeypress = function() {
+            idcss('telefone').setAttribute('maxlength', 15);
+            idcss('telefone').onkeypress = function() {
                 mask(this, masktel);
             }
             //-----------
@@ -176,8 +176,12 @@
 
                                 <div class="row">
                                     <div>
+                                        <label class="form-label"></label>
+                                        <input type="hidden" name="id" id="inputId" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+                                    </div>
+                                    <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
-                                        <input type="name" name="nome" id="nome" value="<?= $usuario ?>" class="form-control" placeholder="Digite seu nome completo" required>
+                                        <input type="name" name="nome" id="InputNome" value="<?= $usuario ?>" class="form-control" placeholder="Digite seu nome completo" required>
                                     </div>
                                 </div>
 
@@ -190,7 +194,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="telefone" class="form-label">Telefone:</label>
-                                        <input type="text" name="telefone" id="telefone" value="<?= $fone ?>" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="telefone" value="<?= $telefone ?>" maxlength="15" minlength="14" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
