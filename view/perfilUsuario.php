@@ -19,6 +19,8 @@
 
 
     <?php
+    include "../model/connect.php";
+   
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -40,8 +42,19 @@
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
+    $id = $_SESSION['id_usuario_session'];
+    
 
+    var_dump($_SESSION);
+    
+    //$sql = mysqli_query($conn, "SELECT id_usuario FROM usuario WHERE email = '$email'");
+    //var_dump($sql);
+    //$usuario = mysqli_fetch_object($sql);
+    //$id = $usuario->id_usuario;
+
+   
     ?>
+    
 
     <script>
         function mascara_cpf() {
@@ -176,8 +189,13 @@
 
                                 <div class="row">
                                     <div>
+<<<<<<< HEAD
                                         <label class="form-label"></label>
                                         <input type="hidden" name="id" id="inputId" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+=======
+                                        <label for="inputNome" class="form-label"></label>
+                                        <input type="text" name="id" id="id" value="<?=$id?>" class="form-control" " required>
+>>>>>>> 55f1d834eb1f56c77263606299ddbee96a7bdf08
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
@@ -194,7 +212,11 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="telefone" class="form-label">Telefone:</label>
+<<<<<<< HEAD
                                         <input type="text" name="telefone" id="telefone" value="<?= $telefone ?>" maxlength="15" minlength="14" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+=======
+                                        <input type="text" name="telefone" id="inputPhone"  value="<?= $fone ?>" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+>>>>>>> 55f1d834eb1f56c77263606299ddbee96a7bdf08
                                     </div>
                                 </div>
 
@@ -317,7 +339,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="../js/clima.js"></script>
+    <!-- <script src="../js/clima.js"></script> -->
 
 </body>
 

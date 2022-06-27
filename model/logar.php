@@ -23,6 +23,7 @@ while($linha = mysqli_fetch_array($logar)){
     $cpf = $linha['cpf'];
     $dtnasc = $linha['dtnasc'];
     $sexo = $linha['sexo'];
+    $id = $linha['id_usuario'];
 }
 
 $sql = "SELECT senha, email FROM usuario WHERE email='$email' AND senha='$senha'";
@@ -41,6 +42,7 @@ if($result->num_rows === 1 and $tipo == 1) {
     $_SESSION['sexo_session'] = $sexo;
     $_SESSION['telefone_session'] = $fone;
 
+
     //libera acesso ao Admin
 
     header("location:../view/homeAdmin.php");
@@ -49,13 +51,14 @@ if($result->num_rows === 1 and $tipo == 1) {
 }else if($result->num_rows === 1 and $tipo == 2) {
 
         session_start();
+        $_SESSION['id_usuario_session'] = $id;
         $_SESSION['email_session'] = $email;
         $_SESSION['nome_session'] = $nome;
         $_SESSION['senha_session'] = $senha;
         $_SESSION['cpf_session'] = $cpf;
         $_SESSION['dtnasc_session'] = $dtnasc;
         $_SESSION['sexo_session'] = $sexo;
-        $_SESSION['telefone_session'] = $telefone;
+        $_SESSION['telefone_session'] = $fone;
     
         //libera acesso ao user
     
