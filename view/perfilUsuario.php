@@ -43,12 +43,6 @@
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
     $id = $_SESSION['id_usuario_session'];
-    
-
-    
-    //$sql = mysqli_query($conn, "SELECT id_usuario FROM usuario WHERE email = '$email'");
-    //$usuario = mysqli_fetch_object($sql);
-    //$id = $usuario->id_usuario;
 
    
     ?>
@@ -188,7 +182,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label"></label>
-                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control" " required>
+                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control"  required>
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
