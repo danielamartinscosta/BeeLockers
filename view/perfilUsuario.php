@@ -43,7 +43,7 @@
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
     $id = $_SESSION['id_session'];
-
+    var_dump($_SESSION);
 
     ?>
 
@@ -182,7 +182,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label"></label>
-                                        <input type="hidden" name="id" id="id" value="<?= $id ?>" class="form-control" required readonly="readonly">
+                                        <input type="" name="id" id="id" value="<?= $_SESSION['id_session'] ?>" class="form-control" required readonly="readonly">
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>

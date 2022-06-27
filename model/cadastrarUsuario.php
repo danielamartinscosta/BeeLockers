@@ -69,8 +69,8 @@ if ($result) {
         $_SESSION['dtnasc_session'] = $dtnasc;
         $_SESSION['sexo_session'] = $sexo;
         $_SESSION['telefone_session'] = $telefone;
-        $_SESSION['id_usuario_session'] = $id;
-    header('Location:../view/perfilUsuario.php');
+        $_SESSION['id_session'] = $id;
+    header('Location:../view/home.php');
 
 } else {
     echo "Não foi possivel realizar o cadastro";
