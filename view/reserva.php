@@ -170,7 +170,7 @@
                                                     echo "<option value=$vpraia[0]>$vnome_praia</option>";
                                                 }
 
-                                                echo $nome_praia;
+
 
                                                 ?>">
                                             </select>

@@ -44,6 +44,10 @@
     $sexo = $_SESSION['sexo_session'];
     $id = $_SESSION['id_session'];
 
+    $start = $_SESSION['start_session'];
+    $end = $_SESSION['end_session'];
+
+
     ?>
 
 
@@ -254,20 +258,14 @@
                     <div class="modal-body">
                         <div class="consulta">
                             <dl class="row">
-                                <dt class="col-sm-3">ID da reserva</dt>
-                                <dd class="col-sm-9" id="id_reserva"></dd>
-
                                 <dt class="col-sm-3">Nome:</dt>
                                 <dd class="col-sm-9" id="id_usuario"> <?= $usuario ?></dd>
 
-                                <dt class="col-sm-3">Praia</dt>
-                                <dd class="col-sm-9" id="nome_praia"> </dd>
-
                                 <dt class="col-sm-3">Início da reserva</dt>
-                                <dd class="col-sm-9" id="start"></dd>
+                                <dd class="col-sm-9" id="start"><?= $start ?></dd>
 
                                 <dt class="col-sm-3">Fim da reserva</dt>
-                                <dd class="col-sm-9" id="end"></dd>
+                                <dd class="col-sm-9" id="end"><?= $end ?></dd>
                             </dl>
                         </div>
                     </div>

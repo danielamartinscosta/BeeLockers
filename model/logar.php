@@ -62,7 +62,7 @@ if($result->num_rows === 1 and $tipo == 1) {
     
         //libera acesso ao user
     
-        header("location:../view/perfilUsuario.php");
+        header("location:../view/agendaUser.php");
 
 
 } else {
