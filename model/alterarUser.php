@@ -29,18 +29,20 @@ $resultado = mysqli_query($conn, $result);
 
 if ($resultado) {  //para confirmar a alteração ou informar o erro
   echo "Atualização realizada com sucesso!";
-       
-} else {
-  echo "Atualização não realizada <br/><br/>";
-}
-
+  session_start();
 $_SESSION['email_session'] = $email;
 $_SESSION['nome_session'] = $nome;
 $_SESSION['cpf_session'] = $cpf;
 $_SESSION['dtnasc_session'] = $dtnasc;
 $_SESSION['sexo_session'] = $sexo;
 $_SESSION['telefone_session'] = $telefone;
-var_dump($_SESSION);
-//exit();
+//var_dump($_SESSION);
+
+       
+} else {
+  echo "Atualização não realizada <br/><br/>";
+}
+
+
 
 header('Location:../view/perfilUsuario.php');

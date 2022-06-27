@@ -45,10 +45,8 @@
     $id = $_SESSION['id_usuario_session'];
     
 
-    var_dump($_SESSION);
     
     //$sql = mysqli_query($conn, "SELECT id_usuario FROM usuario WHERE email = '$email'");
-    //var_dump($sql);
     //$usuario = mysqli_fetch_object($sql);
     //$id = $usuario->id_usuario;
 
@@ -190,7 +188,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label"></label>
-                                        <input type="text" name="id" id="id" value="<?=$id?>" class="form-control" " required>
+                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control" " required>
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
@@ -201,7 +199,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control" readonly>
+                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control" >
                                     </div>
                                 </div>
                                 <div class="row">

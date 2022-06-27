@@ -114,13 +114,13 @@
                 <div class="row">
                     <div class="col-md text-center">
                         <P>
-                            Olá <?=$_SESSION['razao_social_session']?>, aqui você pode atualizar seus dados caso queira.
+                            Olá <?=$usuario?>, aqui você pode atualizar seus dados caso queira.
                         </P>
                     </div>
                 </div>
 
                 <div class="row justify-content-center caixa">
-                    <form method="post" action="" enctype="multipart/form-data" class="col-md-6">
+                    <form method="post" action="../model/alterarParc.php" enctype="multipart/form-data" class="col-md-6">
                         <div class="card">
                             <div class="card-body mb-2 fw-bolder">
 
@@ -134,7 +134,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="inputEmail" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control" readonly>
+                                        <input type="email" name="email" id="inputEmail" value="<?=$email?>" placeholder="Seu e-mail" required class="form-control" >
                                     </div>
                                 </div>
                                 <div class="row">
@@ -246,7 +246,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="../js/clima.js"></script>
 
 </body>
 </html>
