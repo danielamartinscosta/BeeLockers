@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 
 include_once 'connect.php';
 
@@ -10,13 +10,14 @@ $end = $_POST['end'];
 $id_praia = $_POST['id_praia'];
 $nome_usuario = $_POST['nome_usuario'];
 $id = $_POST['id_usuario'];
-//var_dump($_POST);
+var_dump($_POST);
 
 //exit();
 
 
 
 $sql = "INSERT INTO reservas (start, end, id_praia, id_usuario) VALUES ('$start','$end', '$id_praia', '$id')";
+var_dump($sql);
 
 if ($conn->query($sql) === TRUE) {
     echo "<div class='alert alert-success' role='alert'>
