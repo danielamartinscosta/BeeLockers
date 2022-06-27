@@ -241,6 +241,7 @@
                     </form>
 
                     <?php
+                    
                     $id_reserva = ['id_reserva'];
                     $nome_praia=['$nome_praia'];
 
