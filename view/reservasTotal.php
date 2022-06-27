@@ -158,8 +158,8 @@
                                             $html = <<<HTML
                                     <tr class="text-white">
                                     <td>$id_reserva</td>
-                                    <td>$id_praia</td>
                                     <td>$id_usuario</td>
+                                    <td>$id_praia</td>
                                     <td>$start</td>
                                     <td>$end</td>
                                     <td>
