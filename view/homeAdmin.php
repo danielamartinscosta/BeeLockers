@@ -66,6 +66,9 @@
                             <a href="pesquisarPraias.php" class="nav-link">Praias</a>
                         </li>
                         <li class="nav-item">
+                            <a href="reservasTotal.php" class="nav-link">Reservas</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="pesquisarParcerias.php" class="nav-link">Parcerias</a>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
@@ -126,7 +129,7 @@
                     <div class="col-md-3 caixa">
                         <div class="card">
                             <div class="container">
-                                <a href="../view/pesquisarPraias.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="reservas"></a>
+                                <a href="../view/reservasTotal.php"><img class="img-fluid" src="../assets/img/reserva.png" alt="reservas"></a>
                                 <h4 class="text-center">Reservas</h4>
                             </div>
                         </div>

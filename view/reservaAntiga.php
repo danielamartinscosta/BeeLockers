@@ -35,7 +35,7 @@
 
     <?php
     include "../model/connect.php";
-   
+
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -58,16 +58,16 @@
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
     $id_usuario = $_SESSION['id_session'];
-    
 
-   // var_dump($_SESSION);
-    
+
+    // var_dump($_SESSION);
+
     //$sql = mysqli_query($conn, "SELECT id_usuario FROM usuario WHERE email = '$email'");
     //var_dump($sql);
     //$usuario = mysqli_fetch_object($sql);
     //$id = $usuario->id_usuario;
 
-   
+
     ?>
 
     <title>Bee Lockers - Reservar</title>
@@ -132,76 +132,18 @@
     <main>
         <section id="home" class="container-fluid div-home">
             <!-- Início do calendário  -->
-            <div class="row fw-bolder">
+            <div class="row">
                 <div class="col-md-8 div-home text-center">
-                    <div class="">
-
-                        <form method="post" id="reservar" action="../model/reservas.php" enctype="multipart/form-data" class="col">
-
-                            <div class="card">
-                                <div class="card-header bg-transparent border-warning text-center">
-                                    <h2 class="" id="">Reservar horário</h2>
-                                </div>
-                                <div class="card-body mb-2">
-                                <div class="form-group row">
-                                    <div class="col-sm-10">
-                                        <input type="hidden" name="id" id="id" class="form-control" value="<?= $id ?>" readonly="readonly">
-                                    </div>
-                                </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Nome</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" name="nome_usuario" class="form-control" id="nome_usuario" value="<?= $usuario ?>" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Praia</label>
-                                        <div class="col-sm-10">
-                                            <select name="id_praia" class="form-control" id="id_praia">
-                                                <option value="">Selecione a praia</option>
-
-                                                <?php
-
-                                                $sql = "SELECT * FROM praia ORDER BY nome_praia";
-                                                $res = mysqli_query($conn, $sql);
-                                                while ($vpraia = mysqli_fetch_row($res)) {
-                                                    $vnome_praia = $vpraia[1];
-                                                    echo "<option value=$vpraia[0]>$vnome_praia</option>";
-                                                }
-
-                                                echo $nome_praia;
-
-                                                ?>">
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Início da reserva</label>
-                                        <div class="col-sm-10">
-                                            <input type="datetime-local" name="start" class="form-control" id="start">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Fim da reserva</label>
-                                        <div class="col-sm-10">
-                                            <input type="datetime-local" name="end" class="form-control" id="end">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-10">
-                                            <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
-                                        </div>
-                                    </div>
-
-                                </div>
+                    <div class="col-md">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id='calendar'></div>
                             </div>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
                 <!-- Fim do calendário  -->
-                <div class="col-md-4 div-home">
+                <div class="col-sm div-home">
                     <div class="row fw-bolder">
                         <div class="col">
                             <div class="card">
@@ -258,6 +200,207 @@
                 </div>
             </div>
         </section>
+
+        <section class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Detalhes da reserva</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="visevent">
+                            <dl class="row">
+                                <dt class="col-sm-3">ID da reserva</dt>
+                                <dd class="col-sm-9" id="id_reserva"></dd>
+
+                                <dt class="col-sm-3">Nome</dt>
+                                <dd class="col-sm-9" id="id_usuario"></dd>
+
+                                <dt class="col-sm-3">Praia</dt>
+                                <dd class="col-sm-9" id="id_praia"></dd>
+
+                                <dt class="col-sm-3">Início da reserva</dt>
+                                <dd class="col-sm-9" id="start"></dd>
+
+                                <dt class="col-sm-3">Fim da reserva</dt>
+                                <dd class="col-sm-9" id="end"></dd>
+                            </dl>
+                            <button class="btn btn-warning btn-canc-vis">Editar</button>
+                        </div>
+                        <div class="formedit">
+                            <span id="msg-edit"></span>
+                            <form id="editevent" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="id_reserva" id="id_reserva">
+
+                                <div class="card-body mb-2">
+                                    <div class="form-group row">
+                                        <div class="col-sm-10">
+                                            <input type="hidden" name="id" id="id" class="form-control" value="<?= $id ?>" readonly="readonly">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Nome</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="nome_usuario" class="form-control" id="nome_usuario" value="<?= $usuario ?>" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Praia</label>
+                                        <div class="col-sm-10">
+                                            <select name="id_praia" class="form-control" id="id_praia">
+                                                <option value="">Selecione a praia</option>
+
+                                                <?php
+
+                                                $sql = "SELECT * FROM praia ORDER BY nome_praia";
+                                                $res = mysqli_query($conn, $sql);
+                                                while ($vpraia = mysqli_fetch_row($res)) {
+                                                    $vnome_praia = $vpraia[1];
+                                                    echo "<option value=$vpraia[0]>$vnome_praia</option>";
+                                                }
+
+                                                echo $nome_praia;
+
+                                                ?>">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Início da reserva</label>
+                                        <div class="col-sm-10">
+                                            <input type="datetime-local" name="start" class="form-control" id="start">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Fim da reserva</label>
+                                        <div class="col-sm-10">
+                                            <input type="datetime-local" name="end" class="form-control" id="end">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-10">
+                                            <button type="button" class="btn btn-primary btn-canc-edit">Cancelar</button>
+
+                                            <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="cadastrarModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cadastrarModalLabel">Reservar horário</h5>
+                        <button type="button" class="close warning btn-success" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="false">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span id="msg-reservas"></span>
+                        <form id="addevent" method="POST" action="../model/reservas.php" enctype="multipart/form-data">
+                            <div class="card-body mb-2">
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <input type="hidden" name="id" id="id" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Nome</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="nome_usuario" class="form-control" id="nome_usuario" value="<?= $usuario ?>" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Praia</label>
+                                    <div class="col-sm-10">
+                                        <select name="id_praia" class="form-control" id="id_praia">
+                                            <option value="">Selecione a praia</option>
+
+                                            <?php
+
+                                            $sql = "SELECT * FROM praia ORDER BY nome_praia";
+                                            $res = mysqli_query($conn, $sql);
+                                            while ($vpraia = mysqli_fetch_row($res)) {
+                                                $vnome_praia = $vpraia[1];
+                                                echo "<option value=$vpraia[0]>$vnome_praia</option>";
+                                            }
+
+                                            echo $nome_praia;
+
+                                            ?>">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Início da reserva</label>
+                                    <div class="col-sm-10">
+                                        <input type="datetime-local" name="start" class="form-control" id="start">
+                                    </div>
+                                </div>
+                                <div class=" form-group row">
+                                    <label class="col-sm-2 col-form-label">Fim da reserva</label>
+                                    <div class="col-sm-10">
+                                        <input type="datetime-local" name="end" class="form-control" id="end">
+                                    </div>
+                                </div>
+                                <div class=" form-group row">
+                                    <div class="col-sm-10">
+                                        <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="imgPraia" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Endereço - Praia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>
+                                <?php
+
+                                $sql = "SELECT  FROM praia ORDER BY nome_praia";
+                                $res = mysqli_query($conn, $sql);
+                                while ($vpraia = mysqli_fetch_row($res)) {
+                                    $vnome_praia = $vpraia[1];
+                                    echo "<option value=$vpraia>$vnome_praia</option>";
+                                }
+
+                                echo $nome_praia;
+
+                                ?>">
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
 
     </main>
 

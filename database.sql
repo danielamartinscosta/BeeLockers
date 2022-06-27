@@ -60,24 +60,6 @@ CREATE TABLE reservas (
   FOREIGN KEY (id_usuario) references usuario (id_usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
 
-CREATE TABLE armarios(
-  id_armario int(11) NOT NULL AUTO_INCREMENT,
-  numero_armario int(11) DEFAULT NULL,
-  status_armario varchar(225) DEFAULT NULL,
-  PRIMARY KEY (id_armario)
-) ENGINE=InnoDB DEFAULT CHARSET=LATIN1;
-
-INSERT INTO armarios(
-  id_armario, numero_armario, status_armario) VALUES (1, 1, 'disponivel'), 
-  (2, 2, 'disponivel'),
-  (3, 3, 'disponivel'),
-  (4, 4, 'disponivel'),
-  (5, 5, 'disponivel'),
-  (6, 6, 'disponivel'),
-  (7, 7, 'disponivel'),
-  (8, 8, 'disponivel'),
-  (9, 9, 'disponivel'),
-  (10, 10, 'disponivel');
 
  INSERT INTO `tipo` (`id_tipo`, `nome_tipo`) VALUES ('1', 'admin'),
 ('2', 'usuario'),

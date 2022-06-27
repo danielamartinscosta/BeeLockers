@@ -20,7 +20,7 @@
 
     <?php
     include "../model/connect.php";
-   
+
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -44,9 +44,9 @@
     $sexo = $_SESSION['sexo_session'];
     $id = $_SESSION['id_session'];
 
-   
+
     ?>
-    
+
 
     <script>
         function mascara_cpf() {
@@ -182,7 +182,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label"></label>
-                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control"  required readonly="readonly">
+                                        <input type="hidden" name="id" id="id" value="<?= $id ?>" class="form-control" required readonly="readonly">
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
@@ -193,13 +193,13 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control"  >
+                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="telefone" class="form-label">Telefone:</label>
-                                        <input type="text" name="telefone" id="inputPhone"  value="<?= $fone ?>" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
+                                        <input type="text" name="telefone" id="inputPhone" value="<?= $fone ?>" maxlength="15" minlength="15" class="form-control" required placeholder="(DDD) xxxxx-xxxx">
                                     </div>
                                 </div>
 
@@ -230,17 +230,61 @@
                                     <div class="col">
                                         <button type="submit" class="btn text-white btn-custom">Atualizar</button>
                                     </div>
+                                    <div class="text-center mt-4">
+                                        <button type="button" class="btn text-white btn-custom" data-toggle="modal" data-target="#consulta">Consultar Reservas</button>
+                                    </div>
 
                                 </div>
 
                             </div>
                         </div>
                     </form>
+
+                    <?php
+                    $id_reserva = ['id_reserva'];
+                    $nome_praia=['$nome_praia'];
+
+                    ?>
+
+                    
                 </div>
-
-
             </div>
         </section>
+
+        <section class="modal fade" id="consulta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="card">
+                    <div class="card-header bg-transparent border-warning text-center">
+                        <h5 class="modal-title" id="exampleModalLabel">Detalhes da reserva</h5>
+                        <button type="button" class="close btn text-white btn-custom" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="consulta">
+                            <dl class="row">
+                                <dt class="col-sm-3">ID da reserva</dt>
+                                <dd class="col-sm-9" id="id_reserva"></dd>
+
+                                <dt class="col-sm-3">Nome:</dt>
+                                <dd class="col-sm-9" id="id_usuario"> <?= $usuario ?></dd>
+
+                                <dt class="col-sm-3">Praia</dt>
+                                <dd class="col-sm-9" id="nome_praia"></dd>
+
+                                <dt class="col-sm-3">Início da reserva</dt>
+                                <dd class="col-sm-9" id="start"></dd>
+
+                                <dt class="col-sm-3">Fim da reserva</dt>
+                                <dd class="col-sm-9" id="end"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main><!-- Fim do Conteúdo Principal-->
 
     <footer>

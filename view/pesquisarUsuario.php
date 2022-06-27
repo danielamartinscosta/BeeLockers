@@ -84,6 +84,9 @@ mysql> describe usuario;
                             <a href="pesquisarPraias.php" class="nav-link">Praias</a>
                         </li>
                         <li class="nav-item">
+                            <a href="reservasTotal.php" class="nav-link">Reservas</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="pesquisarParcerias.php" class="nav-link">Parcerias</a>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">

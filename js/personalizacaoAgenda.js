@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
         eventClick: function (info) {
             info.jsEvent.preventDefault(); // don't let the browser navigate
             console.log(info.event);
-            $('#visualizar #id_reserva').text(info.event.id_reserva);
-            $('#visualizar #id_reserva').val(info.event.id_reserva);
-            $('#visualizar #id_usuario').text(info.event.id_usuario);
-            $('#visualizar #id_usuario').val(info.event.id_usuario);
+            //$('#visualizar #id_reserva').text(info.event.id_reserva);
+            //$('#visualizar #id_reserva').val(info.event.id_reserva);
+            $('#visualizar #id').text(info.event.id_usuario);
+            $('#visualizar #id').val(info.event.id_usuario);
             $('#visualizar #id_praia').text(info.event.id_praia);
             $('#visualizar #id_praia').val(info.event.id_praia);
             $('#visualizar #start').text(info.event.start.toLocaleString());
