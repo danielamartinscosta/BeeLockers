@@ -57,7 +57,7 @@
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
-    $id_usuario = $_SESSION['id_usuario_session'];
+    $id_usuario = $_SESSION['id_session'];
     
 
    // var_dump($_SESSION);
@@ -145,7 +145,7 @@
                                 <div class="card-body mb-2">
                                 <div class="form-group row">
                                     <div class="col-sm-10">
-                                        <input type="hidden" name="id" id="id" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+                                        <input type="hidden" name="id" id="id" class="form-control" value="<?= $id ?>" readonly="readonly">
                                     </div>
                                 </div>
 

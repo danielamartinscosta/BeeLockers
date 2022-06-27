@@ -57,7 +57,7 @@
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
-    $id_usuario = $_SESSION['id_usuario_session'];
+    $id_usuario = $_SESSION['id_session'];
 
 
     // var_dump($_SESSION);
@@ -238,7 +238,7 @@
                                 <div class="card-body mb-2">
                                     <div class="form-group row">
                                         <div class="col-sm-10">
-                                            <input type="hidden" name="id" id="id" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+                                            <input type="hidden" name="id" id="id" class="form-control" value="<?= $id ?>" readonly="readonly">
                                         </div>
                                     </div>
 
@@ -344,20 +344,20 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Início da reserva</label>
                                     <div class="col-sm-10">
-                                        <input type="datetime-local" name="start" class="form-control" id="start" ">
+                                        <input type="datetime-local" name="start" class="form-control" id="start">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class=" form-group row">
-                                        <label class="col-sm-2 col-form-label">Fim da reserva</label>
-                                        <div class="col-sm-10">
-                                            <input type="datetime-local" name="end" class="form-control" id="end" ">
+                                <div class=" form-group row">
+                                    <label class="col-sm-2 col-form-label">Fim da reserva</label>
+                                    <div class="col-sm-10">
+                                        <input type="datetime-local" name="end" class="form-control" id="end">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class=" form-group row">
-                                            <div class="col-sm-10">
-                                                <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
-                                            </div>
-                                        </div>
+                                <div class=" form-group row">
+                                    <div class="col-sm-10">
+                                        <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Escolher armário</button>
+                                    </div>
+                                </div>
                         </form>
                     </div>
                 </div>

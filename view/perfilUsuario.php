@@ -42,7 +42,7 @@
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
-    $id = $_SESSION['id_usuario_session'];
+    $id = $_SESSION['id_session'];
 
    
     ?>
@@ -182,7 +182,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label"></label>
-                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control"  required>
+                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control"  required readonly="readonly">
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
@@ -193,7 +193,7 @@
                                 <div class="row">
                                     <div class="col-md">
                                         <label for="inputEmail" class="form-label">E-mail:</label>
-                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control" >
+                                        <input type="email" name="email" id="email" value="<?= $email ?>" placeholder="Seu e-mail" required class="form-control"  >
                                     </div>
                                 </div>
                                 <div class="row">
