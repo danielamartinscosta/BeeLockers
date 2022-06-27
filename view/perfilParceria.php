@@ -38,6 +38,7 @@
     $email = $_SESSION['email_session'];
     $fone = $_SESSION['telefone_session'];
     $cnpj = $_SESSION['cnpj_session']; 
+    $id = $_SESSION['id_session'];
     ?>
    
     <title>Bee Lockers - Reservar</title>
@@ -125,6 +126,10 @@
                             <div class="card-body mb-2 fw-bolder">
 
                                 <div class="row">
+                                <div>
+                                        <label for="inputNome" class="form-label"></label>
+                                        <input type="hidden" name="id" id="id" value="<?=$id?>" class="form-control"  required>
+                                    </div>
                                     <div>
                                         <label for="razao_social" class="form-label">Parceria:</label>
                                         <input type="text" name="razao_social" id="razao_social" value="<?= $usuario ?>" class="form-control" placeholder="Digite o nome da empresa ou do quiosque" required>

@@ -45,6 +45,7 @@ while($linha = mysqli_fetch_array($logar)){
     $nome = $linha['razao_social'];
     $fone = $linha['telefone'];
     $cnpj = $linha['cnpj'];
+    $id = $linha['id_parceria'];
 }
 
 $sql = "SELECT senha, email FROM parceria WHERE email='$email' AND senha='$senha'";
@@ -55,6 +56,7 @@ $result = $conn->query($sql);
 if($result->num_rows === 1) {
 
     session_start();
+    $_SESSION['id_session'] = $id;
     $_SESSION['email_session'] = $email;
     $_SESSION['razao_social_session'] = $nome;
     $_SESSION['senha_session'] = $senha;

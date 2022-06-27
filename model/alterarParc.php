@@ -3,7 +3,7 @@
 //conexão como banco de dados
 include "connect.php";
 
-$id_parceria = $_POST['id_parceria'];
+$id_parceria = $_POST['id'];
 $razao_social = $_POST['razao_social'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
@@ -11,7 +11,7 @@ $cnpj = $_POST['cnpj'];
 $senha = $_POST['senha'];
 
 
-$id_parceria = isset($_POST['id_parceria']) ? $_POST['id_parceria'] : '';
+$id_parceria = isset($_POST['id']) ? $_POST['id'] : '';
 
 
 

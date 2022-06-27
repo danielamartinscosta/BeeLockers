@@ -51,7 +51,7 @@ if($result->num_rows === 1 and $tipo == 1) {
 }else if($result->num_rows === 1 and $tipo == 2) {
 
         session_start();
-        $_SESSION['id_usuario_session'] = $id;
+        $_SESSION['id_session'] = $id;
         $_SESSION['email_session'] = $email;
         $_SESSION['nome_session'] = $nome;
         $_SESSION['senha_session'] = $senha;
