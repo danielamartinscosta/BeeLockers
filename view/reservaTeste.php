@@ -34,6 +34,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <?php
+    include "../model/connect.php";
+   
     //testar de o usuário está logado
     //verificar se existe uma sessão aberta no servidor
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -49,15 +51,23 @@
         echo "Erro!!", $_SESSION;
         header("Location: ../index.php");
     }
-
-    $id_usuario = $_SESSION['id_usuario_session'];
     $usuario = $_SESSION['nome_session'];
     $email = $_SESSION['email_session'];
     $telefone = $_SESSION['telefone_session'];
     $cpf = $_SESSION['cpf_session'];
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
+    $id_usuario = $_SESSION['id_usuario_session'];
+    
 
+   // var_dump($_SESSION);
+    
+    //$sql = mysqli_query($conn, "SELECT id_usuario FROM usuario WHERE email = '$email'");
+    //var_dump($sql);
+    //$usuario = mysqli_fetch_object($sql);
+    //$id = $usuario->id_usuario;
+
+   
     ?>
 
     <title>Bee Lockers - Reservar</title>
@@ -135,7 +145,7 @@
                                 <div class="card-body mb-2">
                                 <div class="form-group row">
                                     <div class="col-sm-10">
-                                        <input type="hidden" name="id" id="inputId" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
+                                        <input type="hidden" name="id" id="id" class="form-control" value="<?= $id_usuario ?>" readonly="readonly">
                                     </div>
                                 </div>
 

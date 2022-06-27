@@ -297,7 +297,7 @@
                                         $html = <<<HTML
                                         <div class="row justify-content-center">
                                             <div class="rounded col-md-6 bg-dark text-light py-2 justify-content-center">
-                                                <p class="text-center" >Dados alterados com sucesso! Senha não foi alterada.</h1>
+                                                <p class="text-center" >E-mail enviado com sucesso!</h1>
                                             </div>
                                         </div>               
 HTML;
