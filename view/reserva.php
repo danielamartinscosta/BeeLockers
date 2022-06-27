@@ -145,7 +145,7 @@
                                 <div class="card-body mb-2">
                                 <div class="form-group row">
                                     <div class="col-sm-10">
-                                        <input type="" name="id_usuario" id="id_usuario" class="form-control" value="<?= $id ?>" readonly="readonly">
+                                        <input type="hidden" name="id_usuario" id="id_usuario" class="form-control" value="<?= $id ?>" readonly="readonly">
                                     </div>
                                 </div>
 

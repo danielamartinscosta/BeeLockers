@@ -43,7 +43,6 @@
     $dtnasc = $_SESSION['dtnasc_session'];
     $sexo = $_SESSION['sexo_session'];
     $id = $_SESSION['id_session'];
-    var_dump($_SESSION);
 
     ?>
 
@@ -182,7 +181,7 @@
                                 <div class="row">
                                     <div>
                                         <label for="inputNome" class="form-label"></label>
-                                        <input type="" name="id" id="id" value="<?= $_SESSION['id_session'] ?>" class="form-control" required readonly="readonly">
+                                        <input type="hidden" name="id" id="id" value="<?= $_SESSION['id_session'] ?>" class="form-control" required readonly="readonly">
                                     </div>
                                     <div>
                                         <label for="inputNome" class="form-label">Usuário:</label>
@@ -239,24 +238,6 @@
                             </div>
                         </div>
                     </form>
-
-                    <?php
-                    $id_reserva = ['id_reserva'];
-                    $nome_praia=['$nome_praia'];
-
-                    ?>
-
-                    <div class="row justify-content-center caixa">
-                        <div class="row justify-content-center caixa">
-                            <div class="card col-md-4">
-                                <div class="card-body mb-2 fw-bolder">
-                                    <div class="text-center mt-4">
-                                        <button type="button" class="btn text-white btn-custom" data-toggle="modal" data-target="#consulta">Consultar Reservas</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -274,13 +255,13 @@
                         <div class="consulta">
                             <dl class="row">
                                 <dt class="col-sm-3">ID da reserva</dt>
-                                <dd class="col-sm-9" id="id_reserva"><?= $id_reserva ?></dd>
+                                <dd class="col-sm-9" id="id_reserva"></dd>
 
                                 <dt class="col-sm-3">Nome:</dt>
                                 <dd class="col-sm-9" id="id_usuario"> <?= $usuario ?></dd>
 
                                 <dt class="col-sm-3">Praia</dt>
-                                <dd class="col-sm-9" id="nome_praia"> <?= $nome_praia ?></dd>
+                                <dd class="col-sm-9" id="nome_praia"> </dd>
 
                                 <dt class="col-sm-3">Início da reserva</dt>
                                 <dd class="col-sm-9" id="start"></dd>
