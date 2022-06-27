@@ -3,7 +3,7 @@
 //conexão como banco de dados
 include "connect.php";
 
-$id_usuario = $_POST['id'];
+$id_usuario = $_POST['id_usuario'];
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $email = $_POST['email'];
@@ -11,7 +11,7 @@ $sexo = $_POST['sexo'];
 $telefone = $_POST['telefone'];
 $dtnasc = $_POST['dtnasc'];
 
-$id_usuario = isset($_POST['id']) ? $_POST['id'] : '';
+$id_usuario = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : '';
 
 
 

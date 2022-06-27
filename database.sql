@@ -51,8 +51,8 @@ FOREIGN KEY (id_parceria) references parceria (id_parceria)
 
 CREATE TABLE reservas (
   id_reserva int(11) NOT NULL AUTO_INCREMENT,
-  start TIMESTAMP DEFAULT NULL,
-  end TIMESTAMP DEFAULT NULL,
+  start DATETIME DEFAULT NULL,
+  end DATETIME DEFAULT NULL,
   id_praia INT(11) DEFAULT NULL,
   id_usuario int(11) DEFAULT NULL,
   PRIMARY KEY (id_reserva),

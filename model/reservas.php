@@ -6,14 +6,14 @@ include_once 'connect.php';
 
 
 //opção 1
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+//$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 //Converter a data e hora do formato brasileiro para o formato do Banco de Dados
-$data_start = str_replace('/', '-', $dados['start']);
+/*$data_start = str_replace('/', '-', $dados['start']);
 $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 
 $data_end = str_replace('/', '-', $dados['end']);
-$data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
+$data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));*/
 
 /*
 $start = $_POST['start'];
@@ -65,17 +65,22 @@ echo $sql;*/
 //opção 3
 
 
-    $start = $data_start_conv = $_POST['start'];
-    $end = $_POST['end'];
-    $id_praia = $_POST['id_praia'];
-    $id_usuario = $_POST['id_usuario']; 
+$start = $_POST['start'];
+$end = $_POST['end'];
+$id_praia = $_POST['id_praia'];
+$nome_usuario = $_POST['nome_usuario'];
+$id = $_POST['id'];
+//var_dump($_POST);
+
+//exit();
 
 
-$sql = "INSERT INTO reservas (start, end, id_praia, id_usuario) VALUES ('$start','$end','$id_praia', '$id_usuario')";
 
-if($conn->query($sql) === TRUE){
+$sql = "INSERT INTO reservas (start, end, id_praia, id_usuario) VALUES ('$start','$end', '$id_praia', '$id')";
+
+if ($conn->query($sql) === TRUE) {
     echo "cadastro realizado com sucesso!";
-}else {
+} else {
     echo "Cadastro não realizado, tente novamente: " . $conn->error;
 }
 
