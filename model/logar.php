@@ -10,7 +10,7 @@ include "../model/connect.php";
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-// se o login do banco for igual ao login do formulario e senha igual a senha
+//se o login do banco for igual ao login do formulario e senha igual a senha
 
 $logar = $conn->query("SELECT * FROM usuario WHERE email='$email' AND senha='$senha'");
 
